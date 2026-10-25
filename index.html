@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>کار در عراق — دانلود</title>
+<title>kar 🏗 dar — دانلود</title>
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-Variable-font-face.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/gh/aminabedi68/Estedad@v10.0.0/dist/font-face.css" rel="stylesheet">
@@ -245,7 +245,7 @@
 <body>
 
   <div class="hero-visual">
-    <img id="appIcon" class="hero-icon" alt="کار در عراق">
+    <img id="appIcon" class="hero-icon" alt="kar 🏗 dar">
   </div>
 
   <div class="content">
@@ -256,7 +256,7 @@
         به‌روز و فعال
       </div>
 
-      <h1>کار در عراق</h1>
+      <h1>kar 🏗 dar</h1>
       <p class="tagline">تجربه‌ای متفاوت، سریع و امن — همین حالا شروع کن</p>
 
       <div class="stats-row">
@@ -269,7 +269,7 @@
           <span class="lbl">حجم</span>
         </div>
         <div class="stat-mini">
-          <span class="val" id="verMini">—</span>
+          <span class="val" id="verMini">02.0.00</span>
           <span class="lbl">نسخه</span>
         </div>
       </div>
@@ -284,7 +284,7 @@
         دانلود و نصب
       </a>
 
-      <div class="version">آخرین نسخه: <b id="verFull">—</b></div>
+      <div class="version">آخرین نسخه: <b id="verFull">02.0.00</b></div>
 
     </div>
 
@@ -322,7 +322,7 @@
     // ── لینک دانلود خودکار از آخرین ریلیز گیت‌هاب ──
     (function(){
       var btn = document.getElementById('downloadBtn');
-      var repo = 'iran98ir/apk-kardar-iraq';   // ← مخزن جدید شما
+      var repo = 'iran98ir/apk-kardar-iraq';   // ← مخزن شما
 
       function fallback(){
         btn.href = 'https://github.com/' + repo + '/releases/latest';
@@ -338,7 +338,7 @@
       .then(function(data){
         var assets = data.assets || [];
 
-        // اولین فایلی که پسوند .apk دارد
+        // اولین فایلی که پسوند .apk دارد (هر اسمی باشد)
         var apk = assets.find(function(a){ return /\.apk$/i.test(a.name); });
 
         if (apk) {
@@ -347,15 +347,7 @@
         } else {
           fallback();
         }
-
-        // نمایش نسخه (tag_name مثل v1.0.0)
-        if (data.tag_name) {
-          var v = data.tag_name.replace(/^v/i, '');
-          var verFull = document.getElementById('verFull');
-          var verMini = document.getElementById('verMini');
-          if (verFull) verFull.textContent = v;
-          if (verMini) verMini.textContent = v;
-        }
+        // نسخه به‌صورت ثابت در HTML تنظیم شده (02.0.00) و اینجا دست نمی‌خورد
       })
       .catch(function(err){
         console.warn('GitHub API:', err);

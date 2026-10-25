@@ -50,8 +50,9 @@
     z-index:2;
     width: 140px; height: 140px;
     border-radius: 34px;
-    object-fit: cover;
     display: block;
+    background: #fff;
+    padding: 18px;
     border: 1px solid rgba(255,255,255,0.2);
     box-shadow:
       0 30px 60px -20px rgba(0,0,0,0.7),
@@ -233,7 +234,7 @@
 
   @media (max-height: 720px) {
     .hero-visual { height: 38vh; min-height: 240px; }
-    .hero-icon { width: 112px; height: 112px; border-radius: 28px; }
+    .hero-icon { width: 112px; height: 112px; border-radius: 28px; padding: 14px; }
     .card { padding: 26px 20px 22px; }
     h1 { font-size: 36px; }
     .tagline { font-size: 13px; margin-bottom: 18px; }
@@ -245,7 +246,9 @@
 <body>
 
   <div class="hero-visual">
-    <img id="appIcon" class="hero-icon" alt="kar 🏗 dar">
+    <svg id="appIcon" class="hero-icon" fill="#2E4732" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2.4 0A2.395 2.395 0 0 0 0 2.4v19.2C0 22.9296 1.0704 24 2.4 24h19.2c1.3296 0 2.4-1.0704 2.4-2.4V2.4C24 1.0704 22.9296 0 21.6 0H10.112v11.7119l3.648-4.128h6l-4.58 4.3506 4.868 8.1296h-5.52l-2.5938-5.0211L10.112 16.8v3.264H5.12V0Z"/>
+    </svg>
   </div>
 
   <div class="content">
@@ -297,32 +300,9 @@
   </div>
 
   <script>
-    // ── آیکون اپ: نام‌های ممکن را امتحان می‌کند ──
-    (function(){
-      var candidates = [
-        'icon.png','icon.jpeg','icon.jpg','icon.webp','icon.gif','icon.svg',
-        'logo.png','logo.jpeg','logo.jpg','logo.webp','logo.svg',
-        'app.png','app.jpeg','app.jpg','app-icon.png','app-icon.jpeg',
-        'images.png','images.jpeg','images.jpg','images (2).png','images (2).jpeg',
-        'image.png','image.jpeg','image.jpg'
-      ];
-      var img = document.getElementById('appIcon');
-      var i = 0;
-      img.onerror = function(){
-        i++;
-        if (i < candidates.length) {
-          img.src = candidates[i];
-        } else {
-          img.style.display = 'none';
-        }
-      };
-      img.src = candidates[0];
-    })();
-
-    // ── لینک دانلود خودکار از آخرین ریلیز گیت‌هاب ──
     (function(){
       var btn = document.getElementById('downloadBtn');
-      var repo = 'iran98ir/apk-kardar-iraq';   // ← مخزن شما
+      var repo = 'iran98ir/apk-kardar-iraq';
 
       function fallback(){
         btn.href = 'https://github.com/' + repo + '/releases/latest';
@@ -337,8 +317,6 @@
       })
       .then(function(data){
         var assets = data.assets || [];
-
-        // اولین فایلی که پسوند .apk دارد (هر اسمی باشد)
         var apk = assets.find(function(a){ return /\.apk$/i.test(a.name); });
 
         if (apk) {
@@ -347,7 +325,6 @@
         } else {
           fallback();
         }
-        // نسخه به‌صورت ثابت در HTML تنظیم شده (02.0.00) و اینجا دست نمی‌خورد
       })
       .catch(function(err){
         console.warn('GitHub API:', err);
@@ -356,4 +333,4 @@
     })();
   </script>
 </body>
-</html>
+ </html>

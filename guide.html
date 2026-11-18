@@ -18,17 +18,13 @@
   --brand:#0d7a5f; --brand-2:#0a5e49; --brand-soft:#e3f1eb;
   --brand-glow:rgba(13,122,95,.25);
   --gold:#f5b942; --gold-soft:#fdf3dd; --gold-glow:rgba(245,185,66,.35);
-  --sky:#3b82f6; --sky-soft:#e8f1fe;
-  --danger:#dc4c3f;
   --r-md:16px; --r-lg:22px; --r-xl:30px;
   --shadow-sm:0 2px 8px rgba(13,122,95,.06);
   --shadow-md:0 6px 20px rgba(13,122,95,.10);
   --shadow-lg:0 16px 40px rgba(13,122,95,.14);
-  --shadow-3d:0 1px 0 #ffffff, 0 2px 0 #e8f1ec, 0 6px 14px rgba(13,122,95,.10), 0 14px 30px rgba(13,122,95,.08);
   --ease:cubic-bezier(.4,0,.2,1);
   --ease-bounce:cubic-bezier(.34,1.56,.64,1);
 }
-
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
@@ -41,8 +37,8 @@ a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
 
 .app{
-  max-width:520px;margin:0 auto;min-height:100vh;
-  background:var(--bg);position:relative;padding-bottom:30px;
+  max-width:500px;margin:0 auto;min-height:100vh;
+  background:var(--bg);position:relative;padding-bottom:96px;
   box-shadow:0 0 60px rgba(13,122,95,.08);
 }
 
@@ -64,7 +60,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   background:linear-gradient(135deg,var(--brand),var(--brand-2));
   color:#fff;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 8px 20px var(--brand-glow);
-  transform:translateZ(0);
 }
 .brand-icon svg{width:26px;height:26px}
 .brand-name{font-weight:800;font-size:1.2rem;letter-spacing:-.01em}
@@ -73,23 +68,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   width:46px;height:46px;border-radius:15px;
   display:grid;place-items:center;
   background:var(--surface);border:1px solid var(--border);
-  color:var(--text-soft);
-  transition:all .3s var(--ease);
+  color:var(--text-soft);transition:all .3s var(--ease);
   box-shadow:var(--shadow-sm);
 }
 .header-action:hover{
   color:var(--brand);border-color:var(--brand);
-  transform:translateY(-2px);
-  box-shadow:var(--shadow-md);
+  transform:translateY(-2px);box-shadow:var(--shadow-md);
 }
+.header-action svg{width:22px;height:22px}
 
 /* ===== هیرو راهنما ===== */
 .hero{
-  position:relative;margin:18px;padding:36px 26px 30px;
+  position:relative;margin:18px;padding:34px 24px 28px;
   border-radius:var(--r-xl);
   background:
     radial-gradient(120% 100% at 100% 0%, rgba(245,185,66,.15) 0%, transparent 55%),
-    radial-gradient(100% 100% at 0% 100%, rgba(13,122,95,.14) 0%, transparent 60%),
+    radial-gradient(100% 100% at 0% 100%, rgba(13,122,95,.13) 0%, transparent 60%),
     linear-gradient(135deg,#ffffff 0%, #eef7f2 100%);
   border:1px solid var(--border-2);
   box-shadow:
@@ -98,7 +92,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     0 8px 24px rgba(13,122,95,.10),
     0 20px 46px rgba(13,122,95,.10);
   overflow:hidden;
-  transform:translateZ(0);
 }
 .hero::before{
   content:'';position:absolute;inset:auto -40px -60px auto;
@@ -121,49 +114,34 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   box-shadow:0 4px 12px var(--gold-glow);
 }
 .hero-title{
-  font-size:1.75rem;font-weight:900;line-height:1.4;
-  color:var(--text);letter-spacing:-.02em;margin-bottom:12px;
+  font-size:1.65rem;font-weight:900;line-height:1.45;
+  color:var(--text);letter-spacing:-.02em;margin-bottom:10px;
   position:relative;z-index:1;
 }
-.hero-title .accent{
-  color:var(--brand-2);
-  position:relative;
-  display:inline-block;
-}
+.hero-title .accent{color:var(--brand-2);position:relative;display:inline-block}
 .hero-title .accent::after{
   content:'';position:absolute;left:0;right:0;bottom:2px;
   height:8px;background:linear-gradient(90deg,transparent,var(--gold-soft),transparent);
   border-radius:4px;z-index:-1;
 }
 .hero-text{
-  font-size:1.05rem;color:var(--text-soft);line-height:1.9;
-  margin-bottom:22px;position:relative;z-index:1;
-  font-weight:500;
+  font-size:1rem;color:var(--text-soft);line-height:1.9;
+  margin-bottom:22px;position:relative;z-index:1;font-weight:500;
 }
-.hero-stats{
-  display:flex;gap:12px;position:relative;z-index:1;
-  margin-bottom:22px;
-}
+.hero-stats{display:flex;gap:10px;position:relative;z-index:1;margin-bottom:22px}
 .hero-stat{
-  flex:1;padding:14px 10px;border-radius:14px;
-  background:rgba(255,255,255,.7);
-  border:1px solid var(--border-2);
-  text-align:center;
+  flex:1;padding:14px 8px;border-radius:14px;
+  background:rgba(255,255,255,.75);
+  border:1px solid var(--border-2);text-align:center;
   box-shadow:inset 0 1px 0 #fff, 0 2px 6px rgba(13,122,95,.05);
 }
-.hero-stat-num{
-  font-size:1.4rem;font-weight:900;color:var(--brand-2);
-  line-height:1.2;
-}
-.hero-stat-label{
-  font-size:.75rem;color:var(--text-mute);font-weight:600;
-  margin-top:2px;
-}
+.hero-stat-num{font-size:1.3rem;font-weight:900;color:var(--brand-2);line-height:1.2}
+.hero-stat-label{font-size:.72rem;color:var(--text-mute);font-weight:600;margin-top:2px}
 .hero-button{
   display:inline-flex;align-items:center;gap:10px;
-  padding:16px 28px;border-radius:18px;
+  padding:15px 26px;border-radius:18px;
   background:linear-gradient(180deg,var(--brand),var(--brand-2));
-  color:#fff;font-weight:800;font-size:1.02rem;
+  color:#fff;font-weight:800;font-size:1rem;
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.35),
     0 2px 0 #084a3a,
@@ -172,39 +150,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   transition:all .3s var(--ease);
   position:relative;z-index:1;
 }
-.hero-button:hover{
-  transform:translateY(-3px);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.4),
-    0 3px 0 #084a3a,
-    0 12px 28px var(--brand-glow),
-    0 20px 44px rgba(13,122,95,.18);
-}
+.hero-button:hover{transform:translateY(-3px)}
 .hero-button:active{transform:translateY(-1px)}
 .hero-button svg{width:20px;height:20px}
 
 /* ===== عنوان بخش ===== */
-.section-head{
-  padding:0 20px;margin:28px 0 16px;
-  display:flex;align-items:center;gap:10px;
-}
+.section-head{padding:0 20px;margin:28px 0 16px;display:flex;align-items:center;gap:10px}
 .section-head-dot{
   width:10px;height:10px;border-radius:50%;
   background:linear-gradient(135deg,var(--brand),var(--brand-2));
   box-shadow:0 0 0 4px var(--brand-soft);
 }
-.section-title{
-  font-size:1.25rem;font-weight:900;letter-spacing:-.01em;
-}
-.section-caption{
-  font-size:.85rem;color:var(--text-mute);font-weight:500;
-}
+.section-title{font-size:1.2rem;font-weight:900;letter-spacing:-.01em}
+.section-caption{font-size:.85rem;color:var(--text-mute);font-weight:500}
 
 /* ===== آکاردئون ===== */
-.faq-list{
-  display:flex;flex-direction:column;gap:12px;
-  padding:0 18px;
-}
+.faq-list{display:flex;flex-direction:column;gap:12px;padding:0 18px}
 .faq-item{
   background:var(--surface);
   border:1px solid var(--border-2);
@@ -214,9 +175,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     0 2px 0 #eef5f1,
     0 4px 12px rgba(13,122,95,.06),
     0 10px 24px rgba(13,122,95,.05);
-  overflow:hidden;
-  transition:all .35s var(--ease);
-  position:relative;
+  overflow:hidden;transition:all .35s var(--ease);position:relative;
 }
 .faq-item::before{
   content:'';position:absolute;right:0;top:0;bottom:0;width:4px;
@@ -233,22 +192,20 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   transform:translateY(-2px);
 }
 .faq-item.is-open::before{opacity:1}
-
 .faq-question{
   width:100%;display:flex;align-items:center;gap:14px;
-  padding:18px 18px;text-align:right;
-  font-size:1.02rem;font-weight:700;line-height:1.5;
+  padding:18px;text-align:right;
+  font-size:1rem;font-weight:700;line-height:1.5;
   color:var(--text);transition:color .25s var(--ease);
   cursor:pointer;position:relative;
 }
 .faq-question:hover{color:var(--brand-2)}
 .faq-num{
-  flex-shrink:0;
-  width:34px;height:34px;border-radius:10px;
+  flex-shrink:0;width:36px;height:36px;border-radius:11px;
   display:grid;place-items:center;
   background:var(--brand-soft);color:var(--brand-2);
-  font-size:.9rem;font-weight:900;
-  transition:all .3s var(--ease-bounce);
+  font-size:.92rem;font-weight:900;
+  transition:all .35s var(--ease-bounce);
 }
 .faq-item.is-open .faq-num{
   background:linear-gradient(135deg,var(--brand),var(--brand-2));
@@ -257,54 +214,36 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 .faq-q-text{flex:1}
 .faq-toggle{
-  flex-shrink:0;
-  width:32px;height:32px;border-radius:10px;
+  flex-shrink:0;width:32px;height:32px;border-radius:10px;
   display:grid;place-items:center;
   background:var(--surface-2);color:var(--brand-2);
   transition:all .35s var(--ease-bounce);
 }
-.faq-toggle svg{
-  width:18px;height:18px;transition:transform .35s var(--ease-bounce);
-}
+.faq-toggle svg{width:18px;height:18px;transition:transform .35s var(--ease-bounce)}
 .faq-item.is-open .faq-toggle{
   background:linear-gradient(135deg,var(--brand),var(--brand-2));
-  color:#fff;
-  box-shadow:0 4px 10px var(--brand-glow);
+  color:#fff;box-shadow:0 4px 10px var(--brand-glow);
 }
-.faq-item.is-open .faq-toggle svg{
-  transform:rotate(180deg);
-}
-
-/* پاسخ با انیمیشن height نرم */
+.faq-item.is-open .faq-toggle svg{transform:rotate(180deg)}
 .faq-answer{
-  display:grid;
-  grid-template-rows:0fr;
+  display:grid;grid-template-rows:0fr;
   transition:grid-template-rows .45s var(--ease);
 }
-.faq-item.is-open .faq-answer{
-  grid-template-rows:1fr;
-}
-.faq-answer-inner{
-  overflow:hidden;
-}
+.faq-item.is-open .faq-answer{grid-template-rows:1fr}
+.faq-answer-inner{overflow:hidden}
 .faq-answer-content{
   padding:0 18px 20px 18px;
   font-size:1rem;line-height:2;color:var(--text-soft);
-  font-weight:500;
-  border-top:1px dashed var(--border-2);
-  margin-top:2px;
-  padding-top:16px;
-  opacity:0;
-  transform:translateY(-6px);
+  font-weight:500;border-top:1px dashed var(--border-2);
+  margin-top:2px;padding-top:16px;
+  opacity:0;transform:translateY(-6px);
   transition:opacity .35s var(--ease) .1s, transform .35s var(--ease) .1s;
 }
-.faq-item.is-open .faq-answer-content{
-  opacity:1;transform:translateY(0);
-}
+.faq-item.is-open .faq-answer-content{opacity:1;transform:translateY(0)}
 
 /* ===== کارت پایانی ===== */
 .cta-card{
-  margin:26px 18px 10px;padding:26px 22px;
+  margin:26px 18px 6px;padding:26px 22px;
   border-radius:var(--r-lg);
   background:
     radial-gradient(100% 100% at 100% 0%, rgba(245,185,66,.18) 0%, transparent 60%),
@@ -325,59 +264,73 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   width:180px;height:180px;border-radius:50%;
   background:rgba(255,255,255,.08);
 }
-.cta-title{
-  font-size:1.25rem;font-weight:900;margin-bottom:8px;
-  position:relative;z-index:1;
-}
-.cta-text{
-  font-size:.95rem;color:rgba(255,255,255,.9);
-  margin-bottom:18px;position:relative;z-index:1;
-  font-weight:500;
-}
+.cta-title{font-size:1.2rem;font-weight:900;margin-bottom:8px;position:relative;z-index:1}
+.cta-text{font-size:.9rem;color:rgba(255,255,255,.9);margin-bottom:18px;position:relative;z-index:1;font-weight:500}
 .cta-button{
   display:inline-flex;align-items:center;gap:10px;
   padding:14px 26px;border-radius:16px;
   background:#fff;color:var(--brand-2);
   font-weight:800;font-size:.98rem;
-  box-shadow:
-    inset 0 -3px 0 rgba(0,0,0,.08),
-    0 8px 20px rgba(0,0,0,.15);
-  transition:all .3s var(--ease);
-  position:relative;z-index:1;
+  box-shadow:inset 0 -3px 0 rgba(0,0,0,.08),0 8px 20px rgba(0,0,0,.15);
+  transition:all .3s var(--ease);position:relative;z-index:1;
 }
 .cta-button:hover{transform:translateY(-2px);box-shadow:inset 0 -3px 0 rgba(0,0,0,.08),0 12px 26px rgba(0,0,0,.2)}
 .cta-button svg{width:18px;height:18px}
 
-/* ===== انیمیشن ورود ===== */
+/* ===== منوی پایین (۴ آیتم، همسان با index) ===== */
+.bottom-nav{
+  position:fixed;bottom:0;left:0;right:0;z-index:60;
+  max-width:500px;margin:0 auto;
+  display:flex;justify-content:space-around;align-items:center;
+  padding:10px 8px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(20px) saturate(180%);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  border-top:1px solid var(--border-2);
+  box-shadow:0 -6px 24px rgba(13,122,95,.08);
+}
+.nav-item{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  padding:8px 12px;border-radius:14px;
+  color:var(--text-mute);font-size:.72rem;font-weight:700;
+  transition:all .25s var(--ease);position:relative;
+}
+.nav-item svg{width:22px;height:22px;transition:transform .25s var(--ease-bounce)}
+.nav-item.active{color:var(--brand-2);background:var(--brand-soft)}
+.nav-item.active svg{transform:scale(1.1)}
+.nav-item:hover{color:var(--brand-2)}
+.nav-item:active svg{transform:scale(.92)}
+
+/* ===== انیمیشن ===== */
 @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .hero{animation:fadeUp .6s var(--ease) both}
 .faq-item{animation:fadeUp .5s var(--ease) both}
-.faq-item:nth-child(1){animation-delay:.05s}
-.faq-item:nth-child(2){animation-delay:.08s}
-.faq-item:nth-child(3){animation-delay:.11s}
-.faq-item:nth-child(4){animation-delay:.14s}
-.faq-item:nth-child(5){animation-delay:.17s}
-.faq-item:nth-child(6){animation-delay:.20s}
-.faq-item:nth-child(7){animation-delay:.23s}
-.faq-item:nth-child(8){animation-delay:.26s}
-.faq-item:nth-child(9){animation-delay:.29s}
-.faq-item:nth-child(10){animation-delay:.32s}
-.faq-item:nth-child(11){animation-delay:.35s}
-.faq-item:nth-child(12){animation-delay:.38s}
-.faq-item:nth-child(13){animation-delay:.41s}
-.faq-item:nth-child(14){animation-delay:.44s}
-.faq-item:nth-child(15){animation-delay:.47s}
-.faq-item:nth-child(16){animation-delay:.50s}
-.faq-item:nth-child(17){animation-delay:.53s}
-.faq-item:nth-child(18){animation-delay:.56s}
-.faq-item:nth-child(19){animation-delay:.59s}
-.faq-item:nth-child(20){animation-delay:.62s}
+.faq-item:nth-child(1){animation-delay:.04s}
+.faq-item:nth-child(2){animation-delay:.07s}
+.faq-item:nth-child(3){animation-delay:.10s}
+.faq-item:nth-child(4){animation-delay:.13s}
+.faq-item:nth-child(5){animation-delay:.16s}
+.faq-item:nth-child(6){animation-delay:.19s}
+.faq-item:nth-child(7){animation-delay:.22s}
+.faq-item:nth-child(8){animation-delay:.25s}
+.faq-item:nth-child(9){animation-delay:.28s}
+.faq-item:nth-child(10){animation-delay:.31s}
+.faq-item:nth-child(11){animation-delay:.34s}
+.faq-item:nth-child(12){animation-delay:.37s}
+.faq-item:nth-child(13){animation-delay:.40s}
+.faq-item:nth-child(14){animation-delay:.43s}
+.faq-item:nth-child(15){animation-delay:.46s}
+.faq-item:nth-child(16){animation-delay:.49s}
+.faq-item:nth-child(17){animation-delay:.52s}
+.faq-item:nth-child(18){animation-delay:.55s}
+.faq-item:nth-child(19){animation-delay:.58s}
+.faq-item:nth-child(20){animation-delay:.61s}
 .cta-card{animation:fadeUp .5s var(--ease) .65s both}
 
 @media (max-width:380px){
-  .hero-title{font-size:1.55rem}
+  .hero-title{font-size:1.45rem}
   .faq-question{font-size:.95rem;padding:16px 14px}
-  .faq-num{width:30px;height:30px;font-size:.82rem}
+  .faq-num{width:32px;height:32px;font-size:.85rem}
 }
 </style>
 </head>
@@ -396,18 +349,18 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       </div>
       <div class="brand-text">
         <div class="brand-name">کاردار</div>
-        <div class="brand-subtitle">راهنمای کامل کاریابی در عراق</div>
+        <div class="brand-subtitle">راهنمای کاریابی در عراق</div>
       </div>
     </div>
-    <button class="header-action" aria-label="بازگشت" onclick="history.back()">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <a href="index.html" class="header-action" aria-label="بازگشت به خانه">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="5" y1="12" x2="19" y2="12"/>
         <polyline points="12 5 19 12 12 19"/>
       </svg>
-    </button>
+    </a>
   </header>
 
-  <!-- هیرو -->
+  <!-- هیرو راهنما -->
   <section class="hero">
     <span class="hero-label">📖 راهنمای رسمی کاردار</span>
     <h1 class="hero-title">
@@ -458,260 +411,180 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       <button class="faq-question">
         <span class="faq-num">۱</span>
         <span class="faq-q-text">از کجا شروع کنم؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۲</span>
         <span class="faq-q-text">چه مدارکی لازمه؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۳</span>
         <span class="faq-q-text">ویزا چقدر طول می‌کشه؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۴</span>
         <span class="faq-q-text">هزینه مهاجرت چقدره؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۵</span>
         <span class="faq-q-text">بدون مدرک دانشگاهی می‌شه؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۶</span>
         <span class="faq-q-text">چه شغل‌هایی بیشترین تقاضا رو دارن؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۷</span>
         <span class="faq-q-text">رزومه عربی چطور بنویسم؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۸</span>
         <span class="faq-q-text">مصاحبه کاری در عراق چطوریه؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۹</span>
         <span class="faq-q-text">حقوق معمول چقدره؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۱۰</span>
         <span class="faq-q-text">اقامت بعد از استخدام می‌گیرم؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۱۱</span>
         <span class="faq-q-text">کدوم شهرها فرصت بیشتری دارن؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۱۲</span>
         <span class="faq-q-text">خطر کلاهبرداری هست؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۱۳</span>
         <span class="faq-q-text">آموزش زبان عربی لازمه؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۱۴</span>
         <span class="faq-q-text">مدارک ترجمه‌شده کجا تأیید بشه؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۱۵</span>
         <span class="faq-q-text">مسکن و بیمه چی؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۱۶</span>
         <span class="faq-q-text">با خانواده می‌تونم برم؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۱۷</span>
         <span class="faq-q-text">قرارداد کاری چه بندهایی داشته باشه؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۱۸</span>
         <span class="faq-q-text">اگر کارفرما تخلف کرد چی؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۱۹</span>
         <span class="faq-q-text">بازگشت به ایران چطوریه؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
         <span class="faq-num">۲۰</span>
         <span class="faq-q-text">از کجا مطمئن بشم آگهی واقعیه؟</span>
-        <span class="faq-toggle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </span>
+        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">
-        متن پاسخ این بخش را بعداً قرار می‌دهیم.
-      </div></div></div>
+      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
     </div>
 
   </div>
@@ -719,32 +592,60 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   <!-- کارت پایانی -->
   <section class="cta-card">
     <h3 class="cta-title">آماده‌ای برای قدم بعدی؟</h3>
-    <p class="cta-text">همین حالا آگهی‌های استخدام عراق رو ببین و شغل مناسب خودت رو پیدا کن.</p>
-    <button class="cta-button" onclick="alert('رفتن به صفحه آگهی‌ها')">
-      مشاهده آگهی‌ها
+    <p class="cta-text">همین حالا درخواستت رو ثبت کن و شغل مناسب خودت رو پیدا کن.</p>
+    <a href="request.html" class="cta-button">
+      ثبت درخواست
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="19" y1="12" x2="5" y2="12"/>
         <polyline points="12 19 5 12 12 5"/>
       </svg>
-    </button>
+    </a>
   </section>
+
+  <!-- منوی پایین (همسان با index) -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      خانه
+    </a>
+    <a href="guide.html" class="nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      راهنما
+    </a>
+    <a href="request.html" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="16"/>
+        <line x1="8" y1="12" x2="16" y2="12"/>
+      </svg>
+      ثبت درخواست
+    </a>
+    <a href="status.html" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      وضعیت من
+    </a>
+  </nav>
 
 </div>
 
 <script>
-/* آکاردئون نرم — فقط یک سوال باز بمونه (اختیاری) */
+/* آکاردئون نرم — چندتا می‌تونن باز بمونن */
 document.querySelectorAll('.faq-question').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq-item');
-    const wasOpen = item.classList.contains('is-open');
-
-    // اگر می‌خوای همیشه فقط یکی باز باشه، خط پایین رو از کامنت دربیار:
-    // document.querySelectorAll('.faq-item.is-open').forEach(i => i.classList.remove('is-open'));
-
-    item.classList.toggle('is-open', !wasOpen);
+    item.classList.toggle('is-open');
   });
 });
 </script>
 
 </body>
-        </html>
+                                                                                                                                                                                                   </html>

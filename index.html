@@ -2,335 +2,434 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>kar 🏗 dar — دانلود</title>
-<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-Variable-font-face.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/gh/aminabedi68/Estedad@v10.0.0/dist/font-face.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d7a5f">
+<title>کاردار | MU✂️MU</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html, body { height:100%; }
+/* ===================== متغیرها ===================== */
+:root{
+  --bg:#f3f8f5;
+  --surface:#ffffff;
+  --surface-2:#e9f2ec;
+  --text:#1a2b23;
+  --text-soft:#4a5e52;
+  --text-mute:#8fa399;
+  --border:#d4e2d9;
+  --border-2:#e3efe7;
+  --brand:#0d7a5f;
+  --brand-2:#0a5e49;
+  --brand-soft:#e3f1eb;
+  --brand-glow:rgba(13,122,95,.25);
+  --gold:#f5b942;
+  --danger:#dc4c3f;
+  --r-sm:8px; --r-md:14px; --r-lg:20px; --r-xl:28px;
+  --shadow-sm:0 2px 8px rgba(13,122,95,.06);
+  --shadow-md:0 6px 20px rgba(13,122,95,.10);
+  --shadow-lg:0 16px 40px rgba(13,122,95,.14);
+  --ease:cubic-bezier(.4,0,.2,1);
+}
 
-  body {
-    font-family: 'Estedad', 'Vazirmatn', -apple-system, BlinkMacSystemFont, sans-serif;
-    background:#0c0a1f;
-    color:#ffffff;
-    min-height:100dvh;
-    overflow-x:hidden;
-    overscroll-behavior-y: auto;
-    -webkit-font-smoothing: antialiased;
-  }
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:'Vazirmatn',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
 
-  .hero-visual {
-    position: relative;
-    width:100%;
-    height: 46vh;
-    min-height: 320px;
-    overflow:hidden;
-    display:flex; align-items:center; justify-content:center;
-  }
-  .hero-visual::before {
-    content:'';
-    position:absolute; inset:0;
-    background:
-      radial-gradient(circle at 30% 20%, rgba(168,85,247,0.55), transparent 55%),
-      radial-gradient(circle at 75% 70%, rgba(236,72,153,0.5), transparent 55%),
-      radial-gradient(circle at 50% 100%, rgba(59,130,246,0.35), transparent 60%),
-      linear-gradient(180deg, #0c0a1f 0%, #1a1035 100%);
-  }
-  .hero-visual::after {
-    content:'';
-    position:absolute; inset:0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
-    pointer-events:none;
-  }
+/* ===================== قالب اپ ===================== */
+.app{
+  max-width:480px;
+  margin:0 auto;
+  min-height:100vh;
+  background:var(--bg);
+  position:relative;
+  padding-bottom:88px; /* جای منوی پایین */
+  box-shadow:0 0 60px rgba(13,122,95,.08);
+}
 
-  .hero-icon {
-    position: relative;
-    z-index:2;
-    width: 140px; height: 140px;
-    border-radius: 34px;
-    display: block;
-    background: #F6F4EE;
-    padding: 18px;
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow:
-      0 30px 60px -20px rgba(0,0,0,0.7),
-      0 0 80px -20px rgba(168,85,247,0.6),
-      inset 0 2px 4px rgba(255,255,255,0.15);
-    animation: float 4s ease-in-out infinite;
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
+/* ===================== هدر ===================== */
+.app-header{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 18px;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(18px) saturate(180%);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);
+  border-bottom:1px solid var(--border-2);
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-icon{
+  width:46px;height:46px;border-radius:14px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:#fff;font-size:1.4rem;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 6px 18px var(--brand-glow);
+}
+.brand-name{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand-subtitle{font-size:.8rem;color:var(--text-mute);margin-top:-2px}
+.header-action{
+  width:44px;height:44px;border-radius:14px;
+  display:grid;place-items:center;
+  background:var(--surface);
+  border:1px solid var(--border);
+  color:var(--text-soft);
+  transition:all .25s var(--ease);
+  box-shadow:var(--shadow-sm);
+}
+.header-action:hover{color:var(--brand);border-color:var(--brand);transform:translateY(-1px)}
 
-  .content {
-    position: relative;
-    z-index: 3;
-    max-width: 460px;
-    margin: -40px auto 0;
-    padding: 0 20px;
-  }
+/* ===================== هیرو ===================== */
+.hero{
+  position:relative;
+  margin:18px;
+  padding:32px 24px;
+  border-radius:var(--r-xl);
+  background:
+    radial-gradient(120% 100% at 100% 0%, rgba(13,122,95,.12) 0%, transparent 60%),
+    linear-gradient(135deg,#ffffff 0%, #eef7f2 100%);
+  border:1px solid var(--border-2);
+  box-shadow:var(--shadow-md);
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:auto -40px -60px auto;
+  width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,var(--brand-soft),transparent 70%);
+  opacity:.7;pointer-events:none;
+}
+.hero-label{
+  display:inline-block;
+  padding:6px 14px;border-radius:999px;
+  background:var(--brand-soft);color:var(--brand-2);
+  font-size:.78rem;font-weight:700;
+  margin-bottom:14px;
+  position:relative;z-index:1;
+}
+.hero-title{
+  font-size:1.6rem;font-weight:800;line-height:1.35;
+  color:var(--text);letter-spacing:-.02em;
+  margin-bottom:8px;position:relative;z-index:1;
+}
+.hero-text{
+  font-size:.92rem;color:var(--text-soft);
+  line-height:1.8;margin-bottom:20px;
+  position:relative;z-index:1;
+}
+.hero-button{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 24px;border-radius:16px;
+  background:linear-gradient(180deg,var(--brand),var(--brand-2));
+  color:#fff;font-weight:700;font-size:.95rem;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 8px 22px var(--brand-glow);
+  transition:all .25s var(--ease);
+  position:relative;z-index:1;
+}
+.hero-button:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 12px 28px var(--brand-glow)}
+.hero-button:active{transform:translateY(0)}
+.hero-button svg{width:18px;height:18px;transform:rotate(0deg)}
 
-  .card {
-    background: rgba(255,255,255,0.04);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 28px;
-    padding: 32px 24px 26px;
-    box-shadow: 0 30px 80px -30px rgba(0,0,0,0.8);
-    text-align:center;
-    animation: rise 0.8s cubic-bezier(.2,.7,.2,1) both;
-  }
-  @keyframes rise {
-    from { opacity:0; transform: translateY(24px); }
-    to   { opacity:1; transform: translateY(0); }
-  }
+/* ===================== عنوان بخش ===================== */
+.section-head{
+  padding:0 18px;margin:24px 0 14px;
+  display:flex;align-items:flex-end;justify-content:space-between;
+}
+.section-title{font-size:1.15rem;font-weight:800;letter-spacing:-.01em}
+.section-caption{font-size:.82rem;color:var(--text-mute);margin-top:2px}
 
-  .badge {
-    display: inline-flex; align-items:center; gap:6px;
-    background: rgba(168,85,247,0.15);
-    border: 1px solid rgba(168,85,247,0.35);
-    color:#d8b4fe;
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.4px;
-    padding: 5px 12px;
-    border-radius: 999px;
-    margin-bottom: 18px;
-  }
-  .badge .live {
-    width: 6px; height: 6px; border-radius: 50%;
-    background:#a855f7;
-    box-shadow: 0 0 0 3px rgba(168,85,247,0.25);
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
+/* ===================== کارت‌های خدمات ===================== */
+.features{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:12px;padding:0 18px;
+}
+.feature{
+  position:relative;
+  display:flex;flex-direction:column;align-items:flex-start;
+  padding:18px 16px;
+  background:var(--surface);
+  border:1px solid var(--border-2);
+  border-radius:var(--r-lg);
+  box-shadow:var(--shadow-sm);
+  transition:all .3s var(--ease);
+  cursor:pointer;
+  overflow:hidden;
+}
+.feature::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--brand-soft) 0%,transparent 60%);
+  opacity:0;transition:opacity .3s var(--ease);
+  pointer-events:none;
+}
+.feature:hover{transform:translateY(-4px);border-color:var(--brand);box-shadow:var(--shadow-lg),0 0 0 4px var(--brand-glow)}
+.feature:hover::after{opacity:1}
+.feature:active{transform:translateY(-2px)}
+.feature-icon{
+  position:relative;z-index:1;
+  width:52px;height:52px;border-radius:14px;
+  display:grid;place-items:center;
+  background:var(--surface-2);color:var(--brand-2);
+  margin-bottom:12px;
+  transition:all .3s var(--ease);
+}
+.feature:hover .feature-icon{
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  color:#fff;transform:scale(1.06);
+  box-shadow:0 8px 20px var(--brand-glow);
+}
+.feature-icon svg{width:26px;height:26px}
+.feature-title{position:relative;z-index:1;font-size:.95rem;font-weight:700;margin-bottom:2px}
+.feature-text{position:relative;z-index:1;font-size:.78rem;color:var(--text-mute)}
+.feature-arrow{
+  position:absolute;top:14px;left:14px;z-index:1;
+  width:26px;height:26px;border-radius:8px;
+  display:grid;place-items:center;
+  color:var(--text-mute);
+  transition:all .3s var(--ease);
+}
+.feature:hover .feature-arrow{color:var(--brand);transform:translateX(-3px)}
+.feature-arrow svg{width:16px;height:16px}
 
-  h1 {
-    font-family: 'Estedad', sans-serif;
-    font-size: 42px;
-    font-weight: 900;
-    letter-spacing: -1.5px;
-    line-height: 1.1;
-    margin-bottom: 8px;
-    background: linear-gradient(180deg, #ffffff 0%, #c4b5fd 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .tagline {
-    font-size: 14px;
-    color:#9ca3af;
-    font-weight: 500;
-    line-height: 1.6;
-    margin-bottom: 24px;
-  }
+/* ===================== کارت قیمت ===================== */
+.price-card{
+  margin:20px 18px 0;
+  padding:22px;
+  border-radius:var(--r-lg);
+  background:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 100%);
+  color:#fff;position:relative;overflow:hidden;
+  box-shadow:0 14px 34px var(--brand-glow);
+  cursor:pointer;
+  transition:all .3s var(--ease);
+}
+.price-card::before{
+  content:'';position:absolute;top:-40px;left:-40px;
+  width:160px;height:160px;border-radius:50%;
+  background:rgba(255,255,255,.12);
+}
+.price-card::after{
+  content:'';position:absolute;bottom:-60px;right:-30px;
+  width:180px;height:180px;border-radius:50%;
+  background:rgba(255,255,255,.08);
+}
+.price-card:hover{transform:translateY(-3px);box-shadow:0 20px 44px var(--brand-glow)}
+.price-card-top{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
+.price-card-title{font-size:1.2rem;font-weight:800}
+.price-card-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:rgba(255,255,255,.18);
+  display:grid;place-items:center;
+}
+.price-card-icon svg{width:22px;height:22px}
+.price-card-text{
+  font-size:.85rem;color:rgba(255,255,255,.85);
+  margin:8px 0 16px;position:relative;z-index:1;
+}
+.price-card-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.88rem;font-weight:700;
+  position:relative;z-index:1;
+}
+.price-card-link svg{width:16px;height:16px;transition:transform .25s var(--ease)}
+.price-card:hover .price-card-link svg{transform:translateX(-3px)}
 
-  .stats-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 16px 0;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    margin-bottom: 22px;
-  }
-  .stat-mini { text-align:center; }
-  .stat-mini .val {
-    font-size: 16px; font-weight: 800;
-    color:#fff;
-    letter-spacing: -0.3px;
-    margin-bottom: 3px;
-    display: block;
-  }
-  .stat-mini .lbl {
-    font-size: 10px; color:#6b7280;
-    font-weight: 600; letter-spacing: 0.3px;
-  }
-  .stat-mini .stars {
-    display: flex; justify-content:center; gap:1px;
-    font-size: 12px;
-    direction: ltr;
-    color:#3f3f46;
-    margin-bottom: 3px;
-  }
-  .stat-mini .stars .on { color:#fbbf24; }
+/* ===================== کارت اعتماد ===================== */
+.trust-card{
+  margin:14px 18px 0;
+  padding:18px 20px;
+  background:var(--surface);
+  border:1px solid var(--border-2);
+  border-radius:var(--r-lg);
+  box-shadow:var(--shadow-sm);
+}
+.trust-row{display:flex;align-items:center;gap:14px}
+.trust-icon{
+  width:44px;height:44px;border-radius:12px;
+  display:grid;place-items:center;
+  background:var(--brand-soft);color:var(--brand-2);
+  flex-shrink:0;
+}
+.trust-icon svg{width:22px;height:22px}
+.trust-title{font-size:.95rem;font-weight:700}
+.trust-text{font-size:.78rem;color:var(--text-mute);margin-top:2px}
 
-  .sec-line {
-    display:flex; align-items:center; gap:9px;
-    padding: 12px 14px;
-    background: rgba(16,185,129,0.06);
-    border: 1px solid rgba(16,185,129,0.2);
-    border-radius: 12px;
-    margin-bottom: 20px;
-    text-align:right;
-  }
-  .sec-line .check-ic {
-    flex-shrink:0;
-    width: 26px; height: 26px;
-    border-radius: 50%;
-    background: rgba(16,185,129,0.15);
-    border: 1px solid rgba(16,185,129,0.4);
-    display:flex; align-items:center; justify-content:center;
-    color: #6ee7b7;
-    font-size: 12px; font-weight: 900;
-  }
-  .sec-line p {
-    font-size: 11.5px;
-    color:#86efac;
-    line-height: 1.55;
-    font-weight: 500;
-  }
-  .sec-line b { color:#6ee7b7; font-weight: 800; }
+/* ===================== منوی پایین ===================== */
+.bottom-nav{
+  position:fixed;bottom:0;left:0;right:0;z-index:60;
+  max-width:480px;margin:0 auto;
+  display:flex;justify-content:space-around;align-items:center;
+  padding:10px 8px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(18px) saturate(180%);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);
+  border-top:1px solid var(--border-2);
+  box-shadow:0 -4px 20px rgba(13,122,95,.06);
+}
+.nav-item{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  padding:6px 14px;border-radius:12px;
+  color:var(--text-mute);font-size:.7rem;font-weight:600;
+  transition:all .25s var(--ease);
+}
+.nav-item svg{width:22px;height:22px}
+.nav-item.active{color:var(--brand-2);background:var(--brand-soft)}
+.nav-item:hover{color:var(--brand-2)}
 
-  .btn-inline {
-    display:flex; align-items:center; justify-content:center; gap:9px;
-    width: 100%;
-    padding: 15px 18px;
-    background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
-    color:#fff;
-    text-decoration:none;
-    border-radius: 14px;
-    font-size: 15px; font-weight: 800;
-    letter-spacing: 0.2px;
-    box-shadow:
-      0 14px 30px -8px rgba(168,85,247,0.55),
-      inset 0 1px 0 rgba(255,255,255,0.2);
-    transition: transform 0.18s;
-  }
-  .btn-inline:active { transform: scale(0.98); }
-  .btn-inline svg { width:17px; height:17px; }
+/* ===================== انیمیشن ورود ===================== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.hero{animation:fadeUp .6s var(--ease) both}
+.feature{animation:fadeUp .5s var(--ease) both}
+.feature:nth-child(1){animation-delay:60ms}
+.feature:nth-child(2){animation-delay:120ms}
+.feature:nth-child(3){animation-delay:180ms}
+.feature:nth-child(4){animation-delay:240ms}
+.price-card{animation:fadeUp .5s var(--ease) .3s both}
+.trust-card{animation:fadeUp .5s var(--ease) .36s both}
 
-  .version {
-    margin-top: 12px;
-    font-size: 11px; color:#6b7280;
-    font-weight: 600;
-  }
-  .version b { color:#c4b5fd; font-weight: 800; }
-
-  .footer {
-    text-align: center;
-    margin-top: 22px;
-    padding: 16px 0 10px;
-    font-size: 11px;
-    color:#4b5563;
-    font-weight: 600;
-  }
-  .footer .ver-badge {
-    display: inline-flex; align-items: center; gap:6px;
-    color: #a78bfa;
-  }
-  .footer .ver-badge .v-ck {
-    width: 13px; height: 13px; border-radius: 50%;
-    background: #a855f7;
-    color:#fff; font-size: 8px; font-weight: 900;
-    display: flex; align-items: center; justify-content: center;
-  }
-
-  @media (max-height: 720px) {
-    .hero-visual { height: 38vh; min-height: 240px; }
-    .hero-icon { width: 112px; height: 112px; border-radius: 28px; padding: 14px; }
-    .card { padding: 26px 20px 22px; }
-    h1 { font-size: 36px; }
-    .tagline { font-size: 13px; margin-bottom: 18px; }
-    .stats-row { padding: 13px 0; margin-bottom: 18px; }
-    .sec-line { padding: 10px 12px; margin-bottom: 16px; }
-  }
+@media (max-width:380px){
+  .hero-title{font-size:1.4rem}
+  .feature{padding:16px 12px}
+  .feature-icon{width:46px;height:46px}
+}
 </style>
 </head>
 <body>
 
-  <div class="hero-visual">
-    <svg id="appIcon" class="hero-icon" fill="#2E4732" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2.4 0A2.395 2.395 0 0 0 0 2.4v19.2C0 22.9296 1.0704 24 2.4 24h19.2c1.3296 0 2.4-1.0704 2.4-2.4V2.4C24 1.0704 22.9296 0 21.6 0H10.112v11.7119l3.648-4.128h6l-4.58 4.3506 4.868 8.1296h-5.52l-2.5938-5.0211L10.112 16.8v3.264H5.12V0Z"/>
-    </svg>
-  </div>
+<div class="app">
 
-  <div class="content">
-    <div class="card">
-
-      <div class="badge">
-        <span class="live"></span>
-        به‌روز و فعال
+  <!-- هدر -->
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
       </div>
-
-      <h1>kar 🏗 dar</h1>
-      <p class="tagline">تجربه‌ای متفاوت، سریع و امن — همین حالا شروع کن</p>
-
-      <div class="stats-row">
-        <div class="stat-mini">
-          <div class="stars"><span class="on">★★★★</span>★</div>
-          <span class="lbl">امتیاز</span>
-        </div>
-        <div class="stat-mini">
-          <span class="val">سبک</span>
-          <span class="lbl">حجم</span>
-        </div>
-        <div class="stat-mini">
-          <span class="val" id="verMini">02.0.00</span>
-          <span class="lbl">نسخه</span>
-        </div>
+      <div class="brand-text">
+        <div class="brand-name">کاردار</div>
+        <div class="brand-subtitle">سرویس آرایشی و بهداشتی</div>
       </div>
-
-      <div class="sec-line">
-        <div class="check-ic">✓</div>
-        <p><b>حریم خصوصی شما محفوظ است.</b> این اپ به هیچ بخش از گوشی شما دسترسی ندارد.</p>
-      </div>
-
-      <a href="#" class="btn-inline" id="downloadBtn" download rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
-        دانلود و نصب
-      </a>
-
-      <div class="version">آخرین نسخه: <b id="verFull">02.0.00</b></div>
-
     </div>
+    <button class="header-action" aria-label="راهنما" onclick="alert('راهنمای اپلیکیشن')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </button>
+  </header>
 
-    <div class="footer">
-      <div class="ver-badge">
-        <span class="v-ck">✓</span>
-        تایید شده توسط رایان اپ
-      </div>
+  <!-- هیرو -->
+  <section class="hero">
+    <span class="hero-label">✨ پیشنهاد ویژه</span>
+    <h1 class="hero-title">بهترین خدمات، نزدیک‌ترین شعبه</h1>
+    <p class="hero-text">با یک کلیک نوبت بگیر و از تخفیف‌های ویژهٔ امروز جا نمون.</p>
+    <button class="hero-button" onclick="alert('رفتن به صفحه فروش')">
+      همین حالا شروع کن
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    </button>
+  </section>
+
+  <!-- عنوان بخش -->
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">چه کاری میخوای انجام بدی؟</h2>
+      <p class="section-caption">همه‌چیز ساده و مرحله‌به‌مرحله</p>
     </div>
   </div>
 
-  <script>
-    (function(){
-      var btn = document.getElementById('downloadBtn');
-      var repo = 'iran98ir/apk-kardar-iraq';
+  <!-- ۴ کارت خدمات -->
+  <section class="features">
 
-      function fallback(){
-        btn.href = 'https://github.com/' + repo + '/releases/latest';
-      }
+    <article class="feature" onclick="alert('لیست قیمت')">
+      <span class="feature-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+      </div>
+      <h3 class="feature-title">لیست قیمت</h3>
+      <p class="feature-text">قیمت‌های شفاف و به‌روز</p>
+    </article>
 
-      fetch('https://api.github.com/repos/' + repo + '/releases/latest', {
-        headers: { 'Accept': 'application/vnd.github+json' }
-      })
-      .then(function(r){
-        if (!r.ok) throw new Error('API error ' + r.status);
-        return r.json();
-      })
-      .then(function(data){
-        var assets = data.assets || [];
-        var apk = assets.find(function(a){ return /\.apk$/i.test(a.name); });
+    <article class="feature" onclick="alert('فروش ویژه')">
+      <span class="feature-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+      </div>
+      <h3 class="feature-title">فروش ویژه</h3>
+      <p class="feature-text">تخفیف‌های خاص هفتگی</p>
+    </article>
 
-        if (apk) {
-          btn.href = apk.browser_download_url;
-          btn.setAttribute('download', apk.name);
-        } else {
-          fallback();
-        }
-      })
-      .catch(function(err){
-        console.warn('GitHub API:', err);
-        fallback();
-      });
-    })();
-  </script>
+    <article class="feature" onclick="alert('راهنما')">
+      <span class="feature-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 class="feature-title">راهنما</h3>
+      <p class="feature-text">راهنمای کامل خرید</p>
+    </article>
+
+    <article class="feature" onclick="alert('ارسال')">
+      <span class="feature-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+      </div>
+      <h3 class="feature-title">ارسال</h3>
+      <p class="feature-text">ارسال سریع و مطمئن</p>
+    </article>
+
+  </section>
+
+  <!-- کارت قیمت -->
+  <section class="price-card" onclick="alert('صفحه قیمت')">
+    <div class="price-card-top">
+      <div class="price-card-title">قیمت‌ها</div>
+      <div class="price-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+    </div>
+    <p class="price-card-text">لیست کامل قیمت خدمات با جزئیات</p>
+    <span class="price-card-link">
+      مشاهده
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    </span>
+  </section>
+
+  <!-- کارت اعتماد -->
+  <section class="trust-card">
+    <div class="trust-row">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <div>
+        <h3 class="trust-title">پرداخت امن</h3>
+        <p class="trust-text">اطلاعات شما کاملاً محفوظ است</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- منوی پایین -->
+  <nav class="bottom-nav">
+    <a href="#" class="nav-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      خانه
+    </a>
+    <a href="#" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      جستجو
+    </a>
+    <a href="#" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      علاقه‌مندی
+    </a>
+    <a href="#" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      پروفایل
+    </a>
+  </nav>
+
+</div>
+
 </body>
-</html>
+                                                                                                                                  </html>

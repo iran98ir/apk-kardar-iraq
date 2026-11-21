@@ -1,651 +1,1355 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" id="top">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0d7a5f">
-<title>راهنمای کاردار | کاریابی در عراق</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>راهنمای کامل کاردار | ۳۰ پرسش و پاسخ پیش از پذیرش — استخدام رسمی در عراق</title>
+<meta name="description" content="راهنمای کامل کاردار؛ ۳۰ پرسش و پاسخ شفاف دربارهٔ استخدام رسمی در عراق، شرایط سنی ۱۸ تا ۶۲، هزینه‌ها، اقامت، پشتیبانی و تعهدات مکتوب. مطالعهٔ این صفحه پیش از ثبت درخواست الزامی است — حدود ۱۲ دقیقه.">
+<meta name="theme-color" content="#06231A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B3D2E'/%3E%3Cpath d='M17 12h11v14l14-14h14L36 31l20 21H42L28 37v15H17z' fill='%23FFFFFF'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
 <style>
+/* ============ TOKENS (هم‌خانواده با صفحه اصلی) ============ */
 :root{
-  --bg:#f3f8f5; --surface:#ffffff; --surface-2:#e9f2ec;
-  --text:#1a2b23; --text-soft:#4a5e52; --text-mute:#8fa399;
-  --border:#d4e2d9; --border-2:#e3efe7;
-  --brand:#0d7a5f; --brand-2:#0a5e49; --brand-soft:#e3f1eb;
-  --brand-glow:rgba(13,122,95,.25);
-  --gold:#f5b942; --gold-soft:#fdf3dd; --gold-glow:rgba(245,185,66,.35);
-  --r-md:16px; --r-lg:22px; --r-xl:30px;
-  --shadow-sm:0 2px 8px rgba(13,122,95,.06);
-  --shadow-md:0 6px 20px rgba(13,122,95,.10);
-  --shadow-lg:0 16px 40px rgba(13,122,95,.14);
-  --ease:cubic-bezier(.4,0,.2,1);
-  --ease-bounce:cubic-bezier(.34,1.56,.64,1);
+  --forest-950:#03130D; --forest-900:#06231A; --forest-800:#0B3D2E; --forest-700:#0E4D38; --forest-600:#146247;
+  --emerald:#1DBE82; --emerald-soft:#35D49A;
+  --gold:#D4AF37; --gold-bright:#F5C542; --gold-deep:#B8860B; --amber:#FFB020;
+  --ivory:#F6F1E3; --ivory-70:rgba(246,241,227,.76); --ivory-50:rgba(246,241,227,.55);
+  --teal:#2AA8A0; --danger:#FF6B6B; --danger-deep:#8C2F39;
+  --surface:rgba(14,77,56,.22); --surface-2:rgba(11,61,46,.38);
+  --line:rgba(212,175,55,.24); --line-soft:rgba(246,241,227,.13);
+  --header-h:78px; --nav-h:82px;
+  --gutter:clamp(20px,4vw,48px); --maxw:1200px;
+  --grad-gold:linear-gradient(135deg,#F7D060 0%,#D4AF37 55%,#B8860B 100%);
+  --shadow-gold:0 14px 40px rgba(212,175,55,.22);
+  --rail-pad:max(var(--gutter), calc((100vw - var(--maxw))/2 + var(--gutter)));
+  --ease-lux:cubic-bezier(.22,1,.36,1);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+/* ============ BASE ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;color-scheme:dark;scroll-behavior:smooth;scrollbar-color:var(--gold) var(--forest-900)}
+html.lenis{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
 body{
-  font-family:'Vazirmatn',system-ui,sans-serif;
-  background:var(--bg);color:var(--text);
-  line-height:1.85;-webkit-font-smoothing:antialiased;
-  overflow-x:hidden;font-size:17px;
+  font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif;
+  font-size:1.1875rem;line-height:1.95;font-weight:500;
+  background:var(--forest-950);color:var(--ivory);
+  overflow-x:hidden;overflow-x:clip;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
+::selection{background:var(--gold-bright);color:var(--forest-900)}
+::-webkit-scrollbar{width:12px}
+::-webkit-scrollbar-track{background:var(--forest-900)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--gold),var(--emerald));border-radius:99px;border:3px solid var(--forest-900)}
+::-webkit-scrollbar-thumb:hover{background:var(--gold-bright)}
 a{color:inherit;text-decoration:none}
-button{font-family:inherit;cursor:pointer;border:none;background:none}
-
-.app{
-  max-width:500px;margin:0 auto;min-height:100vh;
-  background:var(--bg);position:relative;padding-bottom:96px;
-  box-shadow:0 0 60px rgba(13,122,95,.08);
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+ul{list-style:none}
+svg{display:block}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px;border-radius:8px}
+[id]{scroll-margin-top:calc(var(--header-h) + 22px)}
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+main{position:relative;z-index:1}
+section{padding-block:78px}
+.skip{position:absolute;top:-60px;inset-inline-start:16px;z-index:200;background:var(--grad-gold);color:var(--forest-900);font-weight:800;padding:10px 18px;border-radius:12px;transition:top .2s}
+.skip:focus{top:12px}
+/* ============ BACKGROUND ============ */
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;will-change:transform}
+#blob-a{width:62vmax;height:62vmax;top:-22vmax;inset-inline-start:-16vmax;opacity:.6;
+  background:radial-gradient(circle at 35% 35%,rgba(29,190,130,.34),rgba(29,190,130,0) 62%);
+  animation:drift-a 30s ease-in-out infinite alternate}
+#blob-b{width:54vmax;height:54vmax;top:20%;inset-inline-end:-20vmax;opacity:.55;
+  background:radial-gradient(circle at 60% 40%,rgba(212,175,55,.22),rgba(212,175,55,0) 60%);
+  animation:drift-b 38s ease-in-out infinite alternate}
+#blob-c{width:56vmax;height:56vmax;bottom:-24vmax;inset-inline-start:10%;opacity:.5;
+  background:radial-gradient(circle at 50% 50%,rgba(42,168,160,.22),rgba(42,168,160,0) 60%);
+  animation:drift-c 44s ease-in-out infinite alternate}
+@keyframes drift-a{to{transform:translate(7vmax,5vmax) scale(1.14)}}
+@keyframes drift-b{to{transform:translate(-6vmax,7vmax) scale(1.1)}}
+@keyframes drift-c{to{transform:translate(5vmax,-6vmax) scale(1.16)}}
+.grain{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+  background-size:260px 260px}
+.pattern{position:relative}
+.pattern::before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-opacity='.13'%3E%3Crect x='26' y='26' width='44' height='44'/%3E%3Crect x='26' y='26' width='44' height='44' transform='rotate(45 48 48)'/%3E%3Ccircle cx='48' cy='48' r='6'/%3E%3Cpath d='M48 0v20M48 76v20M0 48h20M76 48h20'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:96px 96px}
+/* ============ TYPO HELPERS ============ */
+.k-gold{color:var(--gold-bright);font-weight:900}
+.k-emerald{color:var(--emerald-soft);font-weight:800}
+.k-box{display:inline-block;border:1.5px solid rgba(245,197,66,.45);background:rgba(245,197,66,.09);color:var(--gold-bright);font-weight:800;border-radius:12px;padding:.02em .45em}
+mark.sweep{
+  background:linear-gradient(0deg,rgba(245,197,66,.3) 0 32%,transparent 32%) no-repeat right bottom/0% 100%;
+  color:var(--gold-bright);font-weight:900;padding:0 .1em;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  transition:background-size .9s var(--ease-lux) .15s}
+mark.sweep.lit{background-size:100% 100%}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:1.125rem;font-weight:800;color:var(--gold-bright)}
+.eyebrow::before{content:'✦';color:var(--emerald-soft)}
+.eyebrow::after{content:'';width:64px;height:1.5px;background:linear-gradient(90deg,var(--gold),transparent)}
+.sect-head h2{font-size:clamp(1.95rem,5.4vw,3.1rem);font-weight:900;line-height:1.55;margin:14px 0 10px}
+.sect-head .sub{font-size:1.1875rem;color:var(--ivory-70);max-width:660px;line-height:2}
+/* ============ BUTTONS ============ */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:15px 28px;border-radius:16px;font-size:1.1875rem;font-weight:800;
+  overflow:hidden;transition:transform .25s var(--ease-lux),box-shadow .25s,border-color .25s,color .25s,background .25s;white-space:nowrap}
+.btn:active{transform:scale(.97)}
+.btn svg{width:22px;height:22px;flex:0 0 auto}
+.btn-gold{background:var(--grad-gold);color:#142B22;box-shadow:var(--shadow-gold),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 48px rgba(212,175,55,.38),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-gold::after{content:'';position:absolute;top:0;bottom:0;left:-70%;width:45%;
+  background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-20deg);transition:left .6s ease}
+.btn-gold:hover::after{left:135%}
+.btn-ghost{border:1.5px solid rgba(246,241,227,.28);background:rgba(246,241,227,.04);color:var(--ivory)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright);background:rgba(212,175,55,.08);transform:translateY(-2px)}
+.btn-dark{background:linear-gradient(140deg,#0E4D38,#06231A);color:var(--ivory);border:1.5px solid rgba(246,241,227,.3);box-shadow:0 10px 26px rgba(6,35,26,.45)}
+.btn-dark:hover{border-color:rgba(245,197,66,.7);transform:translateY(-2px);box-shadow:0 16px 36px rgba(6,35,26,.55)}
+/* ============ HEADER (فقط نشان و نام) ============ */
+.header{position:fixed;inset-inline:0;top:0;z-index:70;padding-top:env(safe-area-inset-top);
+  border-bottom:1px solid transparent;transition:background .35s,border-color .35s,box-shadow .35s}
+.header.scrolled{background:rgba(4,22,15,.86);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+  border-bottom-color:rgba(212,175,55,.22);box-shadow:0 10px 30px rgba(3,19,13,.45)}
+.header-in{display:flex;align-items:center;height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:13px}
+.logo-tile{width:52px;height:52px;border-radius:15px;flex:0 0 auto;
+  box-shadow:0 6px 18px rgba(11,61,46,.65),0 0 0 1.5px rgba(212,175,55,.4)}
+.logo-tile svg{width:100%;height:100%}
+.brand-name{font-size:1.5rem;font-weight:900;color:var(--ivory)}
+.brand-crane{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;font-size:.82em;margin-inline:.08em}
+.read-progress{position:absolute;bottom:-1px;inset-inline:0;height:3px;background:rgba(212,175,55,.12)}
+#read-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--emerald),var(--gold-bright));
+  box-shadow:0 0 12px rgba(245,197,66,.65);transition:width .15s linear}
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;
+  padding:calc(var(--header-h) + 44px) 0 70px;overflow:hidden}
+.hero::before{opacity:.35;-webkit-mask-image:radial-gradient(ellipse at 75% 15%,#000,transparent 72%);mask-image:radial-gradient(ellipse at 75% 15%,#000,transparent 72%)}
+#dust{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-in{position:relative;z-index:2;width:100%}
+#shamseh-wrap{position:absolute;top:40px;inset-inline-end:-150px;width:560px;height:560px;z-index:0;opacity:.17;pointer-events:none}
+#shamseh-wrap svg{width:100%;height:100%;animation:spin 140s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spark{position:absolute;color:var(--gold-bright);font-size:1.4rem;z-index:1;pointer-events:none;animation:twinkle 3.4s ease-in-out infinite}
+.spark.s1{top:18%;inset-inline-start:12%}
+.spark.s2{top:32%;inset-inline-end:26%;animation-delay:1.1s;font-size:1rem}
+.spark.s3{bottom:24%;inset-inline-start:30%;animation-delay:2s;font-size:1.1rem}
+.spark.s4{top:12%;inset-inline-end:44%;animation-delay:.6s;font-size:.9rem}
+@keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7) rotate(0deg)}50%{opacity:.95;transform:scale(1.15) rotate(24deg)}}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;border-radius:99px;
+  border:1.5px solid rgba(245,197,66,.4);background:rgba(245,197,66,.08);
+  color:var(--gold-bright);font-size:1.125rem;font-weight:800;box-shadow:0 8px 26px rgba(212,175,55,.12)}
+.hero-eyebrow svg{width:21px;height:21px;flex:0 0 auto}
+.hero h1{font-size:clamp(2.15rem,6.4vw,4rem);font-weight:900;line-height:1.55;margin:24px 0 20px;max-width:960px}
+.hero h1 span{display:block}
+.hero-lead{font-size:clamp(1.25rem,2.6vw,1.42rem);color:var(--ivory-70);line-height:2.1;max-width:700px}
+.hero-lead b{color:var(--gold-bright);font-weight:900}
+.oath{border:1.5px dashed rgba(245,197,66,.55);border-radius:20px;padding:22px 24px;margin:28px 0;max-width:760px;
+  background:linear-gradient(140deg,rgba(245,197,66,.11),rgba(29,190,130,.05));
+  box-shadow:0 14px 40px rgba(212,175,55,.1)}
+.oath p{font-size:clamp(1.1875rem,2.4vw,1.31rem);font-weight:700;line-height:2.15;color:var(--ivory)}
+.slogans{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 0}
+.slogan-chip{display:inline-flex;align-items:center;gap:9px;padding:9px 20px;border-radius:99px;
+  border:1.5px solid rgba(245,197,66,.45);background:rgba(245,197,66,.07);
+  font-size:1.125rem;font-weight:900;color:var(--ivory)}
+.slogan-chip svg{width:20px;height:20px;color:var(--emerald-soft);flex:0 0 auto}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px;max-width:780px}
+.stat{position:relative;text-align:center;padding:20px 12px 18px;border-radius:18px;overflow:hidden;
+  border:1px solid var(--line-soft);background:linear-gradient(160deg,rgba(14,77,56,.32),rgba(6,35,26,.58));
+  transition:border-color .3s,transform .3s}
+.stat:hover{border-color:rgba(245,197,66,.45);transform:translateY(-3px)}
+.stat::after{content:'';position:absolute;top:0;inset-inline:20%;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.stat-num{display:block;font-size:clamp(2rem,4.5vw,2.7rem);font-weight:900;color:var(--gold-bright);line-height:1.3}
+.stat-label{display:block;margin-top:4px;font-size:1.0625rem;font-weight:600;color:var(--ivory-70);line-height:1.7}
+#scroll-cue{position:absolute;bottom:118px;left:50%;transform:translateX(-50%);z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:5px;color:var(--ivory-50);font-size:1.0625rem;font-weight:600}
+#scroll-cue svg{width:24px;height:24px;color:var(--gold-bright);animation:bob 1.9s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(8px);opacity:1}}
+/* ============ MARQUEE ============ */
+.marquee{position:relative;overflow:hidden;padding:17px 0;
+  border-block:1px solid rgba(212,175,55,.28);
+  background:linear-gradient(90deg,rgba(11,61,46,.55),rgba(6,35,26,.75))}
+.marquee::before,.marquee::after{content:'';position:absolute;top:0;bottom:0;width:90px;z-index:2;pointer-events:none}
+.marquee::before{right:0;background:linear-gradient(-90deg,var(--forest-950),transparent)}
+.marquee::after{left:0;background:linear-gradient(90deg,var(--forest-950),transparent)}
+.mq-track{display:flex;width:max-content;animation:mq 38s linear infinite;will-change:transform}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-group{display:flex;align-items:center;gap:2.6rem;padding-inline-end:2.6rem}
+.mq-item{font-size:1.3rem;font-weight:800;color:var(--gold-bright);white-space:nowrap}
+.mq-star{color:var(--emerald-soft);font-size:1.1rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* ============ Q&A RAILS ============ */
+.qa{padding-block:74px 84px}
+.qa-top{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.rail-ctrl{display:flex;align-items:center;gap:12px}
+.rail-index{font-size:1.125rem;font-weight:800;color:var(--gold-bright);letter-spacing:.06em;min-width:92px;text-align:center}
+.rail-btn{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;
+  border:1.5px solid var(--line);background:var(--surface-2);color:var(--gold-bright);
+  transition:transform .25s,border-color .25s,background .25s,opacity .25s}
+.rail-btn svg{width:24px;height:24px}
+.rail-btn:hover:not(:disabled){border-color:var(--gold);background:rgba(212,175,55,.13);transform:translateY(-2px)}
+.rail-btn:active:not(:disabled){transform:scale(.93)}
+.rail-btn:disabled{opacity:.32;cursor:default}
+.rail{display:flex;gap:22px;overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x mandatory;scroll-padding-inline-start:var(--rail-pad);
+  padding:36px var(--rail-pad) 44px;margin-top:8px;
+  -webkit-overflow-scrolling:touch;user-select:none;-webkit-user-select:none;
+  scrollbar-color:var(--gold) rgba(212,175,55,.12);scrollbar-width:thin}
+.rail::-webkit-scrollbar{height:10px}
+.rail::-webkit-scrollbar-track{background:rgba(212,175,55,.1);border-radius:99px}
+.rail::-webkit-scrollbar-thumb{background:linear-gradient(90deg,var(--emerald),var(--gold-bright));border-radius:99px;border:2px solid var(--forest-900)}
+.rail::-webkit-scrollbar-thumb:hover{background:var(--gold-bright)}
+@media(hover:hover) and (pointer:fine){.rail{cursor:grab}}
+.rail.dragging{scroll-snap-type:none;cursor:grabbing}
+.b-card{position:relative;flex:0 0 auto;width:min(88vw,470px);scroll-snap-align:start;
+  display:flex;flex-direction:column;
+  border-radius:24px;padding:28px 26px 30px;transform-style:preserve-3d;
+  border:1px solid var(--line-soft);
+  background:linear-gradient(165deg,rgba(20,98,71,.36),rgba(6,35,26,.78));
+  box-shadow:0 18px 44px rgba(3,19,13,.5);
+  transition:border-color .3s,box-shadow .3s}
+.b-card::before{content:'';position:absolute;top:0;inset-inline:24px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.75}
+.b-card:hover{border-color:rgba(245,197,66,.5);box-shadow:0 24px 60px rgba(3,19,13,.6),0 10px 36px rgba(212,175,55,.14)}
+.b-card.pre{opacity:0;transform:translateY(36px);
+  transition:opacity .7s ease,transform .7s var(--ease-lux),border-color .3s,box-shadow .3s}
+.b-card.pre.in{opacity:1;transform:translateY(0)}
+@media(hover:none){.b-card{transition:transform .2s,border-color .3s,box-shadow .3s}.b-card:active{transform:scale(.985)}}
+.js-tilt-glare{border-radius:inherit}
+.z1{transform:translateZ(20px)}.z2{transform:translateZ(36px)}.z3{transform:translateZ(54px)}
+.b-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.b-seal{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+  border:1.5px solid var(--line);color:var(--gold-bright);font-size:1.1875rem;font-weight:900;
+  background:radial-gradient(circle at 30% 30%,rgba(245,197,66,.18),transparent 70%)}
+.b-icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;color:var(--gold-bright);
+  border:1px solid var(--line);background:linear-gradient(140deg,rgba(245,197,66,.18),rgba(29,190,130,.12));
+  transition:transform .35s var(--ease-lux)}
+.b-card:hover .b-icon{transform:rotate(-6deg) scale(1.06)}
+.b-icon svg{width:29px;height:29px}
+.b-kicker{display:flex;align-items:center;gap:8px;font-size:1.0625rem;font-weight:800;color:var(--emerald-soft);margin-bottom:6px}
+.b-kicker svg{width:19px;height:19px}
+.b-title{font-size:1.45rem;font-weight:900;line-height:1.7;margin-bottom:14px}
+.b-divider{height:1.5px;border-radius:2px;margin-bottom:16px;
+  background:linear-gradient(90deg,var(--gold),rgba(29,190,130,.4),transparent);opacity:.55}
+.b-body{flex:1 1 auto;display:flex;flex-direction:column;align-items:flex-start}
+.b-body>*{max-width:100%}
+.b-desc{font-size:1.15rem;color:var(--ivory-70);line-height:2}
+.b-desc + .b-desc{margin-top:12px}
+.b-desc b{color:var(--ivory);font-weight:800}
+.b-subhead{font-size:1.1875rem;font-weight:900;color:var(--gold-bright);margin:14px 0 6px}
+.verdict{display:inline-flex;align-items:center;gap:8px;font-size:1.1875rem;font-weight:900;
+  padding:6px 18px;border-radius:12px;margin-bottom:14px}
+.verdict svg{width:21px;height:21px}
+.v-yes{color:#0B3D2E;background:linear-gradient(135deg,#35D49A,#1DBE82);box-shadow:0 6px 18px rgba(29,190,130,.3)}
+.v-no{color:#142B22;background:linear-gradient(135deg,#FFD166,#FFB020);box-shadow:0 6px 18px rgba(255,176,32,.28)}
+.v-warn{color:#FFF3F0;background:linear-gradient(135deg,#E05252,#A93226);box-shadow:0 6px 18px rgba(224,82,82,.3)}
+.b-note{display:flex;align-items:flex-start;gap:10px;margin-top:18px;padding:13px 15px;width:100%;
+  border:1.5px dashed rgba(245,197,66,.35);border-radius:14px;background:rgba(245,197,66,.05);
+  font-size:1.125rem;color:var(--ivory-70);line-height:1.9}
+.b-note-tag{flex:0 0 auto;font-size:1.0625rem;font-weight:900;color:var(--amber);
+  background:rgba(255,176,32,.13);border:1px solid rgba(255,176,32,.35);padding:2px 12px;border-radius:9px;margin-top:3px}
+.b-note.warn{border-color:rgba(255,107,107,.45);background:rgba(255,107,107,.06)}
+.b-note.warn .b-note-tag{color:#FFD9D4;background:rgba(224,82,82,.22);border-color:rgba(255,107,107,.5)}
+.b-list{margin-top:14px;display:grid;gap:10px;width:100%}
+.b-list li{display:flex;align-items:flex-start;gap:9px;font-size:1.125rem;color:var(--ivory-70);line-height:1.85}
+.b-list svg{width:20px;height:20px;flex:0 0 auto;color:var(--emerald-soft);margin-top:6px}
+.b-list b{color:var(--ivory);font-weight:800}
+.num-list{margin-top:6px;display:grid;gap:12px;width:100%}
+.num-list li{display:flex;align-items:flex-start;gap:12px;font-size:1.125rem;color:var(--ivory-70);line-height:1.85}
+.num-list .n{flex:0 0 auto;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
+  background:var(--grad-gold);color:#142B22;font-size:1.0625rem;font-weight:900;margin-top:3px;
+  box-shadow:0 5px 14px rgba(212,175,55,.3)}
+.num-list b{color:var(--ivory);font-weight:800}
+.cost-list{margin-top:6px;display:grid;gap:11px;width:100%}
+.cost-list li{position:relative;padding-inline-start:26px;font-size:1.125rem;color:var(--ivory-70);line-height:1.85}
+.cost-list li::before{content:'✦';position:absolute;inset-inline-start:0;top:0;color:var(--gold-bright);font-size:1.0625rem}
+.cost-list b{color:var(--gold-bright);font-weight:900}
+.salary{margin-top:8px;display:grid;gap:10px;width:100%}
+.salary-row{display:flex;align-items:baseline;gap:10px;font-size:1.125rem;color:var(--ivory-70);font-weight:700}
+.salary-row .dots{flex:1;border-bottom:2px dotted rgba(212,175,55,.4);transform:translateY(-6px);min-width:18px}
+.salary-row .amt{color:var(--gold-bright);font-weight:900;font-size:1.3rem;white-space:nowrap}
+.b-chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.b-chip{font-size:1.0625rem;font-weight:700;color:var(--emerald-soft);
+  border:1px solid rgba(29,190,130,.4);background:rgba(29,190,130,.09);padding:7px 14px;border-radius:99px}
+.b-chip.gold{color:var(--gold-bright);border-color:rgba(245,197,66,.45);background:rgba(245,197,66,.08)}
+.chips-no{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chip-no{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;
+  border:1px solid rgba(255,107,107,.35);background:rgba(255,107,107,.07);
+  font-size:1.125rem;font-weight:700;color:var(--ivory-70);
+  text-decoration:line-through;text-decoration-color:rgba(255,107,107,.85);text-decoration-thickness:2.5px}
+.b-statement{font-size:1.45rem;font-weight:900;color:var(--gold-bright);margin-top:18px;
+  border-bottom:3px solid rgba(245,197,66,.45);display:inline-block;padding-bottom:3px;line-height:1.75}
+/* gold featured card */
+.b-gold{width:min(90vw,540px);color:#142B22;border-color:rgba(255,255,255,.4);
+  background:linear-gradient(150deg,#F7D060,#D4AF37 55%,#C39B2A);
+  box-shadow:0 24px 60px rgba(212,175,55,.3)}
+.b-gold::before{background:linear-gradient(90deg,transparent,rgba(255,255,255,.8),transparent)}
+.b-gold:hover{box-shadow:0 30px 74px rgba(212,175,55,.42)}
+.b-gold .b-seal{border-color:rgba(20,43,34,.4);color:#142B22;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.4),transparent 70%)}
+.b-gold .b-icon{border-color:rgba(20,43,34,.35);color:#142B22;background:rgba(255,255,255,.28)}
+.b-gold .b-kicker{color:#0B3D2E}
+.b-gold .b-title{color:#0B3D2E}
+.b-gold .b-divider{background:linear-gradient(90deg,#0B3D2E,rgba(11,61,46,.4),transparent);opacity:.6}
+.b-gold .b-desc{color:rgba(20,43,34,.88);font-weight:600}
+.b-gold .b-desc b{color:#0B3D2E}
+.b-gold .b-chip{color:#142B22;border-color:rgba(20,43,34,.4);background:rgba(255,255,255,.25);font-weight:800}
+.b-gold .b-statement{color:#0B3D2E;border-bottom-color:rgba(11,61,46,.5)}
+.b-gold .btn{margin-top:20px}
+.rail-foot{display:flex;align-items:center;gap:18px}
+.rail-progress{flex:1;height:7px;border-radius:99px;background:rgba(246,241,227,.09);overflow:hidden}
+.rail-bar{height:100%;width:8%;border-radius:99px;background:linear-gradient(90deg,var(--emerald),var(--gold-bright));transition:width .15s linear}
+.rail-hint{display:flex;align-items:center;gap:8px;font-size:1.0625rem;font-weight:600;color:var(--ivory-50);white-space:nowrap}
+.rail-hint svg{width:20px;height:20px;color:var(--gold-bright)}
+/* ============ INTERLUDE ============ */
+.interlude{position:relative;text-align:center;padding-block:110px;overflow:hidden}
+.urgency-star{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:520px;height:520px;opacity:.1;pointer-events:none}
+.urgency-star svg{width:100%;height:100%;animation:spin 160s linear infinite reverse}
+.urgency-in{position:relative;z-index:1}
+.pulse-row{display:inline-flex;align-items:center;gap:10px;font-size:1.125rem;font-weight:800;color:var(--amber);
+  border:1.5px solid rgba(255,176,32,.4);background:rgba(255,176,32,.08);padding:9px 20px;border-radius:99px}
+.pulse-dot{width:11px;height:11px;border-radius:50%;background:var(--amber);animation:pulse 1.8s ease-out infinite;flex:0 0 auto}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,176,32,.55)}100%{box-shadow:0 0 0 14px rgba(255,176,32,0)}}
+.interlude h2{margin-top:26px;font-weight:900;line-height:1.6}
+.interlude .u1{display:block;font-size:clamp(1.9rem,5.6vw,3.4rem);
+  background:linear-gradient(100deg,#F7D060,#D4AF37 40%,#F5C542 60%,#B8860B);background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{background-position:-220% 0}}
+.interlude .u2{display:block;font-size:clamp(1.55rem,4.2vw,2.4rem);color:var(--ivory);margin-top:12px}
+.interlude .i-desc{margin:22px auto 0;font-size:clamp(1.1875rem,2.4vw,1.31rem);font-weight:600;color:var(--ivory-70);line-height:2.15;max-width:760px}
+.interlude .i-desc b{color:var(--gold-bright);font-weight:900}
+.interlude .btn{margin-top:32px}
+/* ============ FINISH ============ */
+.finish{padding-block:70px 90px}
+.finish-line{font-size:clamp(1.4rem,3.6vw,1.9rem);font-weight:800;line-height:2.05;max-width:820px;margin-top:22px}
+.guide-card{position:relative;border-radius:30px;padding:38px 34px;margin-top:34px;transform-style:preserve-3d;
+  border:2px solid rgba(212,175,55,.55);
+  background:linear-gradient(160deg,#0E4D38,#06231A 72%);
+  box-shadow:0 30px 80px rgba(3,19,13,.6),var(--shadow-gold);
+  transition:border-color .5s,box-shadow .5s}
+.guide-card::before{opacity:.55}
+.guide-card::after{content:'';position:absolute;top:-90px;inset-inline-start:-90px;width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(245,197,66,.18),transparent 65%);pointer-events:none}
+.guide-card>*{position:relative;z-index:1}
+.guide-card.done{border-color:rgba(245,197,66,.9);
+  box-shadow:0 30px 90px rgba(3,19,13,.65),0 0 60px rgba(212,175,55,.3)}
+.guide-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.guide-ico{width:62px;height:62px;flex:0 0 auto;border-radius:18px;display:grid;place-items:center;color:var(--gold-bright);
+  border:1.5px solid rgba(245,197,66,.5);background:rgba(245,197,66,.12)}
+.guide-ico svg{width:31px;height:31px}
+.state-chip{display:inline-flex;align-items:center;gap:8px;font-size:1.0625rem;font-weight:800;
+  border:1px solid var(--line-soft);color:var(--ivory-70);background:rgba(246,241,227,.05);
+  padding:8px 16px;border-radius:99px;transition:all .4s}
+.state-chip.ok{border-color:rgba(29,190,130,.65);color:var(--emerald-soft);background:rgba(29,190,130,.12);
+  box-shadow:0 0 24px rgba(29,190,130,.22)}
+.must{display:inline-flex;align-items:center;gap:8px;background:var(--grad-gold);color:#142B22;
+  font-size:1.125rem;font-weight:900;padding:9px 18px;border-radius:12px;transform:rotate(-3deg);
+  box-shadow:0 8px 22px rgba(212,175,55,.4);margin-inline-start:auto}
+.must svg{width:20px;height:20px}
+.guide-card h3{font-size:clamp(1.7rem,4.6vw,2.3rem);font-weight:900;line-height:1.65}
+.guide-card .g-desc{margin-top:10px;font-size:1.25rem;color:var(--ivory-70);line-height:2.1;max-width:680px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:28px 0}
+.step{position:relative;text-align:center;padding:20px 14px;border-radius:17px;
+  border:1px solid var(--line-soft);background:rgba(246,241,227,.045);transition:border-color .3s,transform .3s}
+.step:hover{border-color:rgba(245,197,66,.45);transform:translateY(-3px)}
+.step-n{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;margin-bottom:10px;
+  background:var(--grad-gold);color:#142B22;font-size:1.25rem;font-weight:900;box-shadow:0 6px 18px rgba(212,175,55,.3);
+  transition:background .4s}
+.step b{display:block;font-size:1.1875rem;font-weight:800;color:var(--ivory);line-height:1.8}
+.step.done{border-color:rgba(29,190,130,.55)}
+.step.done .step-n{background:linear-gradient(135deg,#35D49A,#1DBE82);color:#0B3D2E}
+.channels{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 26px}
+.channel{display:inline-flex;align-items:center;gap:8px;font-size:1.0625rem;font-weight:800;color:var(--emerald-soft);
+  border:1px solid rgba(29,190,130,.4);background:rgba(29,190,130,.08);padding:8px 16px;border-radius:99px}
+.channel svg{width:19px;height:19px}
+.guide-btns{display:flex;flex-wrap:wrap;gap:14px}
+.guide-btns .btn-gold{font-size:1.25rem;padding:17px 32px}
+.guide-card.done .guide-btns .btn-gold{animation:btnPulse 2.2s ease-in-out infinite}
+@keyframes btnPulse{0%,100%{box-shadow:var(--shadow-gold),inset 0 1px 0 rgba(255,255,255,.5)}50%{box-shadow:0 18px 54px rgba(212,175,55,.5),inset 0 1px 0 rgba(255,255,255,.5)}}
+/* ============ FOOTER ============ */
+.footer{position:relative;z-index:1;border-top:1px solid rgba(212,175,55,.2);
+  padding:44px var(--gutter) calc(var(--nav-h) + 52px + env(safe-area-inset-bottom));
+  text-align:center;background:linear-gradient(180deg,transparent,rgba(6,35,26,.6))}
+.footer-brand{display:inline-flex;align-items:center;gap:12px}
+.footer-brand .logo-tile{width:44px;height:44px;border-radius:13px}
+.footer-brand b{font-size:1.35rem;font-weight:900}
+.footer-tag{margin-top:12px;font-size:1.125rem;font-weight:700;color:var(--gold-bright)}
+.footer-cities{margin-top:8px;font-size:1.0625rem;color:var(--ivory-70);display:flex;justify-content:center;flex-wrap:wrap;gap:8px;align-items:center}
+.footer-cities svg{width:18px;height:18px;color:var(--emerald-soft)}
+.footer-sign{margin-top:20px;font-size:1.0625rem;font-weight:700;color:var(--ivory-50)}
+.footer-sign span{color:var(--gold-bright)}
+.footer-copy{margin-top:8px;font-size:1.0625rem;color:var(--ivory-50)}
+/* ============ BOTTOM NAV ============ */
+.bottom-nav{position:fixed;inset-inline:0;bottom:0;z-index:60;
+  background:rgba(4,22,15,.86);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+  border-top:1px solid rgba(212,175,55,.28);padding-bottom:env(safe-area-inset-bottom)}
+.bottom-nav-in{max-width:560px;margin-inline:auto;display:grid;grid-template-columns:repeat(4,1fr);height:var(--nav-h)}
+.nav-item{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  color:var(--ivory-50);font-size:1.0625rem;font-weight:800;transition:color .25s,transform .15s}
+.nav-item svg{width:26px;height:26px;transition:transform .25s var(--ease-lux)}
+.nav-item:active{transform:scale(.9)}
+.nav-item:hover{color:var(--ivory)}
+.nav-item::before{content:'';position:absolute;top:0;inset-inline:28%;height:3.5px;border-radius:0 0 6px 6px;
+  background:var(--grad-gold);opacity:0;transform:scaleX(.4);transition:opacity .3s,transform .3s}
+.nav-item.active{color:var(--gold-bright)}
+.nav-item.active::before{opacity:1;transform:scaleX(1)}
+.nav-item.active svg{transform:translateY(-2px);filter:drop-shadow(0 4px 10px rgba(245,197,66,.45))}
+.nav-dot{position:absolute;top:13px;inset-inline-start:calc(50% + 7px);width:9px;height:9px;border-radius:50%;
+  background:var(--amber);animation:pulse 2s ease-out infinite}
+@media(min-width:900px){
+  .bottom-nav{inset-inline:auto;left:50%;transform:translateX(-50%);bottom:18px;width:520px;
+    border:1px solid rgba(212,175,55,.35);border-radius:24px;padding-bottom:0;
+    box-shadow:0 20px 60px rgba(3,19,13,.65)}
+  .nav-item::before{inset-inline:32%}
 }
-
-/* ===== هدر ===== */
-.app-header{
-  position:sticky;top:0;z-index:50;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:14px 18px;
-  background:rgba(255,255,255,.88);
-  backdrop-filter:blur(20px) saturate(180%);
-  -webkit-backdrop-filter:blur(20px) saturate(180%);
-  border-bottom:1px solid var(--border-2);
-  box-shadow:0 4px 20px rgba(13,122,95,.06);
+/* ============ RESPONSIVE ============ */
+@media(max-width:900px){
+  #shamseh-wrap{width:400px;height:400px;top:60px;inset-inline-end:-130px;opacity:.13}
 }
-.brand{display:flex;align-items:center;gap:12px}
-.brand-icon{
-  width:48px;height:48px;border-radius:15px;
-  display:grid;place-items:center;
-  background:linear-gradient(135deg,var(--brand),var(--brand-2));
-  color:#fff;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 8px 20px var(--brand-glow);
+@media(max-width:640px){
+  section{padding-block:60px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  #scroll-cue{display:none}
+  .steps{grid-template-columns:1fr}
+  .must{margin-inline-start:0}
+  .guide-card{padding:30px 24px}
+  .rail-foot{flex-wrap:wrap}
+  .rail-hint{order:-1;width:100%}
+  .hero{padding-top:calc(var(--header-h) + 30px)}
+  .spark.s2,.spark.s4{display:none}
+  .oath{padding:18px 18px}
+  .b-title{font-size:1.35rem}
 }
-.brand-icon svg{width:26px;height:26px}
-.brand-name{font-weight:800;font-size:1.2rem;letter-spacing:-.01em}
-.brand-subtitle{font-size:.82rem;color:var(--text-mute);margin-top:-2px}
-.header-action{
-  width:46px;height:46px;border-radius:15px;
-  display:grid;place-items:center;
-  background:var(--surface);border:1px solid var(--border);
-  color:var(--text-soft);transition:all .3s var(--ease);
-  box-shadow:var(--shadow-sm);
+@media(max-width:380px){
+  .btn{padding:14px 20px;font-size:1.125rem}
 }
-.header-action:hover{
-  color:var(--brand);border-color:var(--brand);
-  transform:translateY(-2px);box-shadow:var(--shadow-md);
-}
-.header-action svg{width:22px;height:22px}
-
-/* ===== هیرو راهنما ===== */
-.hero{
-  position:relative;margin:18px;padding:34px 24px 28px;
-  border-radius:var(--r-xl);
-  background:
-    radial-gradient(120% 100% at 100% 0%, rgba(245,185,66,.15) 0%, transparent 55%),
-    radial-gradient(100% 100% at 0% 100%, rgba(13,122,95,.13) 0%, transparent 60%),
-    linear-gradient(135deg,#ffffff 0%, #eef7f2 100%);
-  border:1px solid var(--border-2);
-  box-shadow:
-    inset 0 1px 0 #ffffff,
-    0 2px 0 #e8f1ec,
-    0 8px 24px rgba(13,122,95,.10),
-    0 20px 46px rgba(13,122,95,.10);
-  overflow:hidden;
-}
-.hero::before{
-  content:'';position:absolute;inset:auto -40px -60px auto;
-  width:200px;height:200px;border-radius:50%;
-  background:radial-gradient(circle,var(--brand-soft),transparent 70%);
-  opacity:.7;pointer-events:none;
-}
-.hero::after{
-  content:'';position:absolute;top:-60px;left:-40px;
-  width:160px;height:160px;border-radius:50%;
-  background:radial-gradient(circle,var(--gold-soft),transparent 70%);
-  opacity:.9;pointer-events:none;
-}
-.hero-label{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:8px 16px;border-radius:999px;
-  background:linear-gradient(135deg,var(--gold),#e8a72e);
-  color:#5a3d00;font-size:.82rem;font-weight:800;
-  margin-bottom:16px;position:relative;z-index:1;
-  box-shadow:0 4px 12px var(--gold-glow);
-}
-.hero-title{
-  font-size:1.65rem;font-weight:900;line-height:1.45;
-  color:var(--text);letter-spacing:-.02em;margin-bottom:10px;
-  position:relative;z-index:1;
-}
-.hero-title .accent{color:var(--brand-2);position:relative;display:inline-block}
-.hero-title .accent::after{
-  content:'';position:absolute;left:0;right:0;bottom:2px;
-  height:8px;background:linear-gradient(90deg,transparent,var(--gold-soft),transparent);
-  border-radius:4px;z-index:-1;
-}
-.hero-text{
-  font-size:1rem;color:var(--text-soft);line-height:1.9;
-  margin-bottom:22px;position:relative;z-index:1;font-weight:500;
-}
-.hero-stats{display:flex;gap:10px;position:relative;z-index:1;margin-bottom:22px}
-.hero-stat{
-  flex:1;padding:14px 8px;border-radius:14px;
-  background:rgba(255,255,255,.75);
-  border:1px solid var(--border-2);text-align:center;
-  box-shadow:inset 0 1px 0 #fff, 0 2px 6px rgba(13,122,95,.05);
-}
-.hero-stat-num{font-size:1.3rem;font-weight:900;color:var(--brand-2);line-height:1.2}
-.hero-stat-label{font-size:.72rem;color:var(--text-mute);font-weight:600;margin-top:2px}
-.hero-button{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:15px 26px;border-radius:18px;
-  background:linear-gradient(180deg,var(--brand),var(--brand-2));
-  color:#fff;font-weight:800;font-size:1rem;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.35),
-    0 2px 0 #084a3a,
-    0 8px 22px var(--brand-glow),
-    0 16px 36px rgba(13,122,95,.16);
-  transition:all .3s var(--ease);
-  position:relative;z-index:1;
-}
-.hero-button:hover{transform:translateY(-3px)}
-.hero-button:active{transform:translateY(-1px)}
-.hero-button svg{width:20px;height:20px}
-
-/* ===== عنوان بخش ===== */
-.section-head{padding:0 20px;margin:28px 0 16px;display:flex;align-items:center;gap:10px}
-.section-head-dot{
-  width:10px;height:10px;border-radius:50%;
-  background:linear-gradient(135deg,var(--brand),var(--brand-2));
-  box-shadow:0 0 0 4px var(--brand-soft);
-}
-.section-title{font-size:1.2rem;font-weight:900;letter-spacing:-.01em}
-.section-caption{font-size:.85rem;color:var(--text-mute);font-weight:500}
-
-/* ===== آکاردئون ===== */
-.faq-list{display:flex;flex-direction:column;gap:12px;padding:0 18px}
-.faq-item{
-  background:var(--surface);
-  border:1px solid var(--border-2);
-  border-radius:var(--r-lg);
-  box-shadow:
-    inset 0 1px 0 #ffffff,
-    0 2px 0 #eef5f1,
-    0 4px 12px rgba(13,122,95,.06),
-    0 10px 24px rgba(13,122,95,.05);
-  overflow:hidden;transition:all .35s var(--ease);position:relative;
-}
-.faq-item::before{
-  content:'';position:absolute;right:0;top:0;bottom:0;width:4px;
-  background:linear-gradient(180deg,var(--brand),var(--brand-2));
-  opacity:0;transition:opacity .35s var(--ease);
-}
-.faq-item.is-open{
-  border-color:var(--brand);
-  box-shadow:
-    inset 0 1px 0 #ffffff,
-    0 2px 0 #eef5f1,
-    0 8px 24px var(--brand-glow),
-    0 18px 40px rgba(13,122,95,.12);
-  transform:translateY(-2px);
-}
-.faq-item.is-open::before{opacity:1}
-.faq-question{
-  width:100%;display:flex;align-items:center;gap:14px;
-  padding:18px;text-align:right;
-  font-size:1rem;font-weight:700;line-height:1.5;
-  color:var(--text);transition:color .25s var(--ease);
-  cursor:pointer;position:relative;
-}
-.faq-question:hover{color:var(--brand-2)}
-.faq-num{
-  flex-shrink:0;width:36px;height:36px;border-radius:11px;
-  display:grid;place-items:center;
-  background:var(--brand-soft);color:var(--brand-2);
-  font-size:.92rem;font-weight:900;
-  transition:all .35s var(--ease-bounce);
-}
-.faq-item.is-open .faq-num{
-  background:linear-gradient(135deg,var(--brand),var(--brand-2));
-  color:#fff;transform:scale(1.08) rotate(-4deg);
-  box-shadow:0 6px 14px var(--brand-glow);
-}
-.faq-q-text{flex:1}
-.faq-toggle{
-  flex-shrink:0;width:32px;height:32px;border-radius:10px;
-  display:grid;place-items:center;
-  background:var(--surface-2);color:var(--brand-2);
-  transition:all .35s var(--ease-bounce);
-}
-.faq-toggle svg{width:18px;height:18px;transition:transform .35s var(--ease-bounce)}
-.faq-item.is-open .faq-toggle{
-  background:linear-gradient(135deg,var(--brand),var(--brand-2));
-  color:#fff;box-shadow:0 4px 10px var(--brand-glow);
-}
-.faq-item.is-open .faq-toggle svg{transform:rotate(180deg)}
-.faq-answer{
-  display:grid;grid-template-rows:0fr;
-  transition:grid-template-rows .45s var(--ease);
-}
-.faq-item.is-open .faq-answer{grid-template-rows:1fr}
-.faq-answer-inner{overflow:hidden}
-.faq-answer-content{
-  padding:0 18px 20px 18px;
-  font-size:1rem;line-height:2;color:var(--text-soft);
-  font-weight:500;border-top:1px dashed var(--border-2);
-  margin-top:2px;padding-top:16px;
-  opacity:0;transform:translateY(-6px);
-  transition:opacity .35s var(--ease) .1s, transform .35s var(--ease) .1s;
-}
-.faq-item.is-open .faq-answer-content{opacity:1;transform:translateY(0)}
-
-/* ===== کارت پایانی ===== */
-.cta-card{
-  margin:26px 18px 6px;padding:26px 22px;
-  border-radius:var(--r-lg);
-  background:
-    radial-gradient(100% 100% at 100% 0%, rgba(245,185,66,.18) 0%, transparent 60%),
-    linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 100%);
-  color:#fff;text-align:center;position:relative;overflow:hidden;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.2),
-    0 2px 0 #084a3a,
-    0 14px 34px var(--brand-glow);
-}
-.cta-card::before{
-  content:'';position:absolute;top:-40px;left:-40px;
-  width:160px;height:160px;border-radius:50%;
-  background:rgba(255,255,255,.10);
-}
-.cta-card::after{
-  content:'';position:absolute;bottom:-60px;right:-30px;
-  width:180px;height:180px;border-radius:50%;
-  background:rgba(255,255,255,.08);
-}
-.cta-title{font-size:1.2rem;font-weight:900;margin-bottom:8px;position:relative;z-index:1}
-.cta-text{font-size:.9rem;color:rgba(255,255,255,.9);margin-bottom:18px;position:relative;z-index:1;font-weight:500}
-.cta-button{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:14px 26px;border-radius:16px;
-  background:#fff;color:var(--brand-2);
-  font-weight:800;font-size:.98rem;
-  box-shadow:inset 0 -3px 0 rgba(0,0,0,.08),0 8px 20px rgba(0,0,0,.15);
-  transition:all .3s var(--ease);position:relative;z-index:1;
-}
-.cta-button:hover{transform:translateY(-2px);box-shadow:inset 0 -3px 0 rgba(0,0,0,.08),0 12px 26px rgba(0,0,0,.2)}
-.cta-button svg{width:18px;height:18px}
-
-/* ===== منوی پایین (۴ آیتم، همسان با index) ===== */
-.bottom-nav{
-  position:fixed;bottom:0;left:0;right:0;z-index:60;
-  max-width:500px;margin:0 auto;
-  display:flex;justify-content:space-around;align-items:center;
-  padding:10px 8px calc(10px + env(safe-area-inset-bottom));
-  background:rgba(255,255,255,.92);
-  backdrop-filter:blur(20px) saturate(180%);
-  -webkit-backdrop-filter:blur(20px) saturate(180%);
-  border-top:1px solid var(--border-2);
-  box-shadow:0 -6px 24px rgba(13,122,95,.08);
-}
-.nav-item{
-  display:flex;flex-direction:column;align-items:center;gap:4px;
-  padding:8px 12px;border-radius:14px;
-  color:var(--text-mute);font-size:.72rem;font-weight:700;
-  transition:all .25s var(--ease);position:relative;
-}
-.nav-item svg{width:22px;height:22px;transition:transform .25s var(--ease-bounce)}
-.nav-item.active{color:var(--brand-2);background:var(--brand-soft)}
-.nav-item.active svg{transform:scale(1.1)}
-.nav-item:hover{color:var(--brand-2)}
-.nav-item:active svg{transform:scale(.92)}
-
-/* ===== انیمیشن ===== */
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.hero{animation:fadeUp .6s var(--ease) both}
-.faq-item{animation:fadeUp .5s var(--ease) both}
-.faq-item:nth-child(1){animation-delay:.04s}
-.faq-item:nth-child(2){animation-delay:.07s}
-.faq-item:nth-child(3){animation-delay:.10s}
-.faq-item:nth-child(4){animation-delay:.13s}
-.faq-item:nth-child(5){animation-delay:.16s}
-.faq-item:nth-child(6){animation-delay:.19s}
-.faq-item:nth-child(7){animation-delay:.22s}
-.faq-item:nth-child(8){animation-delay:.25s}
-.faq-item:nth-child(9){animation-delay:.28s}
-.faq-item:nth-child(10){animation-delay:.31s}
-.faq-item:nth-child(11){animation-delay:.34s}
-.faq-item:nth-child(12){animation-delay:.37s}
-.faq-item:nth-child(13){animation-delay:.40s}
-.faq-item:nth-child(14){animation-delay:.43s}
-.faq-item:nth-child(15){animation-delay:.46s}
-.faq-item:nth-child(16){animation-delay:.49s}
-.faq-item:nth-child(17){animation-delay:.52s}
-.faq-item:nth-child(18){animation-delay:.55s}
-.faq-item:nth-child(19){animation-delay:.58s}
-.faq-item:nth-child(20){animation-delay:.61s}
-.cta-card{animation:fadeUp .5s var(--ease) .65s both}
-
-@media (max-width:380px){
-  .hero-title{font-size:1.45rem}
-  .faq-question{font-size:.95rem;padding:16px 14px}
-  .faq-num{width:32px;height:32px;font-size:.85rem}
+/* ============ REDUCED MOTION ============ */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  mark.sweep{background-size:100% 100%}
 }
 </style>
 </head>
 <body>
+<a class="skip" href="#part1">پرش به پرسش‌ها</a>
 
-<div class="app">
+<!-- shared SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="lgK" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#146247"/><stop offset="1" stop-color="#0B3D2E"/>
+    </linearGradient>
+    <g id="shamseh" fill="none" stroke="#D4AF37" stroke-width="1.2">
+      <circle cx="100" cy="100" r="94"/>
+      <rect x="34" y="34" width="132" height="132"/>
+      <rect x="34" y="34" width="132" height="132" transform="rotate(45 100 100)"/>
+      <circle cx="100" cy="100" r="46"/><circle cx="100" cy="100" r="12"/>
+      <path d="M100 6v22M100 172v22M6 100h22M172 100h22M33.5 33.5l15.6 15.6M150.9 150.9l15.6 15.6M166.5 33.5l-15.6 15.6M49.1 150.9l-15.6 15.6"/>
+    </g>
+    <g id="kTile">
+      <rect width="64" height="64" rx="15" fill="url(#lgK)"/>
+      <path d="M17 12h11v14l14-14h14L36 31l20 21H42L28 37v15H17z" fill="#FFFFFF"/>
+    </g>
+  </defs>
+</svg>
 
-  <!-- هدر -->
-  <header class="app-header">
-    <div class="brand">
-      <div class="brand-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-        </svg>
-      </div>
-      <div class="brand-text">
-        <div class="brand-name">کاردار</div>
-        <div class="brand-subtitle">راهنمای کاریابی در عراق</div>
-      </div>
-    </div>
-    <a href="index.html" class="header-action" aria-label="بازگشت به خانه">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="5" y1="12" x2="19" y2="12"/>
-        <polyline points="12 5 19 12 12 19"/>
-      </svg>
+<!-- ambient background -->
+<div class="bg" aria-hidden="true">
+  <div class="blob" id="blob-a"></div>
+  <div class="blob" id="blob-b"></div>
+  <div class="blob" id="blob-c"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ HEADER (فقط نشان و نام + نوار پیشرفت مطالعه) ============ -->
+<header class="header" id="header">
+  <div class="wrap header-in">
+    <a class="brand" href="index.html" aria-label="کاردار — بازگشت به صفحه اصلی">
+      <span class="logo-tile"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#kTile"/></svg></span>
+      <b class="brand-name">کار<span class="brand-crane">🏗</span>دار</b>
     </a>
-  </header>
+  </div>
+  <div class="read-progress" aria-hidden="true"><div id="read-bar"></div></div>
+</header>
 
-  <!-- هیرو راهنما -->
-  <section class="hero">
-    <span class="hero-label">📖 راهنمای رسمی کاردار</span>
-    <h1 class="hero-title">
-      قبل از <span class="accent">پاک کردن چمدون</span>، این راهنما رو بخون!
-    </h1>
-    <p class="hero-text">
-      هر چیزی که برای کاریابی و مهاجرت شغلی به عراق باید بدونی،
-      در ۲۰ پرسش کلیدی جمع شده. جواب‌ها رو باز کن و با خیال راحت قدم بردار.
-    </p>
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero pattern" id="hero" style="padding-block:0">
+    <div id="shamseh-wrap" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#shamseh"/></svg></div>
+    <span class="spark s1" aria-hidden="true">✦</span>
+    <span class="spark s2" aria-hidden="true">✦</span>
+    <span class="spark s3" aria-hidden="true">✦</span>
+    <span class="spark s4" aria-hidden="true">✦</span>
+    <div id="dust" aria-hidden="true"></div>
 
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-num">۲۰</div>
-        <div class="hero-stat-label">پرسش کلیدی</div>
+    <div class="wrap hero-in">
+      <span class="hero-eyebrow" id="hero-eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        راهنمای رسمی کاردار — مطالعهٔ کامل، الزامی است
+      </span>
+
+      <h1>
+        <span id="h1-a">با هر تحصیلاتی، با هر تخصصی — یا بدون تخصص؛</span>
+        <span id="h1-b"><mark class="sweep">از ۱۸ تا ۶۲ سالگی، می‌توانید در عراق استخدام شوید.</mark></span>
+      </h1>
+
+      <p class="hero-lead" id="hero-lead">
+        مهم‌ترین اتفاق، <b>تصمیم شماست</b>: آیا می‌خواهید زندگی‌تان را با کار در عراق بسازید؟
+        ما شرایط را برای شما فراهم می‌کنیم و <b>مانند یک دوست</b>، همیشه کنار شما و همراه شما خواهیم بود.
+      </p>
+
+      <div class="oath" id="hero-oath">
+        <p>
+          اگر تصمیم شما <span class="k-gold">جدی</span> است، این صفحه را کامل مطالعه کنید؛
+          <span class="k-gold">تعهد ما، فعالیت دقیقاً طبق شرایط اعلام‌شده در همین اپلیکیشن است.</span>
+          با احترام کامل می‌گوییم: اصلاً پیچیده نیست.
+        </p>
+        <div class="slogans">
+          <span class="slogan-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>۱۲ دقیقه مطالعه</span>
+          <span class="slogan-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>۳۰ پرسش و پاسخ</span>
+          <span class="slogan-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>ساده و شفاف</span>
+        </div>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">۱۰۰٪</div>
-        <div class="hero-stat-label">رایگان</div>
+
+      <div class="hero-ctas" id="hero-ctas">
+        <a class="btn btn-gold" href="#part1">شروع مطالعه — بخش یکم
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="paziresh.html">تصمیمم جدی است؛ پذیرش</a>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">۵ دقیقه</div>
-        <div class="hero-stat-label">زمان مطالعه</div>
+
+      <div class="stats">
+        <div class="stat"><span class="stat-num" data-count="18">۱۸</span><span class="stat-label">حداقل سن<br>پذیرش</span></div>
+        <div class="stat"><span class="stat-num" data-count="62">۶۲</span><span class="stat-label">حداکثر سن<br>پذیرش</span></div>
+        <div class="stat"><span class="stat-num" data-count="10">۱۰</span><span class="stat-label">حداقل فرصت شغلی<br>پیشنهادی به شما</span></div>
+        <div class="stat"><span class="stat-num" data-count="1">۱</span><span class="stat-label">ساعت مشاوره<br>حق قانونی شما</span></div>
       </div>
     </div>
 
-    <button class="hero-button" onclick="document.getElementById('faq-start').scrollIntoView({behavior:'smooth'})">
-      شروع خواندن راهنما
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="5" x2="12" y2="19"/>
-        <polyline points="19 12 12 19 5 12"/>
-      </svg>
-    </button>
+    <div id="scroll-cue" aria-hidden="true">
+      <span>۳۰ پرسش، یک تصمیم بزرگ</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </div>
   </section>
 
-  <!-- عنوان بخش -->
-  <div class="section-head" id="faq-start">
-    <span class="section-head-dot"></span>
-    <div>
-      <h2 class="section-title">۲۰ پرسش پرتکرار</h2>
-      <p class="section-caption">روی هر سوال بزن تا جوابش باز بشه</p>
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="mq-track" dir="ltr">
+      <div class="mq-group">
+        <span class="mq-item">مطالعهٔ کامل</span><span class="mq-star">✦</span>
+        <span class="mq-item">تصمیم جدی</span><span class="mq-star">✦</span>
+        <span class="mq-item">۳۰ پرسش و پاسخ</span><span class="mq-star">✦</span>
+        <span class="mq-item">تعهد مکتوب</span><span class="mq-star">✦</span>
+        <span class="mq-item">همراهی مانند دوست</span><span class="mq-star">✦</span>
+        <span class="mq-item">۱۲ دقیقه</span><span class="mq-star">✦</span>
+        <span class="mq-item">پذیرش آگاهانه</span><span class="mq-star">✦</span>
+      </div>
+      <div class="mq-group">
+        <span class="mq-item">مطالعهٔ کامل</span><span class="mq-star">✦</span>
+        <span class="mq-item">تصمیم جدی</span><span class="mq-star">✦</span>
+        <span class="mq-item">۳۰ پرسش و پاسخ</span><span class="mq-star">✦</span>
+        <span class="mq-item">تعهد مکتوب</span><span class="mq-star">✦</span>
+        <span class="mq-item">همراهی مانند دوست</span><span class="mq-star">✦</span>
+        <span class="mq-item">۱۲ دقیقه</span><span class="mq-star">✦</span>
+        <span class="mq-item">پذیرش آگاهانه</span><span class="mq-star">✦</span>
+      </div>
     </div>
   </div>
 
-  <!-- آکاردئون -->
-  <div class="faq-list" id="faqList">
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱</span>
-        <span class="faq-q-text">از کجا شروع کنم؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
+  <!-- ============ PART 1 : پرسش‌های ۰۱ تا ۱۵ ============ -->
+  <section class="qa" id="part1" style="padding-inline:0">
+    <div class="wrap qa-top">
+      <div class="sect-head" data-reveal>
+        <span class="eyebrow">بخش یکم — دربارهٔ ما و تعهدات</span>
+        <h2>۱۵ پرسش نخست؛ <span class="k-gold">کاردار را کامل بشناسید</span></h2>
+        <p class="sub">پاسخ‌ها صریح، کوتاه و محترمانه‌اند؛ هر کارت، بخشی از تعهد مکتوب ما به شماست.</p>
+      </div>
+      <div class="rail-ctrl" data-reveal>
+        <button class="rail-btn" id="prev-a" aria-label="پرسش قبلی">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <span class="rail-index" id="idx-a" aria-live="polite">۰۱ / ۱۵</span>
+        <button class="rail-btn" id="next-a" aria-label="پرسش بعدی">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </button>
+      </div>
     </div>
 
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۲</span>
-        <span class="faq-q-text">چه مدارکی لازمه؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
+    <div class="rail" id="rail-a" role="region" aria-label="پرسش‌های ۱ تا ۱۵ — قابل پیمایش افقی" tabindex="0">
+
+      <!-- ۰۱ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۰۱</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h18"/><path d="M6 18v-7M10 18v-7M14 18v-7M18 18v-7"/><path d="m12 2 8 5H4z"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">کاردار چیست؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc">ما <b>دفتر رسمی کاریابی در تهران</b> با مجوز فعالیت در زمینهٔ استخدام در خارج از کشور هستیم.</p>
+          <ul class="b-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>۳ تیم بازاریابی در نجف، کربلا و بصره</b>؛ هم‌وطنانی که خود روزی مانند شما برای کسب درآمد به عراق رفتند.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>شناسایی روزانهٔ مشاغل، بازدید محل اقامت، اخذ وکالت رسمی از کارفرما و پیگیری صدور دعوتنامه.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>در تهران: وکلای مهاجرتی، کارشناسان روابط عمومی، مدیر تبلیغات و تیم اداری و حسابداری.</li>
+          </ul>
+        </div>
+        <div class="b-note z1"><span class="b-note-tag">الزامی</span>یک‌بار حضور شما در دفتر کاردار لازم است؛ همهٔ مجوزها را از نزدیک مشاهده خواهید کرد.</div>
+      </article>
+
+      <!-- ۰۲ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۰۲</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">چرا پشتیبانی در شبکه‌های اجتماعی محدود است؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc">از طرف دفتر کاردار <b>هیچ محدودیتی در پاسخ‌گویی اعمال نمی‌شود</b>؛ محدودیت را خودِ پلتفرم‌ها ایجاد می‌کنند.</p>
+          <p class="b-desc">ما در دیوار، شیپور، اینستاگرام، تیک‌تاک و… فعالیم؛ اما مثلاً پاسخ به <b>۱۰۰ کامنت روزانه</b> زیر یک محتوا، باعث محدودشدن حساب ما توسط اینستاگرام می‌شود — این اتفاق بارها رخ داده است.</p>
+        </div>
+        <div class="b-note z1"><span class="b-note-tag">راه‌حل</span>پاسخ‌گویی کامل و بی‌محدودیت، در تماس تلفنی با کارشناسان انجام می‌شود.</div>
+      </article>
+
+      <!-- ۰۳ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۰۳</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">چرا پشتیبانی در اپلیکیشن محدود است؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc">ابتدا پاسخ‌گوی همه بودیم؛ اما ساعت‌ها پرسشِ صرفاً کنجکاوانه — بدون قصد جدی — وقت و انرژی بسیاری از نیروی کار ما می‌گرفت.</p>
+          <p class="b-desc">ترجیح ما: ابتدا <b>درخواست خود را ثبت کنید</b>؛ سپس <b>یک ساعت مشاورهٔ تلفنی</b> با کارشناسان و پشتیبانی بدون حد و مرز، ویژهٔ کسانی که تصمیم جدی دارند.</p>
+        </div>
+        <div class="b-note z1"><span class="b-note-tag">حق شما</span>یک ساعت مشاورهٔ شغلی، حق قانونی شماست.</div>
+      </article>
+
+      <!-- ۰۴ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۰۴</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا استخدام با شرایط اعلامی قطعی است؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بله، قطعی است</span>
+          <p class="b-desc">پس از ثبت درخواست، استخدام شما از طرف ما قطعی است؛ به شرط آنکه:</p>
+          <ul class="b-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>اطلاعات فرم را با دقت و صداقت کامل کرده باشید.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>واقعاً پاسپورت داشته باشید یا بتوانید آن را تمدید کنید.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>منعی برای خروج از کشور نداشته باشید.</li>
+          </ul>
+        </div>
+        <div class="b-note z1"><span class="b-note-tag">شفاف</span>بیشتر مراحل را ما انجام می‌دهیم؛ تهیهٔ پاسپورت بر عهدهٔ متقاضی است.</div>
+      </article>
+
+      <!-- ۰۵ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۰۵</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">چه مشاغلی به من ارائه خواهد شد؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc">فهرستی <b>بسیار متنوع</b> داریم و هر روز فرصت‌های تازه اضافه می‌شود. در فرم، از تخصص، علایق و اهداف خود بگویید؛ <b>نزدیک‌ترین مشاغل</b> را به شما ارائه می‌کنیم.</p>
+          <span class="b-statement">حداقل ۱۰ فرصت شغلی با جزئیات کامل</span>
+          <p class="b-desc" style="margin-top:12px">و گاه همراه با عکس و فیلم از محل کار، محل اقامت و توضیحات تکمیلی.</p>
+        </div>
+      </article>
+
+      <!-- ۰۶ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۰۶</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا برای بانوان فرصت شغلی وجود دارد؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بله، همیشه</span>
+          <p class="b-desc">فرصت‌هایی برای بانوان محترم همیشه وجود دارد؛ هرچند به تعداد کمتر.</p>
+          <ul class="b-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>عراق، کشور همسایه، زیارتی و اسلامی است؛ شئونات کاملاً رعایت می‌شود.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>محل اقامت <b>جداگانه یا زنانه</b> برای پرسنل خانم همیشه فراهم است.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>عموماً مشاغل خدماتیِ مناسب به بانوان محترم سپرده می‌شود.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ۰۷ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۰۷</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا برای زیر ۱۸ سال یا میان‌سالان فرصتی هست؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>زیر ۱۸ سال: هرگز</span>
+          <p class="b-desc">فعالیت ما تابع قوانین کشورهاست؛ این محدودیت را دولت‌ها برای اخذ اقامت شغلی اعمال می‌کنند.</p>
+          <span class="b-subhead">۵۰ تا ۶۲ سال</span>
+          <p class="b-desc">در حیطهٔ تخصصی، شغلی موجود نیست؛ اما مشاغل عمومیِ بدون نیاز به تخصص — <b>نگهبانی، سرایداری، پرسنل آشپزخانه</b> و… — بسیار فراوان است.</p>
+        </div>
+      </article>
+
+      <!-- ۰۸ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۰۸</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">مراحل استخدام چیست؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <ol class="num-list">
+            <li><span class="n">۱</span><b>تصمیم قطعی شما</b> برای کار در عراق.</li>
+            <li><span class="n">۲</span>مطالعهٔ کامل راهنمای اپلیکیشن.</li>
+            <li><span class="n">۳</span>ثبت درخواست؛ <b>پذیرش بی‌قیدوشرط</b> از طرف کاردار، تماس با شما و ارائهٔ لیست مشاغل.</li>
+            <li><span class="n">۴</span>بررسی مشاغل، مشاورهٔ شغلی و <b>انتخاب فرصت شغلی توسط شما</b>.</li>
+            <li><span class="n">۵</span>اخذ وکالت از کارفرما، صدور دعوتنامهٔ رسمی، سوءپیشینه و ترجمهٔ مدارک، نوبت سفارت با هماهنگی شما — <b>همه با ما</b>.</li>
+          </ol>
+        </div>
+        <div class="b-note z1"><span class="b-note-tag">سهم شما</span>پاسپورت با بیش از ۱۸ ماه اعتبار + یک روز حضور در تهران؛ صبح تا ظهر سفارت عراق، عصر دفتر کاردار برای تنظیم قرارداد و هماهنگی.</div>
+      </article>
+
+      <!-- ۰۹ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۰۹</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا واقعاً تا محل کار همراهم هستید؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بله، تا محل کار</span>
+          <p class="b-desc">نه فقط تا کشور عراق — تا <b>محل کار و معارفهٔ شما به کارفرما</b>.</p>
+          <p class="b-desc">اعزام هر هفته است، به‌ترتیب میان سه شهر: یک هفته نجف، یک هفته کربلا، یک هفته بصره؛ یعنی مثلاً ماهی یک‌بار اعزام به کربلا. جز شما، افراد دیگری نیز در کاروان هستند؛ همه را به فرصت شغلی‌شان می‌رسانیم.</p>
+        </div>
+        <div class="b-note z1"><span class="b-note-tag">قول ما</span>در کشور غریب، تنهایتان نمی‌گذاریم.</div>
+      </article>
+
+      <!-- ۱۰ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۱۰</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا این خدمات رایگان است؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>خیر؛ صادقانه بگوییم</span>
+          <p class="b-desc">هزینهٔ ترانسفر، سیم‌کارت، افتتاح حساب و وعده‌های غذاییِ اختیاری در کاروان — همگی از <b>حقوق ماه اول شما</b> کسر می‌گردد.</p>
+          <span class="b-statement">اما همه‌چیز با پول سنجیده نمی‌شود.</span>
+          <p class="b-desc" style="margin-top:12px">شما عضوی از مجموعهٔ ما و متقاضی ارزشمند ما هستید؛ <b>رضایت شما هدف ماست</b>.</p>
+        </div>
+      </article>
+
+      <!-- ۱۱ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۱۱</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">اگر کارفرما به تعهداتش پایبند نبود، بیرونم کرد یا حقوقم را نداد چه؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <ol class="num-list">
+            <li><span class="n">۱</span><b>سرپناه موقت همیشه فراهم است</b>؛ نگرانیِ هزینه یا ماندن در شب را نداشته باشید.</li>
+            <li><span class="n">۲</span>تعهد کارفرما فقط به شما نیست، <b>به دولت عراق است</b>؛ دعوتنامهٔ رسمی باید به تأیید دولت برسد و حقوق قانونی شما را ما پیگیری می‌کنیم — این بخشی از تعهد ماست.</li>
+            <li><span class="n">۳</span>ما سراغ اشخاص یا تک‌فروشگاه‌ها نمی‌رویم؛ <b>هتل‌ها، پروژه‌های ۵۰۰۰ واحدی در حال ساخت، مجتمع‌های بزرگ خدماتی و خودرو</b>.</li>
+          </ol>
+          <div class="b-chips">
+            <span class="b-chip gold">تنها ۶٪ انصراف یا جابجایی در سال‌های گذشته</span>
+            <span class="b-chip">۳ بار تعویض شغل، بی‌قیدوشرط</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ۱۲ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۱۲</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا تعهدات شما مکتوب به من ارائه می‌شود؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بله، کاملاً مکتوب</span>
+          <ul class="b-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>در <b>دعوتنامه</b>: میزان حقوق، عموماً ۸ ساعت کار و اضافه‌کاری، وعده‌های غذایی و محل اقامت — پیش از اعزام مطالعه می‌کنید.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>نمونهٔ قرارداد کاریابی</b> بسیار منصفانه است؛ پیش از امضا بخواهید تا در روبیکا یا واتساپ برایتان ارسال شود و مطالعه کنید.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ۱۳ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۱۳</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا موارد ذکرشده اغراق‌آمیز است؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>خیر، هرگز</span>
+          <p class="b-desc">همهٔ موارد ذکرشده، <b>تعهد ما به شماست</b>. چشم‌انداز ما این است که علاوه بر بهره‌گیری بهینه از تقاضای نیروی کار در عراق، برند کاردار را <b>شما — متقاضیان محترم — به دیگران معرفی کنید</b>.</p>
+          <p class="b-desc">ما به بهتر دیده‌شدن و افزایش تقاضا نیاز داریم؛ پس رضایت شما برای ما حیاتی است. اگر از این مسیر مشغول به کار شوید، بی‌تردید دوستان و نزدیکان خود را معرفی خواهید کرد.</p>
+        </div>
+      </article>
+
+      <!-- ۱۴ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۱۴</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><circle cx="8" cy="10" r="2"/><path d="M5 16a3 3 0 0 1 6 0"/><path d="M14 9h5M14 13h5"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">من اتباع هستم؛ شرایط من چگونه است؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc">اتباع محترم با <b>مجوز قانونی اقامت در ایران</b> می‌توانند از خدمات ما بهره‌مند شوند؛ دارندگان این مدارک، مجاز برای اقامت کشور ثالث هستند:</p>
+          <div class="b-chips">
+            <span class="b-chip">برگهٔ سرشماری</span>
+            <span class="b-chip">اقامتی / وضعیتی</span>
+            <span class="b-chip">انواع کارت آمایش</span>
+          </div>
+        </div>
+        <div class="b-note warn z1"><span class="b-note-tag">مهم</span>فقط پاسپورت یا تذکرهٔ الکترونیک؟ هرگز از ایران امکان اقدام نیست؛ باید به سفارت عراق در افغانستان مراجعه کنید. لطفاً فرم را پر نکنید؛ در صورت ثبت درخواست، مبلغ دریافتی بازگردانده می‌شود.</div>
+      </article>
+
+      <!-- ۱۵ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۱۵</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M19.27 13.73A2.5 2.5 0 0 0 17.5 13h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1.5c0-.66-.26-1.3-.73-1.77Z"/><path d="M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-6 0c0 2 1 2 1 3.5V13"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">چرا مجوز فعالیت را در اپلیکیشن ارائه نکرده‌اید؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc">زیرا <b>مجوز صنفیِ کاریابی در خارج از کشور</b> با مجوز فعالیت آنلاین متفاوت است.</p>
+          <p class="b-desc">ما یک مجوز رسمی برای دفتر با آدرس فیزیکی داریم و فعالیت فروشگاهیِ آنلاین نداریم؛ اپلیکیشن تنها برای <b>راهنمایی، مطالعه، ثبت درخواست و نوبت پذیرش</b> است. تمام مراحل، حضوری و تلفنی انجام می‌شود — نه غیرحضوری و آنلاین.</p>
+        </div>
+        <div class="b-note z1"><span class="b-note-tag">شفاف</span>همهٔ مجوزها را در حضور شما، در دفتر کاردار ارائه می‌کنیم.</div>
+      </article>
     </div>
 
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۳</span>
-        <span class="faq-q-text">ویزا چقدر طول می‌کشه؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
+    <div class="wrap rail-foot">
+      <div class="rail-progress" aria-hidden="true"><div class="rail-bar" id="bar-a"></div></div>
+      <span class="rail-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        بکشید یا با دکمه‌ها ورق بزنید
+      </span>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۴</span>
-        <span class="faq-q-text">هزینه مهاجرت چقدره؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۵</span>
-        <span class="faq-q-text">بدون مدرک دانشگاهی می‌شه؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۶</span>
-        <span class="faq-q-text">چه شغل‌هایی بیشترین تقاضا رو دارن؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۷</span>
-        <span class="faq-q-text">رزومه عربی چطور بنویسم؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۸</span>
-        <span class="faq-q-text">مصاحبه کاری در عراق چطوریه؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۹</span>
-        <span class="faq-q-text">حقوق معمول چقدره؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱۰</span>
-        <span class="faq-q-text">اقامت بعد از استخدام می‌گیرم؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱۱</span>
-        <span class="faq-q-text">کدوم شهرها فرصت بیشتری دارن؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱۲</span>
-        <span class="faq-q-text">خطر کلاهبرداری هست؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱۳</span>
-        <span class="faq-q-text">آموزش زبان عربی لازمه؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱۴</span>
-        <span class="faq-q-text">مدارک ترجمه‌شده کجا تأیید بشه؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱۵</span>
-        <span class="faq-q-text">مسکن و بیمه چی؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱۶</span>
-        <span class="faq-q-text">با خانواده می‌تونم برم؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱۷</span>
-        <span class="faq-q-text">قرارداد کاری چه بندهایی داشته باشه؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱۸</span>
-        <span class="faq-q-text">اگر کارفرما تخلف کرد چی؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۱۹</span>
-        <span class="faq-q-text">بازگشت به ایران چطوریه؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        <span class="faq-num">۲۰</span>
-        <span class="faq-q-text">از کجا مطمئن بشم آگهی واقعیه؟</span>
-        <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="faq-answer"><div class="faq-answer-inner"><div class="faq-answer-content">متن پاسخ این بخش را بعداً قرار می‌دهیم.</div></div></div>
-    </div>
-
-  </div>
-
-  <!-- کارت پایانی -->
-  <section class="cta-card">
-    <h3 class="cta-title">آماده‌ای برای قدم بعدی؟</h3>
-    <p class="cta-text">همین حالا درخواستت رو ثبت کن و شغل مناسب خودت رو پیدا کن.</p>
-    <a href="request.html" class="cta-button">
-      ثبت درخواست
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="19" y1="12" x2="5" y2="12"/>
-        <polyline points="12 19 5 12 12 5"/>
-      </svg>
-    </a>
   </section>
 
-  <!-- منوی پایین (همسان با index) -->
-  <nav class="bottom-nav">
-    <a href="index.html" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-        <polyline points="9 22 9 12 15 12 15 22"/>
-      </svg>
+  <!-- ============ INTERLUDE (تبلیغ میانی) ============ -->
+  <section class="interlude">
+    <div class="urgency-star" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#shamseh"/></svg></div>
+    <div class="wrap urgency-in">
+      <span class="pulse-row" data-reveal><span class="pulse-dot"></span>۱۵ پرسش خوانده شد — ۱۵ پرسش دیگر مانده</span>
+      <h2 data-reveal>
+        <span class="u1">ما مانند یک دوست، کنار شما ایستاده‌ایم</span>
+        <span class="u2">اکنون، نوبت تصمیم شماست.</span>
+      </h2>
+      <p class="i-desc" data-reveal>
+        شرایط را ما فراهم می‌کنیم؛ اگر تصمیمتان جدی است، پرسش‌های پرتکرار بعدی را هم کامل بخوانید.
+        <b>تعهد ما، فعالیت دقیقاً طبق شرایط اعلام‌شده در همین اپلیکیشن است</b> — اصلاً پیچیده نیست.
+      </p>
+      <div data-reveal>
+        <a class="btn btn-ghost" href="#part2">ادامهٔ مطالعه — پرسش‌های پرتکرار
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PART 2 : پرسش‌های ۱۶ تا ۳۰ ============ -->
+  <section class="qa" id="part2" style="padding-inline:0">
+    <div class="wrap qa-top">
+      <div class="sect-head" data-reveal>
+        <span class="eyebrow">بخش دوم — پرسش‌های پرتکرار شما</span>
+        <h2>۱۵ پرسش پرتکرار؛ <span class="k-gold">پیش از تصمیم نهایی</span></h2>
+        <p class="sub">این‌ها پرسش‌هایی است که متقاضیان محترم، بیش از همه از ما می‌پرسند؛ با احترام کامل، شفاف پاسخ می‌دهیم.</p>
+      </div>
+      <div class="rail-ctrl" data-reveal>
+        <button class="rail-btn" id="prev-b" aria-label="پرسش قبلی">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <span class="rail-index" id="idx-b" aria-live="polite">۱۶ / ۳۰</span>
+        <button class="rail-btn" id="next-b" aria-label="پرسش بعدی">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="rail" id="rail-b" role="region" aria-label="پرسش‌های ۱۶ تا ۳۰ — قابل پیمایش افقی" tabindex="0">
+
+      <!-- ۱۶ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۱۶</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">هنوز نمی‌دانم چه شغلی ارائه می‌شود؛ چرا ثبت‌نام کنم؟ اگر شغلی ارائه نشد چه؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc">قاطعانه می‌گوییم: <b>عراق یک کشور است</b> و مانند ایران به همهٔ مشاغل نیاز دارد. فهرست ما بلند است؛ اما هر هفته تکمیل ظرفیت می‌شود و مشاغل جدید جایگزین می‌گردند — به همین دلیل از درج مشاغل در اپلیکیشن معذوریم.</p>
+          <ul class="b-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>هر شغل، توضیحات تکمیلی دارد و باید در مصاحبه و مشاوره ارائه شود.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ارائهٔ <b>حداقل ۱۰ شغل مرتبط</b> با درخواست شما، بر عهدهٔ ماست.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>مشاغلی که نمی‌توانیم ارائه دهیم، در بخش فرم ذکر شده است.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ۱۷ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۱۷</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">به‌جز هزینهٔ کاریابی، هزینهٔ جانبی دیگری دارم؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بله؛ شفاف و کامل</span>
+          <ul class="cost-list">
+            <li>هزینهٔ کاریابی: <b>۷۰ میلیون تومان</b> — اقساطی، پس از استخدام.</li>
+            <li>ترجمهٔ مدارک و رزومه توسط خودتان و ارسال برای ما — در برخی مشاغل.</li>
+            <li>هزینهٔ تهیهٔ پاسپورت.</li>
+            <li>ترانسفر و وعده‌های غذایی مسیر — اختیاری.</li>
+            <li>هزینهٔ یک روز مراجعه به سفارتخانه و دفتر کاردار.</li>
+            <li>همراه‌داشتن معادل <b>۵ تا ۱۰ میلیون تومان</b> به دینار یا دلار، برای مواقع ضروری نزد خودتان.</li>
+          </ul>
+          <span class="b-statement">به‌جز موارد بالا، هرگز هیچ هزینهٔ دیگری نخواهید داشت.</span>
+        </div>
+      </article>
+
+      <!-- ۱۸ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۱۸</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا می‌توانم برای همسر و فرزندانم اقامت بگیرم؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>اگر متأهل باشید، بله</span>
+          <p class="b-desc">اما محلی برای اقامت ایشان در اختیار شما قرار نمی‌دهیم.</p>
+          <p class="b-desc">با داشتن اقامت قانونی یک‌سالهٔ خودتان، اخذ اقامت یک‌سالهٔ همسر و فرزندان <b>بسیار آسان</b> است: به‌محض استقرار در عراق، خودتان دعوتنامه می‌فرستید؛ دعوتنامهٔ شما نیاز به دلیل و توجیه شغلی ندارد و <b>اقوام درجهٔ یک</b> به‌راحتی پاسپورت یک‌ساله و ویزا می‌گیرند.</p>
+        </div>
+      </article>
+
+      <!-- ۱۹ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۱۹</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا اصلاً نیازی به اقامت برای همسر و فرزندان هست؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>در بسیاری از موارد، خیر</span>
+          <p class="b-desc">به دلیل نزدیکی ایران و عراق و سهولت تردد، می‌توانند هر بار <b>۲ تا ۳ ماه توریستی–زیارتی</b> وارد شوند.</p>
+        </div>
+        <div class="b-note z1"><span class="b-note-tag">امتیاز</span>با اقامت یک‌ساله، آزادی عمل بیشتری برای کسب درآمد دارند: بدون نیاز به دعوتنامهٔ کارفرما، با اقامت قانونی، در هر جایی با درآمد بالاتر می‌توانند فعالیت کنند.</div>
+      </article>
+
+      <!-- ۲۰ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۲۰</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا همهٔ مشاغل ۱۶۰ میلیون تومان درآمد دارند؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>خیر؛ بسیاری بسیار بالاتر!</span>
+          <div class="b-chips" style="margin-top:0"><span class="b-chip gold">ارقام: میلیون تومان در ماه</span></div>
+          <div class="salary">
+            <div class="salary-row"><span>جوشکار اسکلت (حداقل)</span><span class="dots"></span><span class="amt">۲۳۰</span></div>
+            <div class="salary-row"><span>جوشکار لوله و آرگون</span><span class="dots"></span><span class="amt">۲۱۰</span></div>
+            <div class="salary-row"><span>بنای خبره</span><span class="dots"></span><span class="amt">۲۰۰</span></div>
+            <div class="salary-row"><span>سنگ‌کار و نماکار</span><span class="dots"></span><span class="amt">۲۳۰</span></div>
+            <div class="salary-row"><span>مهندس مکانیک / مکانیک حرفه‌ای</span><span class="dots"></span><span class="amt">۲۵۰</span></div>
+            <div class="salary-row"><span>MDFکار حرفه‌ای (کارخانه، بدون نصب)</span><span class="dots"></span><span class="amt">۲۲۰</span></div>
+          </div>
+          <p class="b-desc" style="margin-top:14px">و از این دست مشاغل، <b>بسیار زیاد</b> است.</p>
+        </div>
+      </article>
+
+      <!-- ۲۱ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۲۱</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا برای استخدام به زبان عربی نیاز دارم؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>الزاماً نه</span>
+          <p class="b-desc">بسیاری از فرصت‌ها <b>بدون نیاز به زبان عربی</b> هستند. مشاغل ما با یا بدون نیاز به عربی، با یا بدون تخصص ارائه می‌شوند.</p>
+          <p class="b-desc">در فرم، مهارت‌های خود را بگویید تا مناسب‌ترین فرصت‌ها را پیشنهاد کنیم؛ آشنایی با عربی یک <b>امتیاز</b> است — نه یک شرط همگانی.</p>
+        </div>
+      </article>
+
+      <!-- ۲۲ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۲۲</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">حقوق به چه ارزی پرداخت می‌شود؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc">به <b>دینار عراق</b>؛ مبنای تعهد ما، همان دینار است.</p>
+          <p class="b-desc">معادل ریالیِ حداقل حقوق، <b>۱۶۰ میلیون تومان در ماه</b> است. افتتاح حساب بانکی عراق را نیز تیم پشتیبانی برایتان انجام می‌دهد.</p>
+          <span class="b-statement">شفاف، از روز نخست.</span>
+        </div>
+      </article>
+
+      <!-- ۲۳ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۲۳</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">آیا همهٔ مشاغل غذا و محل اقامت دارند؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بله، بدون استثنا</span>
+          <p class="b-desc">فقط مشاغلی ارائه می‌شوند که <b>دو وعده غذا و محل اقامت مناسب</b> داشته باشند؛ مشاغل بدون غذا یا با اقامت نامناسب، هرگز ارائه نمی‌شود.</p>
+          <p class="b-desc">محل اقامت را پیش از اعزام، تیم‌های ما در عراق <b>بازدید کرده‌اند</b>.</p>
+        </div>
+      </article>
+
+      <!-- ۲۴ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۲۴</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M19.27 13.73A2.5 2.5 0 0 0 17.5 13h-11A2.5 2.5 0 0 0 4 15.5V17a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1.5c0-.66-.26-1.3-.73-1.77Z"/><path d="M14 13V8.5C14 7 15 7 15 5a3 3 0 0 0-6 0c0 2 1 2 1 3.5V13"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">اقامت و مجوز کار من چگونه رسمی می‌شود؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <ul class="b-list" style="margin-top:0">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>دعوتنامهٔ رسمی کارفرما</b>، با تأیید دولت عراق.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>مجوز کار و اقامت قانونی یک‌ساله</b>.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>مهر یک‌سالهٔ پاسپورت</b> در مرز ایران و عراق.</li>
+          </ul>
+        </div>
+        <div class="b-note z1"><span class="b-note-tag">تعهد</span>از روز نخست، وضعیت شما کاملاً قانونی است؛ مشاغل پروژه‌ای و موقت ارائه نمی‌شود.</div>
+      </article>
+
+      <!-- ۲۵ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۲۵</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">هزینهٔ ۷۰ میلیونی را چگونه و چه زمانی بپردازم؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc"><b>اقساطی و منصفانه</b>؛ فقط پس از آنکه کارفرما شما را استخدام کرد.</p>
+          <div class="b-chips">
+            <span class="b-chip gold">۲ تا ۳ قسط</span>
+            <span class="b-chip gold">کسر از حقوق دو ماه اول</span>
+            <span class="b-chip">فقط پس از استخدام</span>
+          </div>
+          <span class="b-statement">ریسک مالی با ماست، نه شما.</span>
+        </div>
+      </article>
+
+      <!-- ۲۶ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۲۶</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">اگر از شغل معرفی‌شده راضی نبودم؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>تا ۳ بار معرفی مجدد</span>
+          <p class="b-desc">تا <b>سه بار</b> شغل متناسب دیگری معرفی می‌کنیم؛ <b>بی‌قیدوشرط</b>. این تعهد ماست.</p>
+          <p class="b-desc">طبق آمار سال‌های گذشته، تنها <b>۶٪</b> انصراف کارفرما یا درخواست جابجایی ثبت شده است؛ با این حال، سرپناه موقت و پشتیبانی کامل در دوران جابجایی همراه شماست.</p>
+        </div>
+      </article>
+
+      <!-- ۲۷ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۲۷</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">چه مشاغلی را ارائه نمی‌کنید؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <ul class="chips-no">
+            <li class="chip-no">پرستاری</li>
+            <li class="chip-no">مهندسی</li>
+            <li class="chip-no">اداری</li>
+            <li class="chip-no">انبارداری</li>
+            <li class="chip-no">راننده سنگین</li>
+          </ul>
+          <p class="b-desc" style="margin-top:14px">این موارد در بخش فرم نیز ذکر شده‌اند تا از ابتدا، انتظارات شما <b>دقیق و شفاف</b> باشد. تمرکز ما بر مشاغل فعال است تا با کیفیت کامل خدمت کنیم.</p>
+        </div>
+      </article>
+
+      <!-- ۲۸ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۲۸</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">در عراق تنها می‌مانم؟ پشتیبانی چگونه است؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>هرگز تنها نیستید</span>
+          <p class="b-desc">تیم‌های ما در <b>نجف، کربلا و بصره</b> — همان کسانی که خود روزی مانند شما رفتند — دوستانه کنار شما هستند.</p>
+          <ul class="b-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>تهیهٔ سیم‌کارت عراقی</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>اسکان اضطراری هنگام بروز مشکل</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>افتتاح حساب بانکی عراق</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>پیگیری اقامت خانواده در صورت نیاز</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ۲۹ -->
+      <article class="b-card" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۲۹</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">ساعت کاری و اضافه‌کاری چگونه است؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc">عموماً <b>۸ ساعت کار در روز</b>، به‌علاوهٔ اضافه‌کاری.</p>
+          <p class="b-desc">میزان حقوق، ساعات کار، اضافه‌کاری، وعده‌های غذایی و محل اقامت — همه در <b>دعوتنامهٔ رسمی</b> ذکر می‌شود و پیش از اعزام آن را مطالعه می‌کنید.</p>
+          <span class="b-statement">هیچ شرط پنهانی وجود ندارد.</span>
+        </div>
+      </article>
+
+      <!-- ۳۰ — کارت طلایی پایانی -->
+      <article class="b-card b-gold" data-tilt>
+        <div class="b-top z3"><span class="b-seal">۳۰</span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg></span>
+        </div>
+        <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
+        <h3 class="b-title z2">راهنما را خواندم؛ قدم بعدی چیست؟</h3>
+        <div class="b-divider z1"></div>
+        <div class="b-body z1">
+          <p class="b-desc"><b>ثبت درخواست در صفحهٔ پذیرش</b>؛ سپس کارشناسان با شما تماس می‌گیرند.</p>
+          <div class="b-chips">
+            <span class="b-chip">۱ ثبت درخواست</span>
+            <span class="b-chip">۲ تماس کارشناس</span>
+            <span class="b-chip">۳ یک ساعت مشاوره — حق قانونی شما</span>
+          </div>
+          <p class="b-desc" style="margin-top:14px">ادامهٔ مراحل، تلفنی، در چت روبیکا یا واتساپ، یا حضوری انجام می‌شود.</p>
+          <span class="b-statement">اکنون، نوبت تصمیم شماست.</span>
+          <a class="btn btn-dark" href="paziresh.html">ثبت درخواست پذیرش
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <div class="wrap rail-foot">
+      <div class="rail-progress" aria-hidden="true"><div class="rail-bar" id="bar-b"></div></div>
+      <span class="rail-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        بکشید یا با دکمه‌ها ورق بزنید
+      </span>
+    </div>
+  </section>
+
+  <!-- ============ FINISH ============ -->
+  <section class="finish" id="finish">
+    <div class="wrap">
+      <div class="sect-head" data-reveal>
+        <span class="eyebrow">اتمام حجت — و آغاز مسیر</span>
+        <h2>۳۰ پرسش، یک حقیقت: <span class="k-gold">مسیر شما آماده است</span></h2>
+      </div>
+      <p class="finish-line" data-reveal>
+        اگر کلیهٔ مطالب را مطالعه کردید، <span class="k-gold">وقت آن است که اقدام کنید</span>؛
+        درخواست خود را ثبت کنید تا کارشناسان با شما تماس بگیرند.
+      </p>
+
+      <div class="guide-card pattern" id="finish-card" data-tilt data-tilt-max="4" data-tilt-scale="1.01" data-tilt-glare="true" data-tilt-max-glare="0.14" data-reveal>
+        <div class="guide-head z2">
+          <span class="guide-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+          <span class="state-chip" id="finish-state">مطالعهٔ کامل این صفحه، شرط تصمیم آگاهانه است</span>
+          <span class="must">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            الزامی
+          </span>
+        </div>
+        <h3 class="z2">همه‌چیز را خواندید؟ <span class="k-gold">وقتِ اقدام است.</span></h3>
+        <p class="g-desc z1">تصمیم جدی، شایستهٔ اقدام جدی است؛ درخواست خود را ثبت کنید تا کارشناسان با شما تماس بگیرند. <b style="color:var(--gold-bright)">یک ساعت مشاورهٔ شغلی، حق قانونی شماست.</b></p>
+        <div class="steps z1">
+          <div class="step" id="step-read"><span class="step-n">۱</span><b>مطالعهٔ کامل راهنما</b></div>
+          <div class="step"><span class="step-n">۲</span><b>ثبت درخواست پذیرش</b></div>
+          <div class="step"><span class="step-n">۳</span><b>تماس کارشناسان با شما</b></div>
+        </div>
+        <div class="channels z1">
+          <span class="channel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>تماس تلفنی</span>
+          <span class="channel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>چت روبیکا</span>
+          <span class="channel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>واتساپ</span>
+          <span class="channel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>حضوری</span>
+        </div>
+        <div class="guide-btns z2">
+          <a class="btn btn-gold" href="paziresh.html">ثبت درخواست پذیرش
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="marahl.html">مشاهدهٔ مراحل کار</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-brand">
+    <span class="logo-tile"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#kTile"/></svg></span>
+    <b>کار<span class="brand-crane">🏗</span>دار</b>
+  </div>
+  <p class="footer-tag">کاریابی با مجوز استخدام در عراق — ساده، آسان و شفاف</p>
+  <p class="footer-cities">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    نجف ✦ کربلا ✦ بصره
+  </p>
+  <p class="footer-sign">کاردار؛ <span>امضای اعتماد</span> در کاریابی عراق ✦</p>
+  <p class="footer-copy">© ۱۴۰۵ کاردار — تمامی حقوق محفوظ است.</p>
+</footer>
+
+<!-- ============ BOTTOM NAV ============ -->
+<nav class="bottom-nav" aria-label="ناوبری اصلی">
+  <div class="bottom-nav-in">
+    <a class="nav-item" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
       خانه
     </a>
-    <a href="guide.html" class="nav-item active">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="11" cy="11" r="8"/>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-      </svg>
+    <a class="nav-item active" id="nav-guide" href="guide.html" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
       راهنما
     </a>
-    <a href="request.html" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <line x1="12" y1="8" x2="12" y2="16"/>
-        <line x1="8" y1="12" x2="16" y2="12"/>
-      </svg>
-      ثبت درخواست
+    <a class="nav-item" href="paziresh.html">
+      <span class="nav-dot" aria-hidden="true"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+      پذیرش
     </a>
-    <a href="status.html" class="nav-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-        <circle cx="12" cy="7" r="4"/>
-      </svg>
-      وضعیت من
+    <a class="nav-item" href="marahl.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg>
+      مراحل
     </a>
-  </nav>
+  </div>
+</nav>
 
-</div>
-
+<!-- ============ LIBRARIES (GitHub: greensock/GSAP, darkroomengineering/lenis, lukePeavey/SplitType, micku7zu/vanilla-tilt.js, tsparticles) ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/slim@3.5.0/tsparticles.slim.bundle.min.js"></script>
 <script>
-/* آکاردئون نرم — چندتا می‌تونن باز بمونن */
-document.querySelectorAll('.faq-question').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.closest('.faq-item');
-    item.classList.toggle('is-open');
+(function(){
+'use strict';
+var $=function(s){return document.querySelector(s)};
+var $$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+var fa=function(n){return String(n).replace(/\d/g,function(d){return '۰۱۲۳۴۵۶۷۸۹'[d]});};
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var finePointer=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+var hasGsap=typeof window.gsap!=='undefined';
+var hasST=hasGsap&&typeof window.ScrollTrigger!=='undefined';
+if(hasST){gsap.registerPlugin(ScrollTrigger);}
+
+/* ---------- header + reading progress + completion ---------- */
+var header=$('#header');
+var readBar=$('#read-bar');
+var finishCard=$('#finish-card');
+var finishState=$('#finish-state');
+var stepRead=$('#step-read');
+var readDone=false;
+function updateRead(){
+  var doc=document.documentElement;
+  var max=doc.scrollHeight-window.innerHeight;
+  var p=max>0?Math.min(1,window.scrollY/max):1;
+  readBar.style.width=(p*100)+'%';
+  if(!readDone&&p>=.97){
+    readDone=true;
+    finishCard.classList.add('done');
+    finishState.textContent='✓ مطالعهٔ شما کامل شد — نوبت اقدام است';
+    finishState.classList.add('ok');
+    stepRead.classList.add('done');
+    stepRead.querySelector('.step-n').textContent='✓';
+  }
+}
+var scrollTick=false;
+function onScroll(){
+  if(scrollTick)return;
+  scrollTick=true;
+  requestAnimationFrame(function(){
+    scrollTick=false;
+    header.classList.toggle('scrolled',window.scrollY>24);
+    updateRead();
+  });
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+window.addEventListener('resize',onScroll,{passive:true});
+onScroll();
+
+/* ---------- Lenis smooth scroll ---------- */
+var lenis=null;
+if(!reduced&&hasGsap&&typeof window.Lenis!=='undefined'){
+  lenis=new Lenis({duration:1.15,smoothWheel:true});
+  lenis.on('scroll',function(){if(hasST){ScrollTrigger.update();}});
+  gsap.ticker.add(function(t){lenis.raf(t*1000);});
+  gsap.ticker.lagSmoothing(0);
+}
+function scrollToTarget(target){
+  if(lenis){lenis.scrollTo(target,{offset:-(header.offsetHeight+14)});return;}
+  var y=(typeof target==='number')?target:(target.getBoundingClientRect().top+window.scrollY-(header.offsetHeight+14));
+  window.scrollTo({top:Math.max(0,y),behavior:reduced?'auto':'smooth'});
+}
+$$('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href');
+    if(id&&id.length>1){
+      var el=document.querySelector(id);
+      if(el){e.preventDefault();scrollToTarget(el);}
+    }
   });
 });
-</script>
+$('#nav-guide').addEventListener('click',function(e){e.preventDefault();scrollToTarget(0);});
 
-</body>
-                                                                                                                                                                                                   </html>
+/* ---------- Q&A rails (دو ریل ۱۵تایی) ---------- */
+var railUpdaters=[];
+function initRail(railId,prevId,nextId,barId,idxId,startIndex){
+  var rail=$(railId),prev=$(prevId),next=$(nextId),bar=$(barId),idx=$(idxId);
+  if(!rail)return;
+  var cards=Array.prototype.slice.call(rail.querySelectorAll('.b-card'));
+  var total=startIndex+cards.length-1;
+  function step(){
+    var gap=parseFloat(getComputedStyle(rail).gap)||22;
+    return cards[0].getBoundingClientRect().width+gap;
+  }
+  function max(){return rail.scrollWidth-rail.clientWidth;}
+  function cur(){return Math.abs(rail.scrollLeft);}
+  function update(){
+    var m=max(),c=Math.min(cur(),m);
+    bar.style.width=(m>0?Math.max(6,(c/m)*100):100)+'%';
+    prev.disabled=c<4;
+    next.disabled=c>m-4;
+    var rr=rail.getBoundingClientRect(),cx=rr.left+rr.width/2,best=0,bd=Infinity;
+    cards.forEach(function(el,i){
+      var r=el.getBoundingClientRect();
+      var d=Ma

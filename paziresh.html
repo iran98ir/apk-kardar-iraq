@@ -15,7 +15,7 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;color-scheme:dark;scroll-behavior:smooth;scrollbar-color:var(--gd) var(--f900)}
 html.lenis{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
-body{font-family:Vazirmatn,'Segoe UI',Tahoma,sans-serif;font-size:1.1875rem;line-height:1.95;font-weight:500;background:var(--f950);color:var(--iv);overflow-x:clip;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+body{font-family:Vazirmatn,'Segoe UI',Tahoma,sans-serif;font-size:1.1875rem;line-height:1.95;font-weight:500;background:var(--f950);color:var(--iv);overflow-x:hidden;overflow-x:clip;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
 body.lock{overflow:hidden}
 ::selection{background:var(--gd2);color:var(--f900)}
 ::-webkit-scrollbar{width:12px;height:9px}::-webkit-scrollbar-track{background:var(--f900)}
@@ -43,7 +43,7 @@ mark.sw.lit{background-size:100% 100%}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:1.125rem;font-weight:800;color:var(--gd2)}
 .eyebrow::before{content:'✦';color:var(--em2)}
 .eyebrow::after{content:'';width:60px;height:1.5px;background:linear-gradient(90deg,var(--gd),transparent)}
-.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:15px 30px;border-radius:16px;font-size:1.1875rem;font-weight:800;overflow:hidden;white-space:nowrap;transition:transform .25s var(--ez),box-shadow .25s,border-color .25s,color .25s,background .25s}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:15px 26px;border-radius:16px;font-size:1.1875rem;font-weight:800;overflow:hidden;max-width:100%;white-space:normal;text-align:center;line-height:1.6;transition:transform .25s var(--ez),box-shadow .25s,border-color .25s,color .25s,background .25s}
 .btn:active{transform:scale(.97)}
 .bg1{background:var(--gold);color:#142B22;box-shadow:var(--sh),inset 0 1px 0 rgba(255,255,255,.5)}
 .bg1:hover{transform:translateY(-2px);box-shadow:0 18px 48px rgba(212,175,55,.38)}
@@ -119,7 +119,7 @@ mark.sw.lit{background-size:100% 100%}
 .chead h3{font-size:1.55rem;font-weight:900;line-height:1.6}
 .csub{font-size:1.0625rem;color:var(--iv5);font-weight:600}
 .cnum{margin-inline-start:auto;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);color:var(--gd2);font-weight:900;font-size:1.1875rem}
-.fld{margin-bottom:24px}.fld:last-child{margin-bottom:0}
+.fld{margin-bottom:24px;min-width:0}.fld:last-child{margin-bottom:0}
 .lbl{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:1.25rem;font-weight:800;margin-bottom:9px;line-height:1.8}
 .req{font-size:1.0625rem;font-weight:900;color:#142B22;background:var(--gold);padding:1px 12px;border-radius:9px}
 .opt{font-size:1.0625rem;font-weight:800;color:var(--em2);border:1px solid rgba(29,190,130,.4);background:rgba(29,190,130,.08);padding:1px 12px;border-radius:9px}
@@ -131,6 +131,7 @@ mark.sw.lit{background-size:100% 100%}
 .inp:focus{outline:none;border-color:var(--gd);box-shadow:0 0 0 4px rgba(245,197,66,.14)}
 textarea.inp{min-height:126px;resize:vertical;line-height:2}
 .cnt{font-size:1.0625rem;color:var(--iv5);text-align:left;margin-top:5px}
+.cnt.ok{color:var(--em2);font-weight:800}
 .err{display:none;align-items:center;gap:9px;margin-top:9px;font-size:1.0625rem;font-weight:800;color:var(--dg);line-height:1.8}
 .err::before{content:'!';width:22px;height:22px;border-radius:50%;background:rgba(255,107,107,.18);border:1.5px solid var(--dg);display:grid;place-items:center;font-size:1.0625rem;flex:0 0 auto}
 .fld.bad .err{display:flex}
@@ -139,7 +140,7 @@ textarea.inp{min-height:126px;resize:vertical;line-height:2}
 @keyframes shk{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
 .step{display:flex;align-items:center;gap:12px;max-width:340px}
 .step .inp{text-align:center;font-size:1.5rem;font-weight:900;color:var(--gd2)}
-.sbtn{width:58px;height:58px;flex:0 0 auto;border-radius:16px;display:grid;place-items:center;border:1.5px solid var(--line);background:rgba(11,61,46,.38);color:var(--gd2);transition:.2s}
+.sbtn{width:58px;height:58px;flex:0 0 auto;border-radius:16px;display:grid;place-items:center;border:1.5px solid var(--line);background:rgba(11,61,46,.38);color:var(--gd2);font-size:1.5rem;font-weight:900;transition:.2s}
 .sbtn:hover{border-color:var(--gd);background:rgba(212,175,55,.13)}.sbtn:active{transform:scale(.92)}
 .acc{border-radius:18px;border:1.5px solid var(--soft);background:rgba(3,19,13,.5);overflow:hidden;transition:.25s}
 .acc.open{border-color:rgba(245,197,66,.55);box-shadow:0 0 0 4px rgba(245,197,66,.1)}
@@ -195,7 +196,7 @@ textarea.inp{min-height:126px;resize:vertical;line-height:2}
 .dzp .lb{font-size:1.0625rem;font-weight:800;color:var(--gd2);margin-top:8px;display:flex;align-items:center;justify-content:center;gap:8px}
 .spn{width:18px;height:18px;border:2.5px solid rgba(245,197,66,.3);border-top-color:var(--gd2);border-radius:50%;animation:spin .8s linear infinite}
 .dzd{display:none;align-items:center;gap:14px;text-align:start}
-.dzth{width:82px;height:82px;flex:0 0 auto;border-radius:14px;object-fit:cover;border:1.5px solid var(--line)}
+.dzth{width:82px;height:82px;flex:0 0 auto;border-radius:14px;object-fit:cover;border:1.5px solid var(--line);background:rgba(3,19,13,.6)}
 .dzm{flex:1;min-width:0}
 .dzn{font-size:1.0625rem;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .dzok{display:inline-flex;align-items:center;gap:7px;font-size:1.0625rem;font-weight:900;color:var(--em2);margin-top:6px}
@@ -243,45 +244,48 @@ textarea.inp{min-height:126px;resize:vertical;line-height:2}
 .cons input:focus-visible~.cbox{outline:3px solid var(--gd2);outline-offset:3px}
 .ctxt{font-size:1.15rem;font-weight:700;line-height:2}
 .ctxt a{color:var(--gd2);font-weight:800;border-bottom:2px solid rgba(245,197,66,.4)}
-.esum{display:none;border:1.5px solid rgba(255,107,107,.55);border-radius:20px;padding:22px;margin-bottom:24px;background:linear-gradient(150deg,rgba(140,47,57,.3),rgba(140,47,57,.1))}
+.sub{text-align:center;margin-top:28px;min-width:0}
+.esum{display:none;text-align:start;border:1.5px solid rgba(255,107,107,.55);border-radius:20px;padding:20px;margin-bottom:18px;background:linear-gradient(150deg,rgba(140,47,57,.32),rgba(140,47,57,.12))}
 .esum.on{display:block;animation:ni .4s var(--ez)}
 .eh{display:flex;align-items:center;gap:12px;margin-bottom:13px}
-.eh .i{width:28px;height:28px;color:var(--dg)}
-.eh h4{font-size:1.35rem;font-weight:900;color:var(--dg)}
+.eh .i{width:26px;height:26px;color:var(--dg)}
+.eh h4{font-size:1.25rem;font-weight:900;color:var(--dg);line-height:1.7}
 .elist{display:grid;gap:8px}
-.ei{display:flex;align-items:center;gap:10px;width:100%;text-align:start;padding:11px 15px;border-radius:13px;border:1px solid rgba(255,107,107,.3);background:rgba(255,107,107,.06);font-size:1.125rem;font-weight:700;transition:.2s}
+.ei{display:flex;align-items:center;gap:10px;width:100%;text-align:start;padding:11px 15px;border-radius:13px;border:1px solid rgba(255,107,107,.3);background:rgba(255,107,107,.06);font-size:1.125rem;font-weight:700;line-height:1.7;transition:.2s}
 .ei:hover{background:rgba(255,107,107,.15);border-color:rgba(255,107,107,.5)}
 .ei::before{content:'↑';color:var(--dg);font-weight:900}
-.sub{text-align:center;margin-top:28px}
-.sub .bg1{font-size:1.3rem;padding:18px 38px;min-height:66px}
+#submit{width:100%;max-width:560px;font-size:clamp(1.125rem,3.6vw,1.3rem);padding:17px 22px;min-height:66px}
 .smeta{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin-top:16px;font-size:1.0625rem;font-weight:700;color:var(--iv5)}
 .smeta span{display:inline-flex;align-items:center;gap:7px}
 .smeta .i{width:19px;height:19px;color:var(--em2)}
 .lnk{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:1.0625rem;font-weight:800;color:var(--iv5);padding:8px 14px;border-radius:11px;transition:.2s}
 .lnk:hover{color:var(--dg);background:rgba(255,107,107,.08)}
 .lnk .i{width:18px;height:18px}
-.modal{position:fixed;inset:0;z-index:150;display:none;align-items:center;justify-content:center;padding:18px}
+.modal{position:fixed;inset:0;z-index:150;display:none;align-items:center;justify-content:center;padding:16px}
 .modal.on{display:flex}
 .mbd{position:absolute;inset:0;background:rgba(3,19,13,.84);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);animation:fi .3s}
 @keyframes fi{from{opacity:0}to{opacity:1}}
-.mcard{position:relative;width:100%;max-width:860px;max-height:min(88vh,900px);display:flex;flex-direction:column;border-radius:28px;border:2px solid rgba(212,175,55,.55);background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 40px 100px rgba(3,19,13,.7),var(--sh);overflow:hidden;animation:mi .45s var(--ez)}
-@keyframes mi{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:none}}
+.mcard{position:relative;width:100%;max-width:840px;display:flex;flex-direction:column;max-height:92vh;max-height:92dvh;border-radius:26px;border:2px solid rgba(212,175,55,.55);background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 40px 100px rgba(3,19,13,.7),var(--sh);overflow:hidden;animation:mi .45s var(--ez)}
+@keyframes mi{from{opacity:0;transform:translateY(34px) scale(.97)}to{opacity:1;transform:none}}
 .mcard::before{opacity:.4}
-.mhead{position:relative;z-index:1;display:flex;align-items:center;gap:14px;padding:24px 26px 16px;border-bottom:1px solid rgba(245,197,66,.25)}
-.mhead h3{font-size:1.5rem;font-weight:900;line-height:1.6}
-.msub{font-size:1.0625rem;color:var(--iv5);font-weight:600}
-.mx{margin-inline-start:auto;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;border:1px solid var(--soft);color:var(--iv7);transition:.2s}
+.mhead{position:relative;z-index:1;flex:0 0 auto;display:flex;align-items:center;gap:13px;padding:20px 24px 15px;border-bottom:1px solid rgba(245,197,66,.25)}
+.mhead h3{font-size:1.4rem;font-weight:900;line-height:1.6}
+.msub{font-size:1.0625rem;color:var(--iv5);font-weight:600;line-height:1.7}
+.mx{margin-inline-start:auto;width:46px;height:46px;flex:0 0 auto;border-radius:14px;display:grid;place-items:center;border:1px solid var(--soft);color:var(--iv7);transition:.2s}
 .mx:hover{border-color:rgba(255,107,107,.5);color:var(--dg);background:rgba(255,107,107,.08)}
-.mbody{position:relative;z-index:1;padding:22px 26px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--gd) rgba(212,175,55,.12)}
-.mbody::-webkit-scrollbar{width:9px}.mbody::-webkit-scrollbar-track{background:rgba(212,175,55,.08)}.mbody::-webkit-scrollbar-thumb{background:var(--gd);border-radius:99px}
-.letter{font-size:1.25rem;font-weight:600;line-height:2.25}
-.letter p{margin-bottom:15px}.letter p:last-child{margin-bottom:0}
-.letter .op{font-size:1.35rem;font-weight:800}
+.mbody{position:relative;z-index:1;flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:20px 24px 24px;scrollbar-width:thin;scrollbar-color:var(--gd) rgba(212,175,55,.14)}
+.mbody::-webkit-scrollbar{width:10px}
+.mbody::-webkit-scrollbar-track{background:rgba(212,175,55,.12);border-radius:99px}
+.mbody::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--gd),var(--em));border-radius:99px;border:2px solid transparent;background-clip:padding-box}
+.mbody::-webkit-scrollbar-thumb:hover{background:var(--gd2);background-clip:padding-box}
+.letter{font-size:1.15rem;font-weight:600;line-height:2.05}
+.letter p{margin-bottom:14px}.letter p:last-child{margin-bottom:0}
+.letter .op{font-size:1.22rem;font-weight:800;line-height:2}
 .letter .g{color:var(--gd2);font-weight:900}
-.letter .cl{border-top:1.5px solid rgba(245,197,66,.3);padding-top:15px;font-weight:800;color:var(--gd2)}
-.letter .sg{font-size:1.125rem;color:var(--iv5);font-weight:700}
-.mfoot{position:relative;z-index:1;display:flex;gap:13px;flex-wrap:wrap;padding:18px 26px 24px;border-top:1px solid rgba(245,197,66,.25)}
-.mfoot .btn{flex:1;min-width:200px}
+.letter .cl{border-top:1.5px solid rgba(245,197,66,.3);padding-top:14px;font-weight:800;color:var(--gd2)}
+.letter .sg{font-size:1.0625rem;color:var(--iv5);font-weight:700}
+.mfoot{position:relative;z-index:1;flex:0 0 auto;display:flex;gap:12px;flex-wrap:wrap;padding:16px 24px 20px;border-top:1px solid rgba(245,197,66,.25);background:rgba(3,19,13,.4)}
+.mfoot .btn{flex:1;min-width:190px}
 .succ{display:none;padding-block:34px 70px}.succ.on{display:block}
 .scard{position:relative;border-radius:30px;padding:42px 34px;text-align:center;border:2px solid rgba(29,190,130,.55);background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 30px 90px rgba(3,19,13,.6),0 0 60px rgba(29,190,130,.2);overflow:hidden;transform-style:preserve-3d}
 .scard::before{opacity:.5}.scard>*{position:relative;z-index:1}
@@ -330,11 +334,14 @@ textarea.inp{min-height:126px;resize:vertical;line-height:2}
 .toast .i{width:20px;height:20px;stroke-width:2.5}
 @media(max-width:900px){#sham{width:400px;height:400px;inset-inline-end:-130px;opacity:.13}}
 @media(max-width:640px){
-section{padding-block:52px}.stats{grid-template-columns:repeat(2,1fr)}.card{padding:24px 19px}
+section{padding-block:52px}.stats{grid-template-columns:repeat(2,1fr)}.card{padding:24px 18px}
 .cnum{margin-inline-start:0}.lbl{font-size:1.1875rem}.nt{padding:16px 15px}.nt.big p{font-size:1.1875rem}
-.bank{padding:22px 18px}.modal{padding:10px}.mhead,.mbody,.mfoot{padding-inline:18px}.mfoot .btn{min-width:100%}
-.scard{padding:32px 20px}.hcard{padding:26px 20px}.hero{padding-top:calc(var(--hh) + 26px)}.sp2{display:none}.psave{width:100%}}
-@media(max-width:380px){.btn{padding:14px 19px;font-size:1.125rem}.bnum{font-size:1.2rem}}
+.bank{padding:22px 17px}.modal{padding:10px}.mhead,.mbody,.mfoot{padding-inline:17px}
+.mfoot .btn{min-width:100%}.mhead h3{font-size:1.25rem}.msub{font-size:1.0625rem}
+.letter{font-size:1.125rem;line-height:2}
+.scard{padding:32px 20px}.hcard{padding:26px 20px}.hero{padding-top:calc(var(--hh) + 26px)}.sp2{display:none}.psave{width:100%}
+.esum{padding:17px 15px}.eh h4{font-size:1.15rem}#submit{padding:16px 16px}}
+@media(max-width:380px){.btn{padding:14px 16px;font-size:1.0625rem}.bnum{font-size:1.2rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-behavior:auto}mark.sw{background-size:100% 100%}}
 </style>
 </head>
@@ -440,16 +447,11 @@ section{padding-block:52px}.stats{grid-template-columns:repeat(2,1fr)}.card{padd
       </div>
     </div>
 
-    <div class="esum" id="esum" role="alert">
-      <div class="eh"><svg class="i"><use href="#i-alert"/></svg><h4>برای ثبت درخواست، این موارد را کامل کنید:</h4></div>
-      <div class="elist" id="elist"></div>
-    </div>
-
     <!-- ۱ -->
     <div class="card" id="sec1" data-rv>
       <div class="chead"><span class="cico"><svg class="i"><use href="#i-user"/></svg></span><div><h3>هویت و تماس</h3><span class="csub">تا کارشناسان بتوانند با شما تماس بگیرند</span></div><span class="cnum">۱</span></div>
-      <div class="fld" id="f-fullname"><label class="lbl" for="i-fullname">نام و نام خانوادگی <span class="req">الزامی</span></label><input class="inp" id="i-fullname" data-f="fullname" autocomplete="name" placeholder="مثال: حمیدرضا سلیمی"><div class="err"><span>لطفاً نام و نام خانوادگی خود را وارد کنید.</span></div></div>
-      <div class="fld" id="f-phone"><label class="lbl" for="i-phone">شماره تماس <span class="req">الزامی</span></label><p class="help">شمارهٔ موبایل فعال خود را وارد کنید؛ تماس کارشناسان با همین شماره خواهد بود. مثال: <b>۰۹۱۲۳۴۵۶۷۸۹</b></p><input class="inp" id="i-phone" data-f="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="۰۹۱۲۳۴۵۶۷۸۹"><div class="err"><span>شماره تماس معتبر وارد کنید (۱۱ رقم، شروع با ۰۹).</span></div></div>
+      <div class="fld" id="f-fullname"><label class="lbl" for="i-fullname">نام و نام خانوادگی <span class="req">الزامی</span></label><input class="inp" id="i-fullname" data-f="fullname" autocomplete="name" placeholder="مثال: علی محمدی"><div class="err"><span>لطفاً نام و نام خانوادگی خود را وارد کنید.</span></div></div>
+      <div class="fld" id="f-phone"><label class="lbl" for="i-phone">شماره تماس <span class="req">الزامی</span></label><p class="help">شمارهٔ موبایل فعال خود را وارد کنید؛ <b>۱۱ رقم و شروع با ۰۹</b>. تماس کارشناسان با همین شماره خواهد بود.</p><input class="inp" id="i-phone" data-f="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" placeholder="۰۹۱۲۳۴۵۶۷۸۹" dir="ltr" style="text-align:left"><div class="cnt" id="phoneCnt">۰ / ۱۱ رقم</div><div class="err"><span>شمارهٔ موبایل باید ۱۱ رقم و با ۰۹ شروع شود.</span></div></div>
       <div class="fld" id="f-gender"><span class="lbl">جنسیت <span class="req">الزامی</span></span><div class="acc" data-f="gender"></div><div class="err"><span>لطفاً جنسیت را انتخاب کنید.</span></div>
         <div class="nt am big hide" id="ntWomen"><svg class="i"><use href="#i-alert"/></svg><p><span class="ntt">بانوی گرامی، توجه فرمایید</span>فرصت‌های شغلی برای بانوان در حال حاضر <b>بسیار محدود</b> است؛ لطفاً گزینه‌های موجود فعلی را پیش از ثبت نهایی، در همین فرم (بخش ۵) رویت کنید.</p></div>
       </div>
@@ -474,7 +476,7 @@ section{padding-block:52px}.stats{grid-template-columns:repeat(2,1fr)}.card{padd
       <!-- ۳ -->
       <div class="card" id="sec3" data-rv>
         <div class="chead"><span class="cico"><svg class="i"><use href="#i-pin"/></svg></span><div><h3>اقامت و پاسپورت</h3><span class="csub">وضعیت فعلی شما، مبنای برنامه‌ریزی اعزام است</span></div><span class="cnum">۳</span></div>
-        <div class="fld" id="f-residence"><label class="lbl" for="i-residence">محل اقامت <span class="req">الزامی</span></label><p class="help">شهر یا منطقهٔ سکونت فعلی خود را ذکر کنید.</p><input class="inp" id="i-residence" data-f="residence" placeholder="مثال: تهران — منطقهٔ ۵"><div class="err"><span>لطفاً شهر یا منطقهٔ سکونت خود را وارد کنید.</span></div></div>
+        <div class="fld" id="f-residence"><label class="lbl" for="i-residence">محل اقامت <span class="req">الزامی</span></label><p class="help">شهر یا منطقهٔ سکونت فعلی خود را ذکر کنید.</p><input class="inp" id="i-residence" data-f="residence" placeholder="نام شهر یا روستایی"><div class="err"><span>لطفاً شهر یا منطقهٔ سکونت خود را وارد کنید.</span></div></div>
         <div class="fld" id="f-passport"><span class="lbl">وضعیت پاسپورت <span class="req">الزامی</span></span><div class="acc" data-f="passport"></div><div class="err"><span>لطفاً وضعیت پاسپورت را انتخاب کنید.</span></div>
           <div class="fld hide" id="f-canPassport" style="margin-top:18px"><span class="lbl">آیا می‌توانید پاسپورت بگیرید؟ <span class="req">الزامی</span></span><p class="help">تمام فرایند اخذ پاسپورت، حدود <b>۱۰ روز</b> زمان خواهد برد.</p><div class="acc" data-f="canPassport"></div><div class="err"><span>لطفاً پاسخ این پرسش را انتخاب کنید.</span></div>
             <div class="nt dg big hide" id="ntPass"><svg class="i"><use href="#i-alert"/></svg><p><span class="ntt">امکان ارائهٔ خدمات وجود ندارد</span>فرایند اقامت قانونی، نیازمند داشتن پاسپورت است؛ در صورت نداشتن پاسپورت و عدم امکان اخذ آن، امکان ارائهٔ خدمات وجود ندارد.</p></div>
@@ -529,8 +531,8 @@ section{padding-block:52px}.stats{grid-template-columns:repeat(2,1fr)}.card{padd
       <div class="card" id="sec6" data-rv>
         <div class="chead"><span class="cico"><svg class="i"><use href="#i-up"/></svg></span><div><h3>مدارک و پرداخت</h3><span class="csub">بارگذاری مدارک و فیش واریز هزینهٔ اداری</span></div><span class="cnum">۶</span></div>
         <div class="fld" id="f-nationality"><span class="lbl">تابعیت <span class="req">الزامی</span></span><div class="acc" data-f="nationality"></div><div class="err"><span>لطفاً تابعیت را انتخاب کنید.</span></div></div>
-        <div class="fld" id="f-up1"><span class="lbl" id="lb1">تصویر روی کارت ملی خود را بارگذاری کنید <span class="req">الزامی</span></span><p class="help">یک تصویر واضح (JPG / PNG)، حداکثر ۸ مگابایت.</p><div class="dzslot" data-slot="1"></div><div class="err"><span>لطفاً تصویر مدرک اول را بارگذاری کنید.</span></div></div>
-        <div class="fld" id="f-up2"><span class="lbl" id="lb2">تصویر پشت کارت ملی (یا صفحه دوم شناسنامه) را بارگذاری کنید <span class="req">الزامی</span></span><p class="help">یک تصویر واضح (JPG / PNG)، حداکثر ۸ مگابایت.</p><div class="dzslot" data-slot="2"></div><div class="err"><span>لطفاً تصویر مدرک دوم را بارگذاری کنید.</span></div></div>
+        <div class="fld" id="f-up1"><span class="lbl" id="lb1">تصویر روی کارت ملی خود را بارگذاری کنید <span class="req">الزامی</span></span><p class="help">یک تصویر واضح از مدرک خود بارگذاری کنید.</p><div class="dzslot" data-slot="1"></div><div class="err"><span>لطفاً تصویر مدرک اول را بارگذاری کنید.</span></div></div>
+        <div class="fld" id="f-up2"><span class="lbl" id="lb2">تصویر پشت کارت ملی (یا صفحه دوم شناسنامه) را بارگذاری کنید <span class="req">الزامی</span></span><p class="help">یک تصویر واضح از مدرک خود بارگذاری کنید.</p><div class="dzslot" data-slot="2"></div><div class="err"><span>لطفاً تصویر مدرک دوم را بارگذاری کنید.</span></div></div>
 
         <div class="bank pat" data-tilt data-tilt-max="4" data-tilt-scale="1.01" data-tilt-glare="true" data-tilt-max-glare="0.12">
           <div class="bhead"><span class="cico"><svg class="i"><use href="#i-card"/></svg></span><div><h4>کارت بانکی رسمی</h4><span class="bbank">بانک پاسارگاد</span></div></div>
@@ -554,7 +556,11 @@ section{padding-block:52px}.stats{grid-template-columns:repeat(2,1fr)}.card{padd
         <div class="fld" id="f-consent"><label class="cons" for="i-consent"><input type="checkbox" id="i-consent" data-f="consent"><span class="cbox"><svg class="i"><use href="#i-check"/></svg></span><span class="ctxt"><a href="guide.html">راهنمای کامل</a> را مطالعه کرده‌ام و صحت اطلاعات فوق را تأیید می‌کنم. می‌دانم ادامهٔ مراحل، تلفنی، در چت روبیکا یا واتساپ، یا حضوری انجام می‌شود.</span></label><div class="err"><span>برای ثبت درخواست، تأیید راهنما و صحت اطلاعات لازم است.</span></div></div>
 
         <div class="sub">
-          <button type="button" class="btn bg1" id="submit">ثبت درخواست و مشاهدهٔ متن نهایی<svg class="i"><use href="#i-arrow"/></svg></button>
+          <div class="esum" id="esum" role="alert">
+            <div class="eh"><svg class="i"><use href="#i-alert"/></svg><h4>برای ثبت درخواست، این موارد را کامل کنید:</h4></div>
+            <div class="elist" id="elist"></div>
+          </div>
+          <button type="button" class="btn bg1" id="submit">ثبت درخواست استخدام فوری<svg class="i"><use href="#i-arrow"/></svg></button>
           <div class="smeta"><span><svg class="i"><use href="#i-lock"/></svg>اطلاعات شما محرمانه است</span><span><svg class="i"><use href="#i-clock"/></svg>۳۰ تا ۴۵ روز تا اعزام</span></div>
           <button type="button" class="lnk" id="clear"><svg class="i"><use href="#i-trash"/></svg>پاک‌کردن پیش‌نویس</button>
         </div>
@@ -607,8 +613,8 @@ section{padding-block:52px}.stats{grid-template-columns:repeat(2,1fr)}.card{padd
   <div class="mbd" id="mbd"></div>
   <div class="mcard pat">
     <div class="mhead"><span class="cico"><svg class="i"><use href="#i-file"/></svg></span><div><h3 id="mtitle">تأیید نهایی درخواست</h3><span class="msub">متن زیر از پاسخ‌های شما ساخته شده است؛ مطالعه و تأیید کنید.</span></div><button type="button" class="mx" id="mx" aria-label="بستن"><svg class="i"><use href="#i-x"/></svg></button></div>
-    <div class="mbody"><div class="letter" id="letter"></div></div>
-    <div class="mfoot"><button type="button" class="btn bg2" id="medit">بازگشت و ویرایش</button><button type="button" class="btn bg1" id="mok">تأیید نهایی و ثبت درخواست<svg class="i"><use href="#i-check"/></svg></button></div>
+    <div class="mbody" id="mbody" tabindex="0"><div class="letter" id="letter"></div></div>
+    <div class="mfoot"><button type="button" class="btn bg2" id="medit">بازگشت و ویرایش</button><button type="button" class="btn bg1" id="mok">تایید نهایی<svg class="i"><use href="#i-check"/></svg></button></div>
   </div>
 </div>
 
@@ -626,13 +632,16 @@ section{padding-block:52px}.stats{grid-template-columns:repeat(2,1fr)}.card{padd
 var $=function(s,r){return (r||document).querySelector(s)},
     $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))},
     fa=function(n){return String(n).replace(/\d/g,function(d){return '۰۱۲۳۴۵۶۷۸۹'[d]})},
-    en=function(s){return String(s).replace(/[۰-۹٠-٩]/g,function(d){var i='۰۱۲۳۴۵۶۷۸۹'.indexOf(d);if(i<0)i='٠١٢٣٤٥٦٧٨٩'.indexOf(d);return i<0?d:String(i)})},
+    en=function(s){return String(s).replace(/[۰-۹٠-٩]/g,function(d){var i='۰۱۲۳۴۵۶۷۸۹'.indexOf(d);if(i<0)i='٠١٢٣٤٥٦٧٨٩'.indexOf(d);return i})},
     esc=function(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')};
 var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,
     fine=matchMedia('(hover: hover) and (pointer: fine)').matches,
     G=typeof gsap!=='undefined',ST=G&&typeof ScrollTrigger!=='undefined';
 if(ST)gsap.registerPlugin(ScrollTrigger);
-var DK='kardar_draft_v2',RK='kardar_request_v2',done=false;var OPTS={
+var DK='kardar_draft_v2',RK='kardar_request_v2',done=false;
+var FALLBACK_IMG='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22%3E%3Crect width=%2280%22 height=%2280%22 fill=%22%230B3D2E%22/%3E%3Cpath d=%22M24 20h20l12 12v28a4 4 0 0 1-4 4H24a4 4 0 0 1-4-4V24a4 4 0 0 1 4-4z%22 fill=%22none%22 stroke=%22%23F5C542%22 stroke-width=%223%22/%3E%3Cpath d=%22M28 46l8-8 7 7 6-6 7 7%22 fill=%22none%22 stroke=%22%2335D49A%22 stroke-width=%223%22 stroke-linecap=%22round%22/%3E%3C/svg%3E';
+
+var OPTS={
 gender:[['female','خانم'],['male','آقا']],
 marital:[['single','مجرد'],['married','متأهل']],
 exit:[['yes','بله'],['no','خیر']],
@@ -647,7 +656,6 @@ arabic:[['none','اصلاً آشنا نیستم'],['little','بسیار کم'],[
 nationality:[['ir','ایرانی'],['af','افغانستانی'],['ar','عرب غیرایرانی']]};
 
 var S={fullname:'',phone:'',gender:'',age:'',marital:'',exit:'',military:'',medical:'',residence:'',passport:'',canPassport:'',education:'',spec1:'',spec2:'',interests:'',experience:'',certs:'',goal:'',children:'',prefs:[],desired:'',arabic:'',nationality:'',consent:false,up1:null,up2:null,up3:null};
-var TXT=['fullname','phone','age','medical','residence','spec1','spec2','interests','experience','certs','desired'];
 
 /* header + smooth scroll */
 var header=$('#header'),lenis=null;
@@ -715,14 +723,29 @@ function paint(){
   });
 }
 
+/* phone helpers */
+function phoneDigits(v){return en(v).replace(/\D/g,'').slice(0,11)}
+function phoneValid(v){return /^09\d{9}$/.test(v)}
+function paintPhone(){
+  var c=$('#phoneCnt'),n=S.phone.length;
+  c.textContent=fa(n)+' / ۱۱ رقم';
+  c.classList.toggle('ok',phoneValid(S.phone));
+}
+
 /* text inputs */
 $$('[data-f]').forEach(function(el){
   if(el.classList.contains('acc'))return;
   var f=el.dataset.f;
   if(el.type==='checkbox'){el.addEventListener('change',function(){S[f]=el.checked;bad(f,false);update()});return}
   el.addEventListener('input',function(){
+    if(f==='phone'){
+      var d=phoneDigits(el.value);
+      S.phone=d;el.value=fa(d);paintPhone();
+      if(phoneValid(d))bad(f,false);
+      update();return;
+    }
     if(el.dataset.c&&el.value.length>+el.dataset.c)el.value=el.value.slice(0,+el.dataset.c);
-    S[f]=(f==='age'||f==='phone')?en(el.value).replace(/[\s-]/g,''):el.value;
+    S[f]=(f==='age')?en(el.value).replace(/\D/g,'').slice(0,2):el.value;
     if(el.dataset.c){var c=$('.cnt[data-for="'+el.id+'"]');if(c)c.textContent=fa(el.value.length)+' / '+fa(el.dataset.c)}
     bad(f,false);check(f,false);update();
   });
@@ -767,7 +790,7 @@ function empty(f){var v=S[f];if(f==='prefs')return !v.length;if(f==='consent')re
 function bad(f,on,msg){var w=$('#f-'+f);if(!w)return;w.classList.toggle('bad',!!on);if(msg){var s=$('.err span',w);if(s)s.textContent=msg}}
 function check(f,on){
   var ok=true,m='';
-  if(f==='phone'&&S.phone&&!/^09\d{9}$/.test(S.phone)){ok=false;m='شماره تماس معتبر وارد کنید (۱۱ رقم، شروع با ۰۹).'}
+  if(f==='phone'&&S.phone&&!phoneValid(S.phone)){ok=false;m='شمارهٔ موبایل باید ۱۱ رقم و با ۰۹ شروع شود.'}
   if(f==='age'&&S.age){var a=age();if(a<18){ok=false;m='سن زیر ۱۸ سال مجاز نیست؛ پذیرش از ۱۸ سال آغاز می‌شود.'}else if(a>62){ok=false;m='حداکثر سن پذیرش ۶۲ سال است.'}}
   if(!ok){if(on)bad(f,true,m);return false}
   bad(f,false);return true;
@@ -794,12 +817,15 @@ function restore(){
   try{var raw=localStorage.getItem(DK);if(!raw)return;var d=JSON.parse(raw);
     Object.keys(d).forEach(function(k){if(k in S)S[k]=d[k]});
     if(!Array.isArray(S.prefs))S.prefs=[];
+    S.phone=phoneDigits(S.phone||'');
     $$('[data-f]').forEach(function(el){
       if(el.classList.contains('acc'))return;var f=el.dataset.f;
-      if(el.type==='checkbox')el.checked=!!S[f];else if(S[f])el.value=S[f];
+      if(el.type==='checkbox')el.checked=!!S[f];
+      else if(f==='phone')el.value=fa(S.phone);
+      else if(S[f])el.value=S[f];
       if(el.dataset.c){var c=$('.cnt[data-for="'+el.id+'"]');if(c)c.textContent=fa(String(S[f]||'').length)+' / '+fa(el.dataset.c)}
     });
-    update();toast('پیش‌نویس قبلی شما بازیابی شد');
+    paintPhone();update();toast('پیش‌نویس قبلی شما بازیابی شد');
   }catch(e){}
 }
 $('#clear').addEventListener('click',function(){
@@ -807,10 +833,10 @@ $('#clear').addEventListener('click',function(){
   Object.keys(S).forEach(function(k){S[k]=k==='prefs'?[]:(k==='consent'?false:(k.indexOf('up')===0?null:''))});
   $$('[data-f]').forEach(function(el){if(el.classList.contains('acc'))return;if(el.type==='checkbox')el.checked=false;else el.value='';if(el.dataset.c){var c=$('.cnt[data-for="'+el.id+'"]');if(c)c.textContent='۰ / '+fa(el.dataset.c)}});
   [1,2,3].forEach(resetUp);$$('.fld').forEach(function(f){f.classList.remove('bad')});
-  $('#esum').classList.remove('on');update();toast('پیش‌نویس پاک شد');
+  paintPhone();$('#esum').classList.remove('on');update();toast('پیش‌نویس پاک شد');
 });
 
-/* uploads */
+/* uploads — نمایشی، همیشه موفق */
 function resetUp(i){
   var dz=$('#dz'+i);if(!dz)return;S['up'+i]=null;
   dz.classList.remove('done','busy');$('.dzp',dz).style.display='none';$('.fl',dz).style.width='0';$('.pc',dz).textContent='۰٪';
@@ -821,25 +847,31 @@ $$('.dzslot').forEach(function(slot){
       title=i==='3'?'تصویر فیش واریز را انتخاب یا رها کنید':'برای انتخاب تصویر کلیک کنید یا فایل را اینجا رها کنید';
   slot.innerHTML='<div class="dz" id="dz'+i+'"><input type="file" id="file'+i+'" accept="image/*" aria-label="بارگذاری مدرک '+fa(i)+'"><div class="dze"><span class="dzico"><svg class="i"><use href="#'+ico+'"/></svg></span><div class="dzt">'+title+'</div><div class="dzs">بارگذاری امن و فوری</div><div class="dzp"><div class="tr"><div class="fl"></div></div><div class="lb"><span class="spn"></span>در حال بارگذاری… <span class="pc">۰٪</span></div></div></div><div class="dzd"><img class="dzth" alt="پیش‌نمایش مدرک"><div class="dzm"><div class="dzn"></div><span class="dzok"><svg class="i"><use href="#i-check"/></svg>بارگذاری شد</span></div><button type="button" class="dzx" aria-label="حذف تصویر"><svg class="i"><use href="#i-trash"/></svg></button></div></div>';
   var dz=$('#dz'+i),inp=$('#file'+i),prog=$('.dzp',dz),fl=$('.fl',dz),pc=$('.pc',dz),timer=null;
+  function finish(src,name){
+    $('.dzth',dz).src=src||FALLBACK_IMG;
+    $('.dzn',dz).textContent=name||'مدرک بارگذاری شد';
+    S['up'+i]={name:name||'مدرک'};
+    dz.classList.remove('busy');dz.classList.add('done');
+    prog.style.display='none';bad('up'+i,false);update();toast('تصویر با موفقیت بارگذاری شد');
+  }
   function handle(file){
     if(!file)return;
-    if(!/^image\//.test(file.type)){bad('up'+i,true,'لطفاً یک فایل تصویری (JPG یا PNG) انتخاب کنید.');return}
-    if(file.size>8388608){bad('up'+i,true,'حجم تصویر باید حداکثر ۸ مگابایت باشد.');return}
     bad('up'+i,false);dz.classList.add('busy');prog.style.display='block';
     var p=0;clearInterval(timer);
     timer=setInterval(function(){
-      p=Math.min(100,p+Math.random()*22+9);fl.style.width=p+'%';pc.textContent=fa(Math.round(p))+'٪';
-      if(p>=100){clearInterval(timer);
-        var rd=new FileReader();
-        rd.onload=function(ev){
-          $('.dzth',dz).src=ev.target.result;$('.dzn',dz).textContent=file.name;
-          S['up'+i]={name:file.name};dz.classList.remove('busy');dz.classList.add('done');
-          prog.style.display='none';bad('up'+i,false);update();toast('تصویر با موفقیت بارگذاری شد');
-        };
-        rd.onerror=function(){dz.classList.remove('busy');prog.style.display='none';bad('up'+i,true,'خواندن فایل ممکن نشد؛ تصویر دیگری انتخاب کنید.')};
-        rd.readAsDataURL(file);
+      p=Math.min(100,p+Math.random()*24+11);fl.style.width=p+'%';pc.textContent=fa(Math.round(p))+'٪';
+      if(p>=100){
+        clearInterval(timer);
+        var settled=false;
+        var guard=setTimeout(function(){if(!settled){settled=true;finish(FALLBACK_IMG,file.name)}},1200);
+        try{
+          var rd=new FileReader();
+          rd.onload=function(ev){if(settled)return;settled=true;clearTimeout(guard);finish(ev.target.result,file.name)};
+          rd.onerror=function(){if(settled)return;settled=true;clearTimeout(guard);finish(FALLBACK_IMG,file.name)};
+          rd.readAsDataURL(file);
+        }catch(e){if(!settled){settled=true;clearTimeout(guard);finish(FALLBACK_IMG,file.name)}}
       }
-    },140);
+    },130);
   }
   inp.addEventListener('change',function(){handle(inp.files[0])});
   ['dragenter','dragover'].forEach(function(ev){dz.addEventListener(ev,function(e){e.preventDefault();dz.classList.add('over')})});
@@ -877,39 +909,61 @@ $('#submit').addEventListener('click',function(){
       });
       L.appendChild(b);
     });
-    $('#esum').classList.add('on');goTo($('#esum'));toast(fa(miss.length)+' مورد نیاز به تکمیل دارد');return;
+    var box=$('#esum');box.classList.add('on');
+    var r=box.getBoundingClientRect(),navH=$('.nav').offsetHeight||0;
+    if(r.top<header.offsetHeight+16||r.bottom>innerHeight-navH-16)goTo(box);
+    toast(fa(miss.length)+' مورد نیاز به تکمیل دارد');return;
   }
   $('#esum').classList.remove('on');openM();
 });
 
-/* letter */
+/* letter — روان و بدون تکرار */
 function letter(){
-  var g=S.gender==='female'?'خانم':'آقای',s=[];
-  s.push('وضعیت تأهل: '+lbl('marital',S.marital));
-  if(S.gender==='female')s.push('اجازهٔ خروج از کشور: '+lbl('exit',S.exit));
-  if(S.gender==='male'){s.push('وضعیت نظام وظیفه: '+lbl('military',S.military));if(S.medical.trim())s.push('شرح وضعیت جسمانی: '+esc(S.medical.trim()))}
-  s.push('وضعیت پاسپورت: '+lbl('passport',S.passport)+(S.passport==='no'&&S.canPassport==='yes'?' (امکان اخذ آن را دارم — حدود ۱۰ روز)':''));
-  s.push('میزان تحصیلات: '+lbl('education',S.education));
-  if(S.spec1.trim())s.push('تخصص اول: '+esc(S.spec1.trim()));
-  if(S.spec2.trim())s.push('تخصص دوم: '+esc(S.spec2.trim()));
-  if(S.interests.trim())s.push('علایق شغلی: '+esc(S.interests.trim()));
-  if(S.experience.trim())s.push('سوابق شغلی: '+esc(S.experience.trim()));
-  if(S.certs.trim())s.push('مدارک فنی و دوره‌ها: '+esc(S.certs.trim()));
-  s.push('هدف از اشتغال در عراق: '+lbl('goal',S.goal));
-  if(S.goal==='family')s.push('تعداد فرزندان: '+lbl('children',S.children));
-  s.push('ترجیحات شغلی: '+S.prefs.map(function(v){return lbl('prefs',v)}).join('، '));
-  if(S.desired.trim())s.push('مشاغل مد نظر: '+esc(S.desired.trim()));
-  s.push('آشنایی به زبان عربی: '+lbl('arabic',S.arabic));
-  s.push('تابعیت: '+lbl('nationality',S.nationality));
-  return '<p class="op">اینجانب '+g+' <span class="g">'+esc(S.fullname)+'</span>، <span class="g">'+fa(age())+' ساله</span>، ساکن <span class="g">'+esc(S.residence)+'</span>، تقاضای استخدام فوری در عراق با شرایط اعلامی در اپلیکیشن را دارم.</p>'+
-  '<p>'+s.join('؛ ')+'.</p><p>تصاویر مدارک شناسایی و فیش واریز ۱۴۶٬۰۰۰ تومان به پیوست ارسال شده است.</p>'+
-  '<p class="cl">لطفاً با قید رسیدگی فرمایید؛ منتظر تماس کارشناسان شما، مشاورهٔ شغلی و ارائهٔ لیست مشاغل هستم و آمادهٔ اعزام به عراق ظرف ۳۰ الی ۴۵ روز آینده هستم.</p>'+
-  '<p class="sg">با احترام — '+esc(S.fullname)+' • شماره تماس: '+fa(S.phone)+'</p>';
+  var g=S.gender==='female'?'خانم':'آقای',A=[],B=[];
+  var goalTxt={finance:'انگیزه‌ام بهبود وضعیت مالی است',migrate:'قصد مهاجرت دارم',family:'قصد مهاجرت همراه با خانواده را دارم'}[S.goal]||'';
+  var l1=(S.marital==='married'?'متأهل هستم':'مجرد هستم')+(goalTxt?' و '+goalTxt:'')+'.';
+  if(S.goal==='family'&&S.children)l1=l1.slice(0,-1)+'؛ '+lbl('children',S.children)+'.';
+  A.push(l1);
+  if(S.gender==='female'&&S.exit)A.push(S.exit==='yes'?'اجازهٔ خروج از کشور را دارم.':'اجازهٔ خروج از کشور را ندارم.');
+  if(S.gender==='male'&&S.military){
+    var mm={done:'کارت پایان خدمت دارم.',exempt:'کارت معافیت غیرپزشکی دارم.',medical:'کارت معافیت پزشکی دارم.',absent:'غایب از خدمت هستم.'}[S.military];
+    if(S.military==='medical'&&S.medical.trim())mm=mm.slice(0,-1)+' و شرح وضعیت جسمانی‌ام چنین است: '+esc(S.medical.trim())+'.';
+    A.push(mm);
+  }
+  if(S.passport==='yes')A.push('پاسپورت معتبر در اختیار دارم.');
+  else if(S.passport==='no')A.push(S.canPassport==='yes'?'پاسپورت ندارم، اما می‌توانم آن را ظرف حدود ۱۰ روز تهیه کنم.':'پاسپورت ندارم و امکان تهیهٔ آن را نیز ندارم.');
+  var ed={none:'سواد خواندن و نوشتن ندارم.',basic:'در حد خواندن و نوشتن سواد دارم.',diploma:'دیپلم دارم.',associate:'مدرک کاردانی دارم.',bachelor:'مدرک کارشناسی دارم.',master:'مدرک کارشناسی ارشد یا بالاتر دارم.',technical:'مدرک فنی دارم.'}[S.education];
+  if(ed)A.push(ed);
+  var nt={ir:'تابعیت ایرانی دارم.',af:'تابعیت افغانستانی دارم.',ar:'از اتباع عرب غیرایرانی هستم.'}[S.nationality];
+  if(nt)A.push(nt);
+
+  if(S.spec1.trim()&&S.spec2.trim())B.push('تخصص اصلی‌ام '+esc(S.spec1.trim())+' است و در '+esc(S.spec2.trim())+' نیز مهارت دارم.');
+  else if(S.spec1.trim())B.push('تخصصم '+esc(S.spec1.trim())+' است.');
+  else if(S.spec2.trim())B.push('در '+esc(S.spec2.trim())+' مهارت دارم.');
+  if(S.interests.trim())B.push('به '+esc(S.interests.trim())+' علاقه‌مندم.');
+  if(S.experience.trim())B.push('سوابق کاری‌ام: '+esc(S.experience.trim())+'.');
+  if(S.certs.trim())B.push('مدارک و دوره‌های آموزشی‌ام: '+esc(S.certs.trim())+'.');
+  if(S.prefs.length){
+    var pm={income:'درآمد بالاتر',easy:'آسان‌تر بودن کار',noskill:'بدون نیاز به تخصص',interest:'هم‌راستا با علایقم',skill:'هم‌راستا با تخصصم'};
+    B.push('در انتخاب شغل، '+S.prefs.map(function(v){return pm[v]}).join('، ')+' برایم اهمیت دارد.');
+  }
+  if(S.desired.trim())B.push('مشاغل مورد نظرم: '+esc(S.desired.trim())+'.');
+  var ar={none:'با زبان عربی آشنایی ندارم.',little:'آشنایی بسیار کمی با عربی دارم.',mid:'با زبان عربی در حد متوسط آشنا هستم.',fluent:'عرب‌زبان و مسلط هستم.'}[S.arabic];
+  if(ar)B.push(ar);
+
+  var out='<p class="op">اینجانب '+g+' <span class="g">'+esc(S.fullname)+'</span>، <span class="g">'+fa(age())+' ساله</span>، ساکن <span class="g">'+esc(S.residence)+'</span>، تقاضای استخدام فوری در عراق با شرایط اعلامی در اپلیکیشن را دارم.</p>';
+  if(A.length)out+='<p>'+A.join(' ')+'</p>';
+  if(B.length)out+='<p>'+B.join(' ')+'</p>';
+  out+='<p>تصاویر مدارک شناسایی و فیش واریز ۱۴۶٬۰۰۰ تومان پیوست شده است.</p>';
+  out+='<p class="cl">لطفاً با قید رسیدگی فرمایید؛ منتظر تماس کارشناسان شما، مشاورهٔ شغلی و ارائهٔ لیست مشاغل هستم و آمادهٔ اعزام به عراق ظرف ۳۰ الی ۴۵ روز آینده هستم.</p>';
+  out+='<p class="sg">با احترام — '+esc(S.fullname)+' • شماره تماس: '+fa(S.phone)+'</p>';
+  return out;
 }
 var modal=$('#modal'),last=null;
 function openM(){
   $('#letter').innerHTML=letter();last=document.activeElement;
   modal.classList.add('on');document.body.classList.add('lock');if(lenis)lenis.stop();
+  $('#mbody').scrollTop=0;
   setTimeout(function(){$('#mok').focus()},80);
 }
 function closeM(){modal.classList.remove('on');document.body.classList.remove('lock');if(lenis)lenis.start();if(last)last.focus()}
@@ -918,7 +972,7 @@ document.addEventListener('keydown',function(e){
   if(!modal.classList.contains('on'))return;
   if(e.key==='Escape'){closeM();return}
   if(e.key==='Tab'){
-    var f=$$('button,[href]',modal).filter(function(x){return x.offsetParent!==null});
+    var f=$$('button,[href],[tabindex]',modal).filter(function(x){return x.offsetParent!==null});
     if(!f.length)return;var a=f[0],b=f[f.length-1];
     if(e.shiftKey&&document.activeElement===a){e.preventDefault();b.focus()}
     else if(!e.shiftKey&&document.activeElement===b){e.preventDefault();a.focus()}
@@ -988,8 +1042,8 @@ if(!reduced&&typeof tsParticles!=='undefined'){
 }
 
 /* init */
-paint();restore();update();
+paint();paintPhone();restore();update();
 })();
 </script>
 </body>
-                              </html>
+                                                </html>

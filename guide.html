@@ -197,7 +197,7 @@ mark.sweep.lit{background-size:100% 100%}
 .rail-btn:disabled{opacity:.32;cursor:default}
 .rail{display:flex;gap:22px;overflow-x:auto;overscroll-behavior-x:contain;
   scroll-snap-type:x mandatory;scroll-padding-inline-start:var(--rail-pad);
-  padding:36px var(--rail-pad) 44px;margin-top:8px;
+  padding:32px var(--rail-pad) 40px;margin-top:8px;
   -webkit-overflow-scrolling:touch;user-select:none;-webkit-user-select:none;
   scrollbar-color:var(--gold) rgba(212,175,55,.12);scrollbar-width:thin}
 .rail::-webkit-scrollbar{height:10px}
@@ -206,9 +206,10 @@ mark.sweep.lit{background-size:100% 100%}
 .rail::-webkit-scrollbar-thumb:hover{background:var(--gold-bright)}
 @media(hover:hover) and (pointer:fine){.rail{cursor:grab}}
 .rail.dragging{scroll-snap-type:none;cursor:grabbing}
+/* ---- کارت‌ها: چیدمان تک‌ستونی و روان ---- */
 .b-card{position:relative;flex:0 0 auto;width:min(88vw,470px);scroll-snap-align:start;
   display:flex;flex-direction:column;
-  border-radius:24px;padding:28px 26px 30px;transform-style:preserve-3d;
+  border-radius:24px;padding:24px 24px 26px;transform-style:preserve-3d;
   border:1px solid var(--line-soft);
   background:linear-gradient(165deg,rgba(20,98,71,.36),rgba(6,35,26,.78));
   box-shadow:0 18px 44px rgba(3,19,13,.5);
@@ -222,7 +223,7 @@ mark.sweep.lit{background-size:100% 100%}
 @media(hover:none){.b-card{transition:transform .2s,border-color .3s,box-shadow .3s}.b-card:active{transform:scale(.985)}}
 .js-tilt-glare{border-radius:inherit}
 .z1{transform:translateZ(20px)}.z2{transform:translateZ(36px)}.z3{transform:translateZ(54px)}
-.b-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.b-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
 .b-seal{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
   border:1.5px solid var(--line);color:var(--gold-bright);font-size:1.1875rem;font-weight:900;
   background:radial-gradient(circle at 30% 30%,rgba(245,197,66,.18),transparent 70%)}
@@ -233,56 +234,39 @@ mark.sweep.lit{background-size:100% 100%}
 .b-icon svg{width:29px;height:29px}
 .b-kicker{display:flex;align-items:center;gap:8px;font-size:1.0625rem;font-weight:800;color:var(--emerald-soft);margin-bottom:6px}
 .b-kicker svg{width:19px;height:19px}
-.b-title{font-size:1.45rem;font-weight:900;line-height:1.7;margin-bottom:14px}
-.b-divider{height:1.5px;border-radius:2px;margin-bottom:16px;
+.b-title{font-size:1.4rem;font-weight:900;line-height:1.7;margin-bottom:12px}
+.b-divider{height:1.5px;border-radius:2px;margin-bottom:14px;
   background:linear-gradient(90deg,var(--gold),rgba(29,190,130,.4),transparent);opacity:.55}
-.b-body{flex:1 1 auto;display:flex;flex-direction:column;align-items:flex-start}
+.b-body{flex:1 1 auto;display:block}
 .b-body>*{max-width:100%}
-.b-desc{font-size:1.15rem;color:var(--ivory-70);line-height:2}
-.b-desc + .b-desc{margin-top:12px}
+.b-desc{font-size:1.15rem;color:var(--ivory-70);line-height:1.95}
+.b-desc + .b-desc{margin-top:10px}
 .b-desc b{color:var(--ivory);font-weight:800}
-.b-subhead{font-size:1.1875rem;font-weight:900;color:var(--gold-bright);margin:14px 0 6px}
+.b-subhead{display:block;font-size:1.1875rem;font-weight:900;color:var(--gold-bright);margin:14px 0 6px}
 .verdict{display:inline-flex;align-items:center;gap:8px;font-size:1.1875rem;font-weight:900;
-  padding:6px 18px;border-radius:12px;margin-bottom:14px}
+  padding:6px 18px;border-radius:12px;margin-bottom:12px}
 .verdict svg{width:21px;height:21px}
 .v-yes{color:#0B3D2E;background:linear-gradient(135deg,#35D49A,#1DBE82);box-shadow:0 6px 18px rgba(29,190,130,.3)}
 .v-no{color:#142B22;background:linear-gradient(135deg,#FFD166,#FFB020);box-shadow:0 6px 18px rgba(255,176,32,.28)}
 .v-warn{color:#FFF3F0;background:linear-gradient(135deg,#E05252,#A93226);box-shadow:0 6px 18px rgba(224,82,82,.3)}
-.b-note{display:flex;align-items:flex-start;gap:10px;margin-top:18px;padding:13px 15px;width:100%;
+.b-lines{margin-top:12px;display:block}
+.b-lines li{position:relative;display:block;padding-inline-start:24px;
+  font-size:1.125rem;color:var(--ivory-70);line-height:1.9;margin-bottom:7px}
+.b-lines li:last-child{margin-bottom:0}
+.b-lines li::before{content:'✦';position:absolute;inset-inline-start:0;top:0;color:var(--gold-bright);font-size:1.0625rem}
+.b-lines li b{color:var(--ivory);font-weight:800}
+.b-lines .amt{color:var(--gold-bright);font-weight:900}
+.b-lines.tight li{margin-bottom:5px}
+.b-no{margin-top:4px;font-size:1.125rem;font-weight:700;color:var(--ivory-70);line-height:1.95}
+.b-no s{color:var(--ivory-70);text-decoration-color:rgba(255,107,107,.85);text-decoration-thickness:2.5px}
+.b-note{display:flex;align-items:flex-start;gap:10px;margin-top:14px;padding:12px 14px;width:100%;
   border:1.5px dashed rgba(245,197,66,.35);border-radius:14px;background:rgba(245,197,66,.05);
   font-size:1.125rem;color:var(--ivory-70);line-height:1.9}
 .b-note-tag{flex:0 0 auto;font-size:1.0625rem;font-weight:900;color:var(--amber);
   background:rgba(255,176,32,.13);border:1px solid rgba(255,176,32,.35);padding:2px 12px;border-radius:9px;margin-top:3px}
 .b-note.warn{border-color:rgba(255,107,107,.45);background:rgba(255,107,107,.06)}
 .b-note.warn .b-note-tag{color:#FFD9D4;background:rgba(224,82,82,.22);border-color:rgba(255,107,107,.5)}
-.b-list{margin-top:14px;display:grid;gap:10px;width:100%}
-.b-list li{display:flex;align-items:flex-start;gap:9px;font-size:1.125rem;color:var(--ivory-70);line-height:1.85}
-.b-list svg{width:20px;height:20px;flex:0 0 auto;color:var(--emerald-soft);margin-top:6px}
-.b-list b{color:var(--ivory);font-weight:800}
-.num-list{margin-top:6px;display:grid;gap:12px;width:100%}
-.num-list li{display:flex;align-items:flex-start;gap:12px;font-size:1.125rem;color:var(--ivory-70);line-height:1.85}
-.num-list .n{flex:0 0 auto;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
-  background:var(--grad-gold);color:#142B22;font-size:1.0625rem;font-weight:900;margin-top:3px;
-  box-shadow:0 5px 14px rgba(212,175,55,.3)}
-.num-list b{color:var(--ivory);font-weight:800}
-.cost-list{margin-top:6px;display:grid;gap:11px;width:100%}
-.cost-list li{position:relative;padding-inline-start:26px;font-size:1.125rem;color:var(--ivory-70);line-height:1.85}
-.cost-list li::before{content:'✦';position:absolute;inset-inline-start:0;top:0;color:var(--gold-bright);font-size:1.0625rem}
-.cost-list b{color:var(--gold-bright);font-weight:900}
-.salary{margin-top:8px;display:grid;gap:10px;width:100%}
-.salary-row{display:flex;align-items:baseline;gap:10px;font-size:1.125rem;color:var(--ivory-70);font-weight:700}
-.salary-row .dots{flex:1;border-bottom:2px dotted rgba(212,175,55,.4);transform:translateY(-6px);min-width:18px}
-.salary-row .amt{color:var(--gold-bright);font-weight:900;font-size:1.3rem;white-space:nowrap}
-.b-chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
-.b-chip{font-size:1.0625rem;font-weight:700;color:var(--emerald-soft);
-  border:1px solid rgba(29,190,130,.4);background:rgba(29,190,130,.09);padding:7px 14px;border-radius:99px}
-.b-chip.gold{color:var(--gold-bright);border-color:rgba(245,197,66,.45);background:rgba(245,197,66,.08)}
-.chips-no{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-.chip-no{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;
-  border:1px solid rgba(255,107,107,.35);background:rgba(255,107,107,.07);
-  font-size:1.125rem;font-weight:700;color:var(--ivory-70);
-  text-decoration:line-through;text-decoration-color:rgba(255,107,107,.85);text-decoration-thickness:2.5px}
-.b-statement{font-size:1.45rem;font-weight:900;color:var(--gold-bright);margin-top:18px;
+.b-statement{font-size:1.4rem;font-weight:900;color:var(--gold-bright);margin-top:14px;
   border-bottom:3px solid rgba(245,197,66,.45);display:inline-block;padding-bottom:3px;line-height:1.75}
 /* gold featured card */
 .b-gold{width:min(90vw,540px);color:#142B22;border-color:rgba(255,255,255,.4);
@@ -297,9 +281,11 @@ mark.sweep.lit{background-size:100% 100%}
 .b-gold .b-divider{background:linear-gradient(90deg,#0B3D2E,rgba(11,61,46,.4),transparent);opacity:.6}
 .b-gold .b-desc{color:rgba(20,43,34,.88);font-weight:600}
 .b-gold .b-desc b{color:#0B3D2E}
-.b-gold .b-chip{color:#142B22;border-color:rgba(20,43,34,.4);background:rgba(255,255,255,.25);font-weight:800}
+.b-gold .b-lines li{color:rgba(20,43,34,.88);font-weight:600}
+.b-gold .b-lines li::before{color:#0B3D2E}
+.b-gold .b-lines li b{color:#0B3D2E}
 .b-gold .b-statement{color:#0B3D2E;border-bottom-color:rgba(11,61,46,.5)}
-.b-gold .btn{margin-top:20px}
+.b-gold .btn{margin-top:18px}
 .rail-foot{display:flex;align-items:center;gap:18px}
 .rail-progress{flex:1;height:7px;border-radius:99px;background:rgba(246,241,227,.09);overflow:hidden}
 .rail-bar{height:100%;width:8%;border-radius:99px;background:linear-gradient(90deg,var(--emerald),var(--gold-bright));transition:width .15s linear}
@@ -422,10 +408,8 @@ mark.sweep.lit{background-size:100% 100%}
   .hero{padding-top:calc(var(--header-h) + 30px)}
   .spark.s2,.spark.s4{display:none}
   .oath{padding:18px 18px}
-  .b-title{font-size:1.35rem}
-}
-@media(max-width:380px){
-  .btn{padding:14px 20px;font-size:1.125rem}
+  .b-card{padding:22px 20px 24px}
+  .b-title{font-size:1.32rem}
 }
 /* ============ REDUCED MOTION ============ */
 @media(prefers-reduced-motion:reduce){
@@ -434,8 +418,7 @@ mark.sweep.lit{background-size:100% 100%}
   mark.sweep{background-size:100% 100%}
 }
 </style>
-</head>
-<body>
+</head><body>
 <a class="skip" href="#part1">پرش به پرسش‌ها</a>
 
 <!-- shared SVG defs -->
@@ -507,11 +490,11 @@ mark.sweep.lit{background-size:100% 100%}
         <p>
           اگر تصمیم شما <span class="k-gold">جدی</span> است، این صفحه را کامل مطالعه کنید؛
           <span class="k-gold">تعهد ما، فعالیت دقیقاً طبق شرایط اعلام‌شده در همین اپلیکیشن است.</span>
-          با احترام کامل می‌گوییم: اصلاً پیچیده نیست.
+          اصلاً پیچیده نیست.
         </p>
         <div class="slogans">
           <span class="slogan-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>۱۲ دقیقه مطالعه</span>
-          <span class="slogan-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>۳۰ پرسش و پاسخ</span>
+          <span class="slogan-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پاسخ به سوالات شما</span>
           <span class="slogan-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>ساده و شفاف</span>
         </div>
       </div>
@@ -543,7 +526,7 @@ mark.sweep.lit{background-size:100% 100%}
       <div class="mq-group">
         <span class="mq-item">مطالعهٔ کامل</span><span class="mq-star">✦</span>
         <span class="mq-item">تصمیم جدی</span><span class="mq-star">✦</span>
-        <span class="mq-item">۳۰ پرسش و پاسخ</span><span class="mq-star">✦</span>
+        <span class="mq-item">پاسخ به سوالات شما</span><span class="mq-star">✦</span>
         <span class="mq-item">تعهد مکتوب</span><span class="mq-star">✦</span>
         <span class="mq-item">همراهی مانند دوست</span><span class="mq-star">✦</span>
         <span class="mq-item">۱۲ دقیقه</span><span class="mq-star">✦</span>
@@ -552,7 +535,7 @@ mark.sweep.lit{background-size:100% 100%}
       <div class="mq-group">
         <span class="mq-item">مطالعهٔ کامل</span><span class="mq-star">✦</span>
         <span class="mq-item">تصمیم جدی</span><span class="mq-star">✦</span>
-        <span class="mq-item">۳۰ پرسش و پاسخ</span><span class="mq-star">✦</span>
+        <span class="mq-item">پاسخ به سوالات شما</span><span class="mq-star">✦</span>
         <span class="mq-item">تعهد مکتوب</span><span class="mq-star">✦</span>
         <span class="mq-item">همراهی مانند دوست</span><span class="mq-star">✦</span>
         <span class="mq-item">۱۲ دقیقه</span><span class="mq-star">✦</span>
@@ -566,7 +549,7 @@ mark.sweep.lit{background-size:100% 100%}
     <div class="wrap qa-top">
       <div class="sect-head" data-reveal>
         <span class="eyebrow">بخش یکم — دربارهٔ ما و تعهدات</span>
-        <h2>۱۵ پرسش نخست؛ <span class="k-gold">کاردار را کامل بشناسید</span></h2>
+        <h2>آشنایی مراحل استخدام؛ <span class="k-gold">قوانین و تعهدات</span></h2>
         <p class="sub">پاسخ‌ها صریح، کوتاه و محترمانه‌اند؛ هر کارت، بخشی از تعهد مکتوب ما به شماست.</p>
       </div>
       <div class="rail-ctrl" data-reveal>
@@ -592,10 +575,10 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-divider z1"></div>
         <div class="b-body z1">
           <p class="b-desc">ما <b>دفتر رسمی کاریابی در تهران</b> با مجوز فعالیت در زمینهٔ استخدام در خارج از کشور هستیم.</p>
-          <ul class="b-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>۳ تیم بازاریابی در نجف، کربلا و بصره</b>؛ هم‌وطنانی که خود روزی مانند شما برای کسب درآمد به عراق رفتند.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>شناسایی روزانهٔ مشاغل، بازدید محل اقامت، اخذ وکالت رسمی از کارفرما و پیگیری صدور دعوتنامه.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>در تهران: وکلای مهاجرتی، کارشناسان روابط عمومی، مدیر تبلیغات و تیم اداری و حسابداری.</li>
+          <ul class="b-lines">
+            <li><b>۳ تیم بازاریابی در نجف، کربلا و بصره</b>؛ هم‌وطنانی که خود روزی مانند شما برای کسب درآمد به عراق رفتند.</li>
+            <li>شناسایی روزانهٔ مشاغل، بازدید محل اقامت، اخذ وکالت رسمی از کارفرما و پیگیری صدور دعوتنامه.</li>
+            <li>در تهران: وکلای مهاجرتی، کارشناسان روابط عمومی، مدیر تبلیغات و تیم اداری و حسابداری.</li>
           </ul>
         </div>
         <div class="b-note z1"><span class="b-note-tag">الزامی</span>یک‌بار حضور شما در دفتر کاردار لازم است؛ همهٔ مجوزها را از نزدیک مشاهده خواهید کرد.</div>
@@ -611,7 +594,7 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-divider z1"></div>
         <div class="b-body z1">
           <p class="b-desc">از طرف دفتر کاردار <b>هیچ محدودیتی در پاسخ‌گویی اعمال نمی‌شود</b>؛ محدودیت را خودِ پلتفرم‌ها ایجاد می‌کنند.</p>
-          <p class="b-desc">ما در دیوار، شیپور، اینستاگرام، تیک‌تاک و… فعالیم؛ اما مثلاً پاسخ به <b>۱۰۰ کامنت روزانه</b> زیر یک محتوا، باعث محدودشدن حساب ما توسط اینستاگرام می‌شود — این اتفاق بارها رخ داده است.</p>
+          <p class="b-desc">ما در دیوار، شیپور، اینستاگرام و تیک‌تاک فعالیم؛ اما پاسخ به <b>۱۰۰ کامنت روزانه</b> زیر یک محتوا، باعث محدودشدن حساب ما می‌شود — این اتفاق بارها رخ داده است.</p>
         </div>
         <div class="b-note z1"><span class="b-note-tag">راه‌حل</span>پاسخ‌گویی کامل و بی‌محدودیت، در تماس تلفنی با کارشناسان انجام می‌شود.</div>
       </article>
@@ -626,7 +609,7 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-divider z1"></div>
         <div class="b-body z1">
           <p class="b-desc">ابتدا پاسخ‌گوی همه بودیم؛ اما ساعت‌ها پرسشِ صرفاً کنجکاوانه — بدون قصد جدی — وقت و انرژی بسیاری از نیروی کار ما می‌گرفت.</p>
-          <p class="b-desc">ترجیح ما: ابتدا <b>درخواست خود را ثبت کنید</b>؛ سپس <b>یک ساعت مشاورهٔ تلفنی</b> با کارشناسان و پشتیبانی بدون حد و مرز، ویژهٔ کسانی که تصمیم جدی دارند.</p>
+          <p class="b-desc">ترجیح ما: ابتدا <b>درخواست خود را ثبت کنید</b>؛ سپس <b>یک ساعت مشاورهٔ تلفنی</b> و پشتیبانی بدون حد و مرز، ویژهٔ کسانی که تصمیم جدی دارند.</p>
         </div>
         <div class="b-note z1"><span class="b-note-tag">حق شما</span>یک ساعت مشاورهٔ شغلی، حق قانونی شماست.</div>
       </article>
@@ -642,10 +625,10 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-body z1">
           <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بله، قطعی است</span>
           <p class="b-desc">پس از ثبت درخواست، استخدام شما از طرف ما قطعی است؛ به شرط آنکه:</p>
-          <ul class="b-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>اطلاعات فرم را با دقت و صداقت کامل کرده باشید.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>واقعاً پاسپورت داشته باشید یا بتوانید آن را تمدید کنید.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>منعی برای خروج از کشور نداشته باشید.</li>
+          <ul class="b-lines">
+            <li>اطلاعات فرم را با دقت و صداقت کامل کرده باشید.</li>
+            <li>واقعاً پاسپورت داشته باشید یا بتوانید آن را تمدید کنید.</li>
+            <li>منعی برای خروج از کشور نداشته باشید.</li>
           </ul>
         </div>
         <div class="b-note z1"><span class="b-note-tag">شفاف</span>بیشتر مراحل را ما انجام می‌دهیم؛ تهیهٔ پاسپورت بر عهدهٔ متقاضی است.</div>
@@ -662,7 +645,7 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-body z1">
           <p class="b-desc">فهرستی <b>بسیار متنوع</b> داریم و هر روز فرصت‌های تازه اضافه می‌شود. در فرم، از تخصص، علایق و اهداف خود بگویید؛ <b>نزدیک‌ترین مشاغل</b> را به شما ارائه می‌کنیم.</p>
           <span class="b-statement">حداقل ۱۰ فرصت شغلی با جزئیات کامل</span>
-          <p class="b-desc" style="margin-top:12px">و گاه همراه با عکس و فیلم از محل کار، محل اقامت و توضیحات تکمیلی.</p>
+          <p class="b-desc">و گاه همراه با عکس و فیلم از محل کار، محل اقامت و توضیحات تکمیلی.</p>
         </div>
       </article>
 
@@ -677,10 +660,10 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-body z1">
           <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بله، همیشه</span>
           <p class="b-desc">فرصت‌هایی برای بانوان محترم همیشه وجود دارد؛ هرچند به تعداد کمتر.</p>
-          <ul class="b-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>عراق، کشور همسایه، زیارتی و اسلامی است؛ شئونات کاملاً رعایت می‌شود.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>محل اقامت <b>جداگانه یا زنانه</b> برای پرسنل خانم همیشه فراهم است.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>عموماً مشاغل خدماتیِ مناسب به بانوان محترم سپرده می‌شود.</li>
+          <ul class="b-lines">
+            <li>عراق، کشور همسایه، زیارتی و اسلامی است؛ شئونات کاملاً رعایت می‌شود.</li>
+            <li>محل اقامت <b>جداگانه یا زنانه</b> برای پرسنل خانم همیشه فراهم است.</li>
+            <li>عموماً مشاغل خدماتیِ مناسب به بانوان محترم سپرده می‌شود.</li>
           </ul>
         </div>
       </article>
@@ -704,21 +687,24 @@ mark.sweep.lit{background-size:100% 100%}
       <!-- ۰۸ -->
       <article class="b-card" data-tilt>
         <div class="b-top z3"><span class="b-seal">۰۸</span>
-          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/><path d="M13 6h8"/><path d="M13 12h8"/><path d="M13 18h8"/></svg></span>
+          <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg></span>
         </div>
         <span class="b-kicker z2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>پرسش</span>
-        <h3 class="b-title z2">مراحل استخدام چیست؟</h3>
+        <h3 class="b-title z2">چرا ثبت درخواست هزینه دارد؟</h3>
         <div class="b-divider z1"></div>
         <div class="b-body z1">
-          <ol class="num-list">
-            <li><span class="n">۱</span><b>تصمیم قطعی شما</b> برای کار در عراق.</li>
-            <li><span class="n">۲</span>مطالعهٔ کامل راهنمای اپلیکیشن.</li>
-            <li><span class="n">۳</span>ثبت درخواست؛ <b>پذیرش بی‌قیدوشرط</b> از طرف کاردار، تماس با شما و ارائهٔ لیست مشاغل.</li>
-            <li><span class="n">۴</span>بررسی مشاغل، مشاورهٔ شغلی و <b>انتخاب فرصت شغلی توسط شما</b>.</li>
-            <li><span class="n">۵</span>اخذ وکالت از کارفرما، صدور دعوتنامهٔ رسمی، سوءپیشینه و ترجمهٔ مدارک، نوبت سفارت با هماهنگی شما — <b>همه با ما</b>.</li>
-          </ol>
+          <p class="b-desc">در کاریابی معمول، تشکیل پرونده و جست‌وجوی شغل می‌تواند حتی بدون تضمین استخدام، چندین میلیون تومان هزینه داشته باشد.</p>
+          <p class="b-desc">اما در مجموعه ما، استخدام قطعی و هزینه‌ها شفاف و تفکیک‌شده است:</p>
+          <p class="b-desc"><b>ثبت‌نام، تشکیل پرونده و یک ساعت مشاوره کاملاً رایگان است</b> و بابت این موارد مبلغی دریافت نمی‌شود.</p>
+          <p class="b-desc">پرداخت شما صرفاً بابت هزینه‌های اجرایی پرونده است:</p>
+          <ul class="b-lines tight">
+            <li>چاپ مدارک شناسایی و قرارداد: <span class="amt">۲۷٬۵۰۰ تومان</span></li>
+            <li>تهیه پوشه: <span class="amt">۴۰٬۰۰۰ تومان</span></li>
+            <li>استعلام دولتی مجوز خروج: <span class="amt">۷۹٬۰۰۰ تومان</span></li>
+          </ul>
+          <span class="b-statement">مجموع: ۱۴۶ هزار تومان</span>
+          <p class="b-desc">این مبلغ دستمزد ما نیست؛ صرفاً هزینه آماده‌سازی مدارک و امور اداری پرونده شماست.</p>
         </div>
-        <div class="b-note z1"><span class="b-note-tag">سهم شما</span>پاسپورت با بیش از ۱۸ ماه اعتبار + یک روز حضور در تهران؛ صبح تا ظهر سفارت عراق، عصر دفتر کاردار برای تنظیم قرارداد و هماهنگی.</div>
       </article>
 
       <!-- ۰۹ -->
@@ -749,7 +735,7 @@ mark.sweep.lit{background-size:100% 100%}
           <span class="verdict v-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>خیر؛ صادقانه بگوییم</span>
           <p class="b-desc">هزینهٔ ترانسفر، سیم‌کارت، افتتاح حساب و وعده‌های غذاییِ اختیاری در کاروان — همگی از <b>حقوق ماه اول شما</b> کسر می‌گردد.</p>
           <span class="b-statement">اما همه‌چیز با پول سنجیده نمی‌شود.</span>
-          <p class="b-desc" style="margin-top:12px">شما عضوی از مجموعهٔ ما و متقاضی ارزشمند ما هستید؛ <b>رضایت شما هدف ماست</b>.</p>
+          <p class="b-desc">شما عضوی از مجموعهٔ ما و متقاضی ارزشمند ما هستید؛ <b>رضایت شما هدف ماست</b>.</p>
         </div>
       </article>
 
@@ -762,15 +748,13 @@ mark.sweep.lit{background-size:100% 100%}
         <h3 class="b-title z2">اگر کارفرما به تعهداتش پایبند نبود، بیرونم کرد یا حقوقم را نداد چه؟</h3>
         <div class="b-divider z1"></div>
         <div class="b-body z1">
-          <ol class="num-list">
-            <li><span class="n">۱</span><b>سرپناه موقت همیشه فراهم است</b>؛ نگرانیِ هزینه یا ماندن در شب را نداشته باشید.</li>
-            <li><span class="n">۲</span>تعهد کارفرما فقط به شما نیست، <b>به دولت عراق است</b>؛ دعوتنامهٔ رسمی باید به تأیید دولت برسد و حقوق قانونی شما را ما پیگیری می‌کنیم — این بخشی از تعهد ماست.</li>
-            <li><span class="n">۳</span>ما سراغ اشخاص یا تک‌فروشگاه‌ها نمی‌رویم؛ <b>هتل‌ها، پروژه‌های ۵۰۰۰ واحدی در حال ساخت، مجتمع‌های بزرگ خدماتی و خودرو</b>.</li>
-          </ol>
-          <div class="b-chips">
-            <span class="b-chip gold">تنها ۶٪ انصراف یا جابجایی در سال‌های گذشته</span>
-            <span class="b-chip">۳ بار تعویض شغل، بی‌قیدوشرط</span>
-          </div>
+          <ul class="b-lines">
+            <li><b>۱.</b> سرپناه موقت همیشه فراهم است؛ نگرانیِ هزینه یا ماندن در شب را نداشته باشید.</li>
+            <li><b>۲.</b> تعهد کارفرما فقط به شما نیست، <b>به دولت عراق است</b>؛ دعوتنامهٔ رسمی باید به تأیید دولت برسد و حقوق قانونی شما را ما پیگیری می‌کنیم.</li>
+            <li><b>۳.</b> ما سراغ اشخاص یا تک‌فروشگاه‌ها نمی‌رویم؛ <b>هتل‌ها، پروژه‌های ۵۰۰۰ واحدی، مجتمع‌های بزرگ خدماتی و خودرو</b>.</li>
+            <li>طبق آمار سال‌های گذشته، تنها <b>۶٪</b> انصراف یا درخواست جابجایی ثبت شده است.</li>
+            <li><b>۳ بار تعویض شغل</b> در صورت درخواست شما، بی‌قیدوشرط تعهد ماست.</li>
+          </ul>
         </div>
       </article>
 
@@ -784,9 +768,9 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-divider z1"></div>
         <div class="b-body z1">
           <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بله، کاملاً مکتوب</span>
-          <ul class="b-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>در <b>دعوتنامه</b>: میزان حقوق، عموماً ۸ ساعت کار و اضافه‌کاری، وعده‌های غذایی و محل اقامت — پیش از اعزام مطالعه می‌کنید.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>نمونهٔ قرارداد کاریابی</b> بسیار منصفانه است؛ پیش از امضا بخواهید تا در روبیکا یا واتساپ برایتان ارسال شود و مطالعه کنید.</li>
+          <ul class="b-lines">
+            <li>در <b>دعوتنامه</b>: میزان حقوق، عموماً ۸ ساعت کار و اضافه‌کاری، وعده‌های غذایی و محل اقامت — پیش از اعزام مطالعه می‌کنید.</li>
+            <li><b>نمونهٔ قرارداد کاریابی</b> بسیار منصفانه است؛ پیش از امضا بخواهید تا در روبیکا یا واتساپ برایتان ارسال شود.</li>
           </ul>
         </div>
       </article>
@@ -815,12 +799,10 @@ mark.sweep.lit{background-size:100% 100%}
         <h3 class="b-title z2">من اتباع هستم؛ شرایط من چگونه است؟</h3>
         <div class="b-divider z1"></div>
         <div class="b-body z1">
-          <p class="b-desc">اتباع محترم با <b>مجوز قانونی اقامت در ایران</b> می‌توانند از خدمات ما بهره‌مند شوند؛ دارندگان این مدارک، مجاز برای اقامت کشور ثالث هستند:</p>
-          <div class="b-chips">
-            <span class="b-chip">برگهٔ سرشماری</span>
-            <span class="b-chip">اقامتی / وضعیتی</span>
-            <span class="b-chip">انواع کارت آمایش</span>
-          </div>
+          <p class="b-desc">اتباع محترم با <b>مجوز قانونی اقامت در ایران</b> می‌توانند از خدمات ما بهره‌مند شوند. دارندگان این مدارک، مجاز برای اقامت کشور ثالث هستند:</p>
+          <ul class="b-lines tight">
+            <li>برگهٔ سرشماری، اقامتی / وضعیتی و انواع کارت آمایش.</li>
+          </ul>
         </div>
         <div class="b-note warn z1"><span class="b-note-tag">مهم</span>فقط پاسپورت یا تذکرهٔ الکترونیک؟ هرگز از ایران امکان اقدام نیست؛ باید به سفارت عراق در افغانستان مراجعه کنید. لطفاً فرم را پر نکنید؛ در صورت ثبت درخواست، مبلغ دریافتی بازگردانده می‌شود.</div>
       </article>
@@ -835,7 +817,7 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-divider z1"></div>
         <div class="b-body z1">
           <p class="b-desc">زیرا <b>مجوز صنفیِ کاریابی در خارج از کشور</b> با مجوز فعالیت آنلاین متفاوت است.</p>
-          <p class="b-desc">ما یک مجوز رسمی برای دفتر با آدرس فیزیکی داریم و فعالیت فروشگاهیِ آنلاین نداریم؛ اپلیکیشن تنها برای <b>راهنمایی، مطالعه، ثبت درخواست و نوبت پذیرش</b> است. تمام مراحل، حضوری و تلفنی انجام می‌شود — نه غیرحضوری و آنلاین.</p>
+          <p class="b-desc">ما یک مجوز رسمی برای دفتر با آدرس فیزیکی داریم و فعالیت فروشگاهیِ آنلاین نداریم؛ اپلیکیشن تنها برای <b>راهنمایی، مطالعه، ثبت درخواست و نوبت پذیرش</b> است. تمامی مراحل، حضوری و تلفنی انجام می‌شود نه غیرحضوری و آنلاین و پس از ثبت درخواست آدرس ها و شمارهای تماس و پشتیبانی در اختیارتان قرار خواهد گرفت.</p>
         </div>
         <div class="b-note z1"><span class="b-note-tag">شفاف</span>همهٔ مجوزها را در حضور شما، در دفتر کاردار ارائه می‌کنیم.</div>
       </article>
@@ -902,10 +884,10 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-divider z1"></div>
         <div class="b-body z1">
           <p class="b-desc">قاطعانه می‌گوییم: <b>عراق یک کشور است</b> و مانند ایران به همهٔ مشاغل نیاز دارد. فهرست ما بلند است؛ اما هر هفته تکمیل ظرفیت می‌شود و مشاغل جدید جایگزین می‌گردند — به همین دلیل از درج مشاغل در اپلیکیشن معذوریم.</p>
-          <ul class="b-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>هر شغل، توضیحات تکمیلی دارد و باید در مصاحبه و مشاوره ارائه شود.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>ارائهٔ <b>حداقل ۱۰ شغل مرتبط</b> با درخواست شما، بر عهدهٔ ماست.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>مشاغلی که نمی‌توانیم ارائه دهیم، در بخش فرم ذکر شده است.</li>
+          <ul class="b-lines">
+            <li>هر شغل، توضیحات تکمیلی دارد و باید در مصاحبه و مشاوره ارائه شود.</li>
+            <li>ارائهٔ <b>حداقل ۱۰ شغل مرتبط</b> با درخواست شما، بر عهدهٔ ماست.</li>
+            <li>مشاغلی که نمی‌توانیم ارائه دهیم، در بخش فرم ذکر شده است.</li>
           </ul>
         </div>
       </article>
@@ -920,9 +902,10 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-divider z1"></div>
         <div class="b-body z1">
           <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>بله؛ شفاف و کامل</span>
-          <ul class="cost-list">
+          <ul class="b-lines">
             <li>هزینهٔ کاریابی: <b>۷۰ میلیون تومان</b> — اقساطی، پس از استخدام.</li>
             <li>ترجمهٔ مدارک و رزومه توسط خودتان و ارسال برای ما — در برخی مشاغل.</li>
+            <li>۱۴۶ هزار تومان هزینه پرینت مدارک شناسایی پوشه قرارداد و استعلامات ضروری مجوز خروج از کشور</li>
             <li>هزینهٔ تهیهٔ پاسپورت.</li>
             <li>ترانسفر و وعده‌های غذایی مسیر — اختیاری.</li>
             <li>هزینهٔ یک روز مراجعه به سفارتخانه و دفتر کاردار.</li>
@@ -972,20 +955,18 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-divider z1"></div>
         <div class="b-body z1">
           <span class="verdict v-no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>خیر؛ بسیاری بسیار بالاتر!</span>
-          <div class="b-chips" style="margin-top:0"><span class="b-chip gold">ارقام: میلیون تومان در ماه</span></div>
-          <div class="salary">
-            <div class="salary-row"><span>جوشکار اسکلت (حداقل)</span><span class="dots"></span><span class="amt">۲۳۰</span></div>
-            <div class="salary-row"><span>جوشکار لوله و آرگون</span><span class="dots"></span><span class="amt">۲۱۰</span></div>
-            <div class="salary-row"><span>بنای خبره</span><span class="dots"></span><span class="amt">۲۰۰</span></div>
-            <div class="salary-row"><span>سنگ‌کار و نماکار</span><span class="dots"></span><span class="amt">۲۳۰</span></div>
-            <div class="salary-row"><span>مهندس مکانیک / مکانیک حرفه‌ای</span><span class="dots"></span><span class="amt">۲۵۰</span></div>
-            <div class="salary-row"><span>MDFکار حرفه‌ای (کارخانه، بدون نصب)</span><span class="dots"></span><span class="amt">۲۲۰</span></div>
-          </div>
-          <p class="b-desc" style="margin-top:14px">و از این دست مشاغل، <b>بسیار زیاد</b> است.</p>
+          <p class="b-desc">ارقام زیر، <b>میلیون تومان در ماه</b> است:</p>
+          <ul class="b-lines tight">
+            <li>جوشکار اسکلت (حداقل): <span class="amt">۲۳۰</span></li>
+            <li>جوشکار لوله و آرگون: <span class="amt">۲۱۰</span></li>
+            <li>بنای خبره: <span class="amt">۲۰۰</span></li>
+            <li>سنگ‌کار و نماکار: <span class="amt">۲۳۰</span></li>
+            <li>مهندس مکانیک / مکانیک حرفه‌ای: <span class="amt">۲۵۰</span></li>
+            <li>MDFکار حرفه‌ای (کارخانه، بدون نصب): <span class="amt">۲۲۰</span></li>
+          </ul>
+          <p class="b-desc">و از این دست مشاغل، <b>بسیار زیاد</b> است.</p>
         </div>
-      </article>
-
-      <!-- ۲۱ -->
+        </article><!-- ۲۱ -->
       <article class="b-card" data-tilt>
         <div class="b-top z3"><span class="b-seal">۲۱</span>
           <span class="b-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span>
@@ -1039,10 +1020,10 @@ mark.sweep.lit{background-size:100% 100%}
         <h3 class="b-title z2">اقامت و مجوز کار من چگونه رسمی می‌شود؟</h3>
         <div class="b-divider z1"></div>
         <div class="b-body z1">
-          <ul class="b-list" style="margin-top:0">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>دعوتنامهٔ رسمی کارفرما</b>، با تأیید دولت عراق.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>مجوز کار و اقامت قانونی یک‌ساله</b>.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><b>مهر یک‌سالهٔ پاسپورت</b> در مرز ایران و عراق.</li>
+          <ul class="b-lines">
+            <li><b>دعوتنامهٔ رسمی کارفرما</b>، با تأیید دولت عراق.</li>
+            <li><b>مجوز کار و اقامت قانونی یک‌ساله</b>.</li>
+            <li><b>مهر یک‌سالهٔ پاسپورت</b> در مرز ایران و عراق.</li>
           </ul>
         </div>
         <div class="b-note z1"><span class="b-note-tag">تعهد</span>از روز نخست، وضعیت شما کاملاً قانونی است؛ مشاغل پروژه‌ای و موقت ارائه نمی‌شود.</div>
@@ -1058,11 +1039,9 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-divider z1"></div>
         <div class="b-body z1">
           <p class="b-desc"><b>اقساطی و منصفانه</b>؛ فقط پس از آنکه کارفرما شما را استخدام کرد.</p>
-          <div class="b-chips">
-            <span class="b-chip gold">۲ تا ۳ قسط</span>
-            <span class="b-chip gold">کسر از حقوق دو ماه اول</span>
-            <span class="b-chip">فقط پس از استخدام</span>
-          </div>
+          <ul class="b-lines tight">
+            <li><b>۲ تا ۳ قسط</b>، کسر از حقوق دو ماه اول، فقط پس از استخدام.</li>
+          </ul>
           <span class="b-statement">ریسک مالی با ماست، نه شما.</span>
         </div>
       </article>
@@ -1091,14 +1070,8 @@ mark.sweep.lit{background-size:100% 100%}
         <h3 class="b-title z2">چه مشاغلی را ارائه نمی‌کنید؟</h3>
         <div class="b-divider z1"></div>
         <div class="b-body z1">
-          <ul class="chips-no">
-            <li class="chip-no">پرستاری</li>
-            <li class="chip-no">مهندسی</li>
-            <li class="chip-no">اداری</li>
-            <li class="chip-no">انبارداری</li>
-            <li class="chip-no">راننده سنگین</li>
-          </ul>
-          <p class="b-desc" style="margin-top:14px">این موارد در بخش فرم نیز ذکر شده‌اند تا از ابتدا، انتظارات شما <b>دقیق و شفاف</b> باشد. تمرکز ما بر مشاغل فعال است تا با کیفیت کامل خدمت کنیم.</p>
+          <p class="b-no"><s>پرستاری</s>، <s>مهندسی</s>، <s>اداری</s>، <s>انبارداری</s> و <s>راننده سنگین</s>.</p>
+          <p class="b-desc">این موارد در بخش فرم نیز ذکر شده‌اند تا از ابتدا، انتظارات شما <b>دقیق و شفاف</b> باشد. تمرکز ما بر مشاغل فعال است تا با کیفیت کامل خدمت کنیم.</p>
         </div>
       </article>
 
@@ -1113,11 +1086,11 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-body z1">
           <span class="verdict v-yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>هرگز تنها نیستید</span>
           <p class="b-desc">تیم‌های ما در <b>نجف، کربلا و بصره</b> — همان کسانی که خود روزی مانند شما رفتند — دوستانه کنار شما هستند.</p>
-          <ul class="b-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>تهیهٔ سیم‌کارت عراقی</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>اسکان اضطراری هنگام بروز مشکل</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>افتتاح حساب بانکی عراق</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>پیگیری اقامت خانواده در صورت نیاز</li>
+          <ul class="b-lines tight">
+            <li>تهیهٔ سیم‌کارت عراقی</li>
+            <li>اسکان اضطراری هنگام بروز مشکل</li>
+            <li>افتتاح حساب بانکی عراق</li>
+            <li>پیگیری اقامت خانواده در صورت نیاز</li>
           </ul>
         </div>
       </article>
@@ -1147,12 +1120,12 @@ mark.sweep.lit{background-size:100% 100%}
         <div class="b-divider z1"></div>
         <div class="b-body z1">
           <p class="b-desc"><b>ثبت درخواست در صفحهٔ پذیرش</b>؛ سپس کارشناسان با شما تماس می‌گیرند.</p>
-          <div class="b-chips">
-            <span class="b-chip">۱ ثبت درخواست</span>
-            <span class="b-chip">۲ تماس کارشناس</span>
-            <span class="b-chip">۳ یک ساعت مشاوره — حق قانونی شما</span>
-          </div>
-          <p class="b-desc" style="margin-top:14px">ادامهٔ مراحل، تلفنی، در چت روبیکا یا واتساپ، یا حضوری انجام می‌شود.</p>
+          <ul class="b-lines tight">
+            <li><b>۱</b> ثبت درخواست</li>
+            <li><b>۲</b> تماس کارشناس</li>
+            <li><b>۳</b> یک ساعت مشاوره — حق قانونی شما</li>
+          </ul>
+          <p class="b-desc">ادامهٔ مراحل، تلفنی، در چت روبیکا یا واتساپ، یا حضوری انجام می‌شود.</p>
           <span class="b-statement">اکنون، نوبت تصمیم شماست.</span>
           <a class="btn btn-dark" href="paziresh.html">ثبت درخواست پذیرش
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
@@ -1352,4 +1325,153 @@ function initRail(railId,prevId,nextId,barId,idxId,startIndex){
     var rr=rail.getBoundingClientRect(),cx=rr.left+rr.width/2,best=0,bd=Infinity;
     cards.forEach(function(el,i){
       var r=el.getBoundingClientRect();
-      var d=Ma
+      var d=Math.abs(r.left+r.width/2-cx);
+      if(d<bd){bd=d;best=i;}
+    });
+    idx.textContent=fa(String(best+startIndex).padStart(2,'0'))+' / '+fa(String(total));
+  }
+  var tick=false;
+  rail.addEventListener('scroll',function(){
+    if(!tick){tick=true;requestAnimationFrame(function(){tick=false;update();});}
+  },{passive:true});
+  next.addEventListener('click',function(){rail.scrollBy({left:-step(),behavior:reduced?'auto':'smooth'});});
+  prev.addEventListener('click',function(){rail.scrollBy({left:step(),behavior:reduced?'auto':'smooth'});});
+  /* drag-to-scroll (mouse) */
+  if(finePointer){
+    var down=false,sx=0,sl=0,moved=false;
+    rail.addEventListener('pointerdown',function(e){
+      if(e.pointerType!=='mouse'||e.target.closest('a,button'))return;
+      down=true;moved=false;sx=e.clientX;sl=rail.scrollLeft;
+      rail.classList.add('dragging');
+      try{rail.setPointerCapture(e.pointerId);}catch(err){}
+    });
+    rail.addEventListener('pointermove',function(e){
+      if(!down)return;
+      var dx=e.clientX-sx;
+      if(Math.abs(dx)>4)moved=true;
+      rail.scrollLeft=sl-dx;
+    });
+    function endDrag(){
+      if(!down)return;
+      down=false;rail.classList.remove('dragging');
+      if(moved){
+        var s=step(),target=Math.round(cur()/s)*s;
+        rail.scrollTo({left:-target,behavior:reduced?'auto':'smooth'});
+      }
+    }
+    rail.addEventListener('pointerup',endDrag);
+    rail.addEventListener('pointercancel',endDrag);
+  }
+  /* reveal */
+  if('IntersectionObserver' in window&&!reduced){
+    cards.forEach(function(c,i){
+      c.classList.add('pre');
+      c.style.transitionDelay=(i%3)*90+'ms';
+      c.addEventListener('pointerenter',function(){c.classList.remove('pre','in');c.style.transitionDelay='';},{once:true});
+      c.addEventListener('transitionend',function(){c.classList.remove('pre','in');c.style.transitionDelay='';},{once:true});
+    });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{threshold:.15});
+    cards.forEach(function(c){io.observe(c);});
+  }
+  railUpdaters.push(update);
+  update();
+}
+initRail('#rail-a','#prev-a','#next-a','#bar-a','#idx-a',1);
+initRail('#rail-b','#prev-b','#next-b','#bar-b','#idx-b',16);
+window.addEventListener('resize',function(){requestAnimationFrame(function(){railUpdaters.forEach(function(u){u();});});},{passive:true});
+
+/* ---------- 3D tilt ---------- */
+if(finePointer&&!reduced&&typeof window.VanillaTilt!=='undefined'){
+  VanillaTilt.init($$('[data-tilt]'),{max:6,speed:600,glare:true,'max-glare':.2,scale:1.015,gyroscope:false,perspective:1100});
+}
+
+/* ---------- hero entrance ---------- */
+var heroTargets='#hero-eyebrow, #h1-a, #h1-b, #hero-lead, #hero-oath, #hero-ctas > *, .stat, #scroll-cue';
+if(hasGsap&&!reduced){gsap.set(heroTargets,{opacity:0});}
+var started=false;
+function startHero(){
+  if(started)return;started=true;
+  var mark=$('#h1-b mark');
+  if(!hasGsap||reduced){
+    if(mark)mark.classList.add('lit');
+    railUpdaters.forEach(function(u){u();});
+    return;
+  }
+  var words=null;
+  try{
+    if(typeof window.SplitType!=='undefined'){words=new SplitType('#h1-a',{types:'words'}).words;}
+  }catch(err){words=null;}
+  var tl=gsap.timeline({defaults:{ease:'power3.out'}});
+  tl.fromTo('#hero-eyebrow',{y:26,opacity:0},{y:0,opacity:1,duration:.7});
+  if(words&&words.length){
+    gsap.set('#h1-a',{opacity:1});
+    tl.fromTo(words,{y:44,opacity:0},{y:0,opacity:1,duration:.75,stagger:.055},'-=.35');
+  }else{
+    tl.fromTo('#h1-a',{y:44,opacity:0},{y:0,opacity:1,duration:.75},'-=.35');
+  }
+  tl.fromTo('#h1-b',{y:44,opacity:0},{y:0,opacity:1,duration:.8},'-=.45')
+    .add(function(){if(mark)mark.classList.add('lit');},'-=.25')
+    .fromTo('#hero-lead',{y:26,opacity:0},{y:0,opacity:1,duration:.7},'-=.4')
+    .fromTo('#hero-oath',{y:26,opacity:0},{y:0,opacity:1,duration:.7},'-=.35')
+    .fromTo('#hero-oath .slogan-chip',{y:16,opacity:0,scale:.92},{y:0,opacity:1,scale:1,duration:.45,stagger:.08,ease:'back.out(1.7)'},'-=.35')
+    .fromTo('#hero-ctas > *',{y:22,opacity:0},{y:0,opacity:1,duration:.55,stagger:.1},'-=.25')
+    .fromTo('.stat',{y:26,opacity:0},{y:0,opacity:1,duration:.6,stagger:.08},'-=.3')
+    .fromTo('#scroll-cue',{opacity:0},{opacity:1,duration:.6},'-=.2');
+  $$('.stat-num').forEach(function(el){
+    var target=parseInt(el.getAttribute('data-count'),10)||0;
+    var obj={v:0};
+    gsap.to(obj,{v:target,duration:1.6,delay:.9,ease:'power2.out',
+      onUpdate:function(){el.textContent=fa(Math.round(obj.v));}});
+  });
+  railUpdaters.forEach(function(u){u();});
+  if(hasST)ScrollTrigger.refresh();
+}
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(startHero);}else{startHero();}
+setTimeout(startHero,2600);
+
+/* ---------- scroll reveals & parallax ---------- */
+if(hasST&&!reduced){
+  $$('[data-reveal]').forEach(function(el){
+    gsap.fromTo(el,{y:36,opacity:0},{y:0,opacity:1,duration:.85,ease:'power3.out',
+      scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+  });
+  gsap.to('#blob-a',{yPercent:22,ease:'none',scrollTrigger:{trigger:document.body,start:'top top',end:'max',scrub:1.2}});
+  gsap.to('#blob-b',{yPercent:-18,ease:'none',scrollTrigger:{trigger:document.body,start:'top top',end:'max',scrub:1.2}});
+  gsap.to('#shamseh-wrap',{yPercent:26,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:1}});
+  window.addEventListener('load',function(){
+    ScrollTrigger.refresh();
+    railUpdaters.forEach(function(u){u();});
+    updateRead();
+  });
+}
+
+/* ---------- gold dust particles ---------- */
+var dust=$('#dust');
+if(dust&&!reduced&&typeof window.tsParticles!=='undefined'){
+  var mobile=window.innerWidth<768;
+  window.tsParticles.load({id:'dust',options:{
+    fullScreen:{enable:false},
+    fpsLimit:60,
+    detectRetina:true,
+    pauseOnOutsideViewport:true,
+    background:{color:'transparent'},
+    particles:{
+      number:{value:mobile?26:46},
+      color:{value:['#F5C542','#D4AF37','#35D49A','#F6F1E3']},
+      shape:{type:'circle'},
+      opacity:{value:{min:.08,max:.6},animation:{enable:true,speed:.6,minimumValue:.05,sync:false}},
+      size:{value:{min:.8,max:2.8}},
+      move:{enable:true,speed:{min:.15,max:.5},direction:'top',random:true,straight:false,outModes:{default:'out'}},
+      twinkle:{particles:{enable:true,frequency:.08,opacity:.9,color:{value:'#F5C542'}}}
+    },
+    interactivity:{events:{onHover:{enable:false},onClick:{enable:false}}}
+  }}).catch(function(){});
+}
+})();
+</script>
+</body>
+                                    </html>

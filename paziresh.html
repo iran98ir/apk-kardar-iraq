@@ -626,15 +626,13 @@ section{padding-block:52px}.stats{grid-template-columns:repeat(2,1fr)}.card{padd
 var $=function(s,r){return (r||document).querySelector(s)},
     $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))},
     fa=function(n){return String(n).replace(/\d/g,function(d){return '۰۱۲۳۴۵۶۷۸۹'[d]})},
-    en=function(s){return String(s).replace(/[۰-٩]/g,function(d){var i='۰۱۲۳۴۵۶۷۸۹'.indexOf(d);if(i<0)i='٠١٢٣٤٥٦٧٨٩'.indexOf(d);return i})},
+    en=function(s){return String(s).replace(/[۰-۹٠-٩]/g,function(d){var i='۰۱۲۳۴۵۶۷۸۹'.indexOf(d);if(i<0)i='٠١٢٣٤٥٦٧٨٩'.indexOf(d);return i<0?d:String(i)})},
     esc=function(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')};
 var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,
     fine=matchMedia('(hover: hover) and (pointer: fine)').matches,
     G=typeof gsap!=='undefined',ST=G&&typeof ScrollTrigger!=='undefined';
 if(ST)gsap.registerPlugin(ScrollTrigger);
-var DK='kardar_draft_v2',RK='kardar_request_v2',done=false;
-
-var OPTS={
+var DK='kardar_draft_v2',RK='kardar_request_v2',done=false;var OPTS={
 gender:[['female','خانم'],['male','آقا']],
 marital:[['single','مجرد'],['married','متأهل']],
 exit:[['yes','بله'],['no','خیر']],
@@ -994,4 +992,4 @@ paint();restore();update();
 })();
 </script>
 </body>
-                                                                                                                                                                  </html>
+                              </html>

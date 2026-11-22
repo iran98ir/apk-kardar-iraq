@@ -108,10 +108,6 @@ background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 26px 70px rg
 .js-tilt-glare{border-radius:inherit}
 .phead{display:flex;align-items:center;gap:14px;padding:clamp(14px,2vh,20px) clamp(16px,2.4vw,26px);border-bottom:1px solid rgba(245,197,66,.22);flex-wrap:wrap}
 .now-badge{display:inline-flex;align-items:center;gap:9px;font-size:1.125rem;font-weight:900;color:var(--em2);border:1.5px solid rgba(29,190,130,.5);background:rgba(29,190,130,.12);padding:8px 17px;border-radius:99px}
-.tasks{display:inline-flex;align-items:center;gap:10px;font-size:1.0625rem;font-weight:800;color:var(--iv7)}
-.tbar{width:88px;height:8px;border-radius:99px;background:rgba(246,241,227,.12);overflow:hidden}
-.tfill{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--em),var(--gd2));transition:width .6s var(--ez)}
-.tasks b{color:var(--gd2);font-weight:900}
 .ring{margin-inline-start:auto;display:flex;align-items:center;gap:11px}
 .ringbox{position:relative;width:var(--ring);height:var(--ring);flex:0 0 auto}
 .ringbox svg{width:100%;height:100%;transform:rotate(-90deg)}
@@ -120,7 +116,7 @@ background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 26px 70px rg
 .ringtxt span{font-size:1.0625rem;font-weight:700;color:var(--iv5)}
 .ringcap{font-size:1.0625rem;font-weight:800;color:var(--iv7);max-width:9ch;line-height:1.6}
 .pbody{padding:clamp(18px,2.6vh,26px) clamp(16px,2.4vw,26px)}
-.cols{display:grid;grid-template-columns:1.25fr .85fr;gap:clamp(18px,2.6vw,32px);align-items:start}
+.cols{display:grid;grid-template-columns:1.25fr .85fr;gap:clamp(18px,2.6vw,32px);align-items:stretch}
 .kicker{display:inline-block;font-size:1.0625rem;font-weight:900;color:var(--em2)}
 .pbody h2{font-size:clamp(1.4rem,3vw,2rem);font-weight:900;line-height:1.65;margin:6px 0 16px}
 .pbody h2 em{font-style:normal;color:var(--gd2)}
@@ -135,29 +131,11 @@ background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 26px 70px rg
 .itxt p{font-size:1.125rem;color:var(--iv7);line-height:1.9;margin-top:4px}
 .iarrow{width:24px;height:24px;color:var(--gd2);margin-top:8px;transition:transform .3s var(--ez)}
 .item.link:hover .iarrow{transform:translateX(-5px)}
-.sw{display:inline-flex;align-items:center;gap:11px;margin-top:12px;padding:7px 15px 7px 9px;border-radius:99px;border:1.5px solid var(--line);background:rgba(3,19,13,.45);font-size:1.0625rem;font-weight:900;color:var(--iv7);transition:.3s}
-.sw:hover{border-color:rgba(245,197,66,.55);color:var(--iv)}
-.sw .tr{position:relative;width:50px;height:28px;border-radius:99px;background:rgba(246,241,227,.14);transition:.3s;flex:0 0 auto}
-.sw .kn{position:absolute;top:3px;inset-inline-start:3px;width:22px;height:22px;border-radius:50%;background:var(--iv5);transition:.32s var(--ez)}
-.sw[aria-checked=true]{border-color:rgba(29,190,130,.6);color:var(--em2);background:rgba(29,190,130,.1)}
-.sw[aria-checked=true] .tr{background:linear-gradient(135deg,#35D49A,#1DBE82)}
-.sw[aria-checked=true] .kn{inset-inline-start:25px;background:#0B3D2E}
-.side{display:grid;gap:12px}
-.note{display:flex;gap:11px;align-items:flex-start;padding:16px 18px;border-radius:17px;border:1.5px solid rgba(255,176,32,.45);background:linear-gradient(150deg,rgba(255,176,32,.13),rgba(255,176,32,.04))}
-.note .i{width:24px;height:24px;color:var(--am);margin-top:5px}
+.side{display:flex;flex-direction:column;justify-content:center}
+.note{display:flex;gap:12px;align-items:center;padding:20px 20px;border-radius:17px;border:1.5px solid rgba(255,176,32,.45);background:linear-gradient(150deg,rgba(255,176,32,.13),rgba(255,176,32,.04))}
+.note .i{width:26px;height:26px;color:var(--am)}
 .note p{font-size:1.125rem;font-weight:700;line-height:1.95}
 .note b{color:var(--am);font-weight:900}
-.status{padding:16px 18px;border-radius:17px;border:1px solid rgba(91,200,192,.4);background:rgba(42,168,160,.08)}
-.strow{display:flex;align-items:center;gap:9px;font-size:1.125rem;font-weight:900;color:var(--info)}
-.strow .i{width:20px;height:20px}
-.stmeta{margin-top:9px;display:flex;flex-wrap:wrap;gap:8px}
-.mchip{display:inline-flex;align-items:center;gap:7px;font-size:1.0625rem;font-weight:800;color:var(--gd2);border:1px solid var(--line);background:rgba(245,197,66,.07);padding:5px 13px;border-radius:99px}
-.mchip.em{color:var(--em2);border-color:rgba(29,190,130,.45);background:rgba(29,190,130,.09)}
-.mchip .i{width:16px;height:16px}
-.next{display:flex;gap:11px;align-items:flex-start;padding:16px 18px;border-radius:17px;border:1.5px dashed rgba(246,241,227,.24);background:rgba(3,19,13,.4)}
-.next .i{width:24px;height:24px;color:var(--iv3);margin-top:5px}
-.next p{font-size:1.125rem;font-weight:600;line-height:1.95;color:var(--iv5)}
-.next b{color:var(--iv7);font-weight:900}
 .pfoot{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:clamp(14px,2vh,18px) clamp(16px,2.4vw,26px);border-top:1px solid rgba(245,197,66,.22);background:rgba(3,19,13,.35)}
 .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:56px;padding:14px 26px;border-radius:15px;font-size:1.125rem;font-weight:900;overflow:hidden;white-space:nowrap;transition:transform .25s var(--ez),box-shadow .25s,border-color .25s,color .25s,background .25s}
 .btn:active{transform:scale(.97)}
@@ -166,8 +144,6 @@ background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 26px 70px rg
 .b1:hover{transform:translateY(-2px);box-shadow:0 18px 46px rgba(212,175,55,.4)}
 .b1::after{content:'';position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s}
 .b1:hover::after{left:135%}
-.b2{border:1.5px solid rgba(246,241,227,.28);background:rgba(246,241,227,.04);color:var(--iv)}
-.b2:hover{border-color:var(--gd);color:var(--gd2);background:rgba(212,175,55,.08);transform:translateY(-2px)}
 .fmeta{margin-inline-start:auto;font-size:1.0625rem;font-weight:700;color:var(--iv5);display:inline-flex;align-items:center;gap:8px}
 .fmeta .i{width:18px;height:18px;color:var(--em2)}
 /* nav */
@@ -185,7 +161,7 @@ background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 26px 70px rg
   .stage{padding-bottom:128px}
   :root{--node:74px;--ring:106px}
 }
-@media(max-width:900px){.cols{grid-template-columns:1fr}.ringcap{display:none}}
+@media(max-width:900px){.cols{grid-template-columns:1fr}.ringcap{display:none}.side{justify-content:flex-start}}
 @media(max-width:640px){
   :root{--hh:66px;--nh:74px;--node:56px;--ring:72px}
   .today{padding:6px 12px}
@@ -193,13 +169,13 @@ background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 26px 70px rg
   .nlabel{max-width:11ch}
   .phead{gap:10px;padding:13px 15px}
   .now-badge{font-size:1.0625rem;padding:6px 13px}
-  .tasks{order:3;width:100%}
   .pbody{padding:16px 15px}
   .pfoot{padding:12px 15px;gap:9px}
-  .btn{flex:1;min-width:calc(50% - 5px);padding:13px 14px;font-size:1.0625rem;min-height:54px}
+  .btn{width:100%;padding:13px 14px;font-size:1.0625rem;min-height:54px}
   .fmeta{display:none}
   .item{padding:13px 14px;gap:11px}
   .itxt b{font-size:1.1875rem}
+  .note{padding:16px 15px}
   .panel .ghost{bottom:-10%;font-size:190px}
 }
 @media(max-height:640px){
@@ -287,7 +263,6 @@ background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 26px 70px rg
 
       <div class="phead">
         <span class="now-badge"><span class="dot"></span>شما اکنون در این مرحله هستید</span>
-        <span class="tasks">انجام‌شده <b id="tCount">۰ از ۳</b><span class="tbar"><span class="tfill" id="tFill"></span></span></span>
         <div class="ring">
           <div class="ringbox">
             <svg viewBox="0 0 120 120" aria-hidden="true">
@@ -308,11 +283,10 @@ background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 26px 70px rg
             <h2 id="ph2">سه کار ساده با شما؛ <em>بقیهٔ مسیر با ما.</em></h2>
             <div class="items">
               <div class="item" id="it1">
-                <span class="iseal" id="seal1">۱</span>
+                <span class="iseal">۱</span>
                 <div class="itxt">
                   <b>با آرامش خاطر، تصمیم بگیرید</b>
                   <p>تنها یک پرسش مهم است: آیا واقعاً قصد مهاجرت کاری به عراق را دارید؟ پاسخ صادقانهٔ شما، آغاز همه‌چیز است.</p>
-                  <button type="button" class="sw" id="sw" role="switch" aria-checked="false"><span class="tr"><span class="kn"></span></span><span id="swLbl">تصمیم من جدی است</span></button>
                 </div>
               </div>
               <a class="item link" id="it2" href="guide.html">
@@ -332,21 +306,12 @@ background:linear-gradient(160deg,#0E4D38,#06231A 72%);box-shadow:0 26px 70px rg
               <svg class="i"><use href="#i-clock"/></svg>
               <p>تماس کارشناسان ممکن است نهایتاً تا <b>۱۰ روز</b> زمان ببرد؛ این زمان، بخشی از فرایند <b>۴۵ روزهٔ</b> مهاجرت شماست.</p>
             </div>
-            <div class="status">
-              <div class="strow"><svg class="i"><use href="#i-shield"/></svg><span id="stTxt" aria-live="polite">در انتظار تصمیم شما</span></div>
-              <div class="stmeta" id="stMeta"></div>
-            </div>
-            <div class="next">
-              <svg class="i"><use href="#i-lock"/></svg>
-              <p><b>سپس مرحلهٔ ۲ برای شما فعال می‌شود:</b> لیست مشاغل مختص شما ارائه می‌گردد، دربارهٔ فرصت‌های شغلی راهنمایی می‌گیرید و یکی را انتخاب می‌کنید.</p>
-            </div>
           </div>
         </div>
       </div>
 
       <div class="pfoot">
-        <a class="btn b1" id="ctaMain" href="paziresh.html">ثبت درخواست پذیرش<svg class="i"><use href="#i-arrow"/></svg></a>
-        <a class="btn b2" id="ctaGuide" href="guide.html">مطالعهٔ راهنما<svg class="i"><use href="#i-book"/></svg></a>
+        <a class="btn b1" id="ctaHome" href="index.html">صفحه اصلی<svg class="i"><use href="#i-home"/></svg></a>
         <span class="fmeta"><svg class="i"><use href="#i-shield"/></svg>کاردار — ساده، آسان و شفاف</span>
       </div>
     </section>
@@ -376,8 +341,8 @@ var $=function(s){return document.querySelector(s)},
 var DK='kardar_stage1_v1',RK=['kardar_request_v2','kardar_request_v1'];
 
 /* stored state */
-var st={decided:false,guide:false};
-try{var raw=localStorage.getItem(DK);if(raw){var p=JSON.parse(raw);st.decided=!!p.decided;st.guide=!!p.guide}}catch(e){}
+var st={guide:false};
+try{var raw=localStorage.getItem(DK);if(raw){var p=JSON.parse(raw);st.guide=!!p.guide}}catch(e){}
 var req=null;
 for(var i=0;i<RK.length&&!req;i++){try{var r=localStorage.getItem(RK[i]);if(r){var o=JSON.parse(r);if(o&&o.code)req=o}}catch(e){}}
 function persist(){try{localStorage.setItem(DK,JSON.stringify(st))}catch(e){}}
@@ -392,51 +357,13 @@ function persist(){try{localStorage.setItem(DK,JSON.stringify(st))}catch(e){}}
 
 /* state paint */
 function paint(){
-  var d=(st.decided?1:0)+(st.guide?1:0)+(req?1:0);
-  $('#tCount').textContent=fa(d)+' از ۳';
-  $('#tFill').style.width=(d/3*100)+'%';
-  $('#it1').classList.toggle('done',st.decided);
   $('#it2').classList.toggle('done',st.guide);
   $('#it3').classList.toggle('done',!!req);
-  $('#seal1').textContent=st.decided?'✓':'۱';
   $('#seal2').textContent=st.guide?'✓':'۲';
   $('#seal3').textContent=req?'✓':'۳';
-  $('#sw').setAttribute('aria-checked',st.decided?'true':'false');
-  $('#swLbl').textContent=st.decided?'تصمیم من ثبت شد':'تصمیم من جدی است';
-  var txt,meta;
-  if(req){
-    var days=Math.max(0,Math.floor((Date.now()-(req.ts||Date.now()))/86400000));
-    txt='درخواست شما ثبت شد — در انتظار تماس کارشناسان';
-    meta='<span class="mchip em"><svg class="i"><use href="#i-check"/></svg>کد پیگیری: '+String(req.code)+'</span>'+
-         '<span class="mchip"><svg class="i"><use href="#i-clock"/></svg>'+(days===0?'ثبت‌شده: امروز':'روز '+fa(Math.min(days,10))+' از ۱۰ روز انتظار')+'</span>';
-    $('#ctaMain').innerHTML='پیگیری درخواست پذیرش<svg class="i"><use href="#i-arrow"/></svg>';
-  }else if(st.decided&&st.guide){
-    txt='آمادهٔ ثبت درخواست — تنها یک قدم مانده';
-    meta='<span class="mchip em"><svg class="i"><use href="#i-check"/></svg>تصمیم و مطالعه انجام شد</span><span class="mchip"><svg class="i"><use href="#i-clock"/></svg>تا تماس: حداکثر ۱۰ روز</span>';
-  }else if(st.decided){
-    txt='تصمیم شما ثبت شد — اکنون راهنما را بخوانید';
-    meta='<span class="mchip"><svg class="i"><use href="#i-book"/></svg>گام بعد: مطالعهٔ راهنما</span><span class="mchip"><svg class="i"><use href="#i-flag"/></svg>فرایند کل: ۴۵ روز</span>';
-  }else if(st.guide){
-    txt='راهنما باز شد — تصمیم شما هنوز ثبت نشده';
-    meta='<span class="mchip"><svg class="i"><use href="#i-spark"/></svg>گام بعد: ثبت تصمیم</span><span class="mchip"><svg class="i"><use href="#i-clock"/></svg>تا تماس: حداکثر ۱۰ روز</span>';
-  }else{
-    txt='در انتظار تصمیم شما';
-    meta='<span class="mchip"><svg class="i"><use href="#i-clock"/></svg>تا تماس: حداکثر ۱۰ روز</span><span class="mchip"><svg class="i"><use href="#i-flag"/></svg>فرایند کل: ۴۵ روز</span>';
-  }
-  var s=$('#stTxt');
-  if(s.textContent!==txt){
-    if(G&&!reduced)gsap.to(s,{opacity:0,duration:.14,onComplete:function(){s.textContent=txt;gsap.to(s,{opacity:1,duration:.25})}});
-    else s.textContent=txt;
-  }
-  $('#stMeta').innerHTML=meta;
-  $('#fill').style.width=(req?24:(st.decided?20:16))+'%';
+  $('#fill').style.width=(req?22:16)+'%';
 }
-$('#sw').addEventListener('click',function(){
-  st.decided=!st.decided;persist();paint();
-  if(G&&!reduced)gsap.fromTo('#it1',{scale:.985},{scale:1,duration:.4,ease:'back.out(2)'});
-});
 $('#it2').addEventListener('click',function(){st.guide=true;persist()});
-$('#ctaGuide').addEventListener('click',function(){st.guide=true;persist()});
 
 /* timeline interaction */
 function pulsePanel(){
@@ -477,8 +404,8 @@ function enter(){
       .from('#arc1',{strokeDasharray:'0 100',duration:1,ease:'power2.inOut'},'-=.5')
       .from('#panel',{y:34,opacity:0,duration:.8},'-=.7')
       .from('.item',{y:18,opacity:0,duration:.5,stagger:.09},'-=.45')
-      .from('.note,.status,.next',{y:16,opacity:0,duration:.5,stagger:.09},'-=.45')
-      .from('.pfoot > *',{y:14,opacity:0,duration:.45,stagger:.08},'-=.35');
+      .from('.note',{y:16,opacity:0,duration:.5},'-=.4')
+      .from('.pfoot > *',{y:14,opacity:0,duration:.45,stagger:.08},'-=.3');
     setTimeout(function(){mk.classList.add('lit')},1600);
   }catch(err){mk.classList.add('lit')}
 }
